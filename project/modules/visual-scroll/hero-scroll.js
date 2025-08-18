@@ -171,7 +171,7 @@ const heroScroll = {
         }
     },
     getInitialSize() {
-        const content = document.querySelector('.sticky-element-content content');
+        const content = document.querySelector('.sticky-element-content .content');
         const background = document.querySelector('.sticky-element-background');
         if (!content || !background) {
             return 50

@@ -144,7 +144,7 @@ const rectScroll = {
     },
     
     getInitialSize() {
-        const content = this.elements.stickyElement?.querySelector('.sticky-element-content content');
+        const content = this.elements.stickyElement?.querySelector('.sticky-element-content .content');
 
         if (!content || !this.elements.background) {
             return 50
