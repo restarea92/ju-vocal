@@ -410,12 +410,6 @@
 @media (max-width: 1024px) and (min-width: 991px) {
 	.story.common-container {
 
-		h2.content-title {
-			.content-title-text {
-				padding: 0 calc(var(--default-container-padding));
-			}
-		}
-
 		.story-text {
 			grid-column: 1 / 2;
 			grid-row: 2 / 3;
