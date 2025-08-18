@@ -321,9 +321,8 @@
 
 /* Coach Section */
 #about-ju-coach.common-container {
-	background-color: #f5f5f7;
 	--common-text-color: black;
-	background-color: white;
+	background-color: #f5f5f7;
 	position: relative;
 	min-height: 120lvh;
 	h3 {
