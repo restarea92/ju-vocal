@@ -424,6 +424,7 @@
     .map-button {
         display:flex;
         align-items:center;
+		justify-content: center;
         gap:0.25rem;
         font-variation-settings:
             'FILL' 1,
