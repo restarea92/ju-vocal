@@ -462,12 +462,75 @@
     }
 }
 
-@media (max-width: 1280px) and (min-width: 1025px) {
 
+/* Vision Section */
+.vision.common-container {
+	--common-text-color: white;
+	background: linear-gradient(135deg, #333, #2d2d2d);
+	text-align: center;
+
+		.vision-content {
+			max-width: 800px;
+			margin: 0 auto;
+
+			h2 {
+				font-size: var(--fs-title);
+				color: white;
+				margin-bottom: 2rem;
+				background: linear-gradient(45deg, #ffffff, #aafff9);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				text-align: center !important;
+			}
+
+			p {
+				font-size: var(--fs-body);
+				color: #e0e0e0;
+				line-height: 1.475;
+				margin-bottom: 2rem;
+			}
+		}
+
+		.vision-stats {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 1rem;
+			margin-top: 60px;
+
+			.stat {
+				background: var(--bg-glass);
+				padding: 30px 20px;
+				border-radius: 15px;
+				border: var(--border-glass);
+
+				.stat-number {
+					font-size: var(--fs-subtitle);
+					font-weight: bold;
+					color: #4ECDC4;
+					margin-bottom: 0.5rem;
+				}
+
+			.stat-label {
+				color: #b0b0b0;
+			}
+			
+			.reference {
+				color: #666669;
+			}
+		}
+	}
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
+.fade-in {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: var(--transition-smooth);
 
+	&.visible {
+		opacity: 1;
+		transform: translateY(0);
+		
+	}
 }
 
 @media (max-width: 768px) {
@@ -568,72 +631,5 @@
 				}
 			}
 		}
-	}
-}
-
-/* Vision Section */
-.vision.common-container {
-	--common-text-color: white;
-	background: linear-gradient(135deg, #333, #2d2d2d);
-	text-align: center;
-
-		.vision-content {
-			max-width: 800px;
-			margin: 0 auto;
-
-			h2 {
-				color: white;
-				margin-bottom: 2rem;
-				background: linear-gradient(45deg, #ffffff, #aafff9);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				text-align: center !important;
-			}
-
-			p {
-				color: #e0e0e0;
-				line-height: 1.475;
-				margin-bottom: 2rem;
-			}
-		}
-
-		.vision-stats {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-			gap: 40px;
-			margin-top: 60px;
-
-			.stat {
-				background: var(--bg-glass);
-				padding: 30px 20px;
-				border-radius: 15px;
-				border: var(--border-glass);
-
-				.stat-number {
-					font-weight: bold;
-					color: #4ECDC4;
-					margin-bottom: 0.5rem;
-				}
-
-			.stat-label {
-				color: #b0b0b0;
-			}
-			
-			.reference {
-				color: #666669;
-			}
-		}
-	}
-}
-
-.fade-in {
-	opacity: 0;
-	transform: translateY(30px);
-	transition: var(--transition-smooth);
-
-	&.visible {
-		opacity: 1;
-		transform: translateY(0);
-		
 	}
 }
