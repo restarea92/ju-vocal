@@ -343,7 +343,7 @@
             .content-text {
                 grid-column: 2 / 12;
                 p {
-					font-size: var(--fs-copyright);
+					font-size: var(--fs-body);
                     color: #333333;
                     margin: 0;
                     line-height: 1.57;
@@ -367,6 +367,7 @@
 
             &.content1 {
 				p {
+					font-size: var(--fs-copyright);
 					font-weight: 700;
 					color: #86868b;
 					strong {
