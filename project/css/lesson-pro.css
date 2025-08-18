@@ -40,6 +40,7 @@
     }
 
     .content-visual {
+        border-radius: 0;
         grid-column: 2 / 12;
         grid-row: 3 / 8;
         height: fit-content;
