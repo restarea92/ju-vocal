@@ -237,7 +237,7 @@
 				
 				.total-range {
 					text-align: center;
-					font-size: var(--font-big);
+					font-size: var(--font-copyright);
 					color:#34c759;
 					font-weight: 800;
 					margin: 1rem 0;
@@ -247,7 +247,7 @@
 				.total-note {
 					text-align: center;
 					color: #6e6e73;
-					font-size: var(--font-small);
+					font-size: var(--fs-body);
 				}
 			}
 		}
