@@ -258,7 +258,7 @@
 		text-align: center;
 		
 		.advantages-title {
-			font-size: var(--font-h3);
+			font-size: var(--fs-title);
 			font-weight: 700;
 			margin-bottom: 2rem;
 			color: #1d1d1f;
