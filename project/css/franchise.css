@@ -158,13 +158,13 @@
 		.content-title-text {
             padding:1rem;
             text-align: left;
-            font-size: var(--fs-title);
+            font-size: var(--fs-primary-title);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
             span.eyebrow-typography {
-                font-size: calc(var(--fs-title) * 0.5);
+                font-size: calc(var(--fs-primary-title) * 0.5);
             }
         }
 	}
