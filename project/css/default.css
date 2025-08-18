@@ -51,6 +51,7 @@
     /* 769 ~ 1024 */
     :root {
         --fs-base-title: calc(var(--fs-base) * 3);
+        --fs-base: calc(var(--base-font-size) * 3 / 4);
 
         --max-container-width: 736px;
         --max-content-width: 680px;
@@ -62,6 +63,7 @@
 @media (max-width: 768px) {
     :root {
         --fs-base-title: calc(var(--fs-base) * 2);
+        --fs-base: calc(var(--base-font-size) * 0.5);
 
         --max-container-width: calc(100svw - 2rem);
         --max-content-width: calc(var(--max-container-width) - 2rem);
