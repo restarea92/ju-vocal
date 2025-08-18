@@ -149,7 +149,7 @@
 		}
 		
 		p {
-			font-size: var(--fs-copyright);
+			font-size: var(--fs-body);
 			margin-bottom: 1.5rem;
 			line-height: 1.57;
 			color: #a6a6a9;
