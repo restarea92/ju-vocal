@@ -345,7 +345,7 @@
     }
 
     .step h4 {
-        font-size: var(--fs-subtitle);
+        font-size: var(--fs-copyright);
         font-weight: 600;
         margin-bottom: 1rem;
     }
