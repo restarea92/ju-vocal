@@ -147,8 +147,8 @@
 		}
 
 		.service-icon {
-			font-size: 3rem;
-			margin-bottom: 1.5rem;
+			font-size: var(--fs-title);
+			margin-bottom: var(--fs-title);
 			background: var(--gradient-primary);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
@@ -213,7 +213,7 @@
 		}
 
 		.ceo-info h3 {
-            font-size: 2rem;
+            font-size: var(--fs-subtitle);
             margin-bottom: 0.5rem;
             font-weight: 700;
             text-align: center !important;
