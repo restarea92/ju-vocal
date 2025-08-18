@@ -94,7 +94,6 @@
 }
 
 #visual-section5 {
-    
   .content-wrapper {
     margin: var(--fs-subtitle) auto;
     display: flex;
@@ -160,8 +159,13 @@
       flex-direction: column;
     }
   }
-
+    #visual-section4, #visual-section5 {
+        h2 {
+            padding: var(--default-container-padding);
+        }
+    }
   #visual-section5 {
+
     .content-wrapper {
       gap: 1rem;
       flex-direction: column;
