@@ -491,7 +491,7 @@
 	#about-ju-coach.common-container {
 		.content-wrapper {
 			max-width: var(--max-container-width);
-			padding: calc(var(--default-container-padding));
+			padding: calc(var(--default-container-padding) / 2);
 		}
 		.coach-content {
 			grid-template-columns: 1fr;
