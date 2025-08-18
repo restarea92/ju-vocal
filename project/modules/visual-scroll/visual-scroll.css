@@ -72,7 +72,7 @@ svg text {
         1
     );
     .content-wrapper-wide {
-        width: 100lvw;
+        width: 100dvw;
         position: relative;
     }
     .content-wrapper {
@@ -83,7 +83,7 @@ svg text {
     }
     
     .content {
-        flex: 0 0 100lvw; /* 하나의 화면을 꽉 채우도록 */
+        flex: 0 0 100dvw; /* 하나의 화면을 꽉 채우도록 */
         box-sizing: border-box;
         padding: 4rem;
         position: relative;
@@ -193,8 +193,8 @@ svg text {
 
     }
     .multi-scroll-item {
-        width: 100lvw;
-        min-width: 100lvw;
+        width: 100dvw;
+        min-width: 100dvw;
         height: 100lvh;
         display: flex;
         align-items: center;
@@ -269,8 +269,8 @@ svg text {
 @media (max-width: 1024px) and (min-width: 769px) {
   /* 769 ~ 1024 */
     #visual-section {
-        --fs-hero-scroll-title: clamp(2.5rem, max(5lvh, 5lvw), 3rem);
-        --fs-visual-scroll-title: clamp(1.125rem, max(3lvh, 3lvw), 1.25rem);
+        --fs-hero-scroll-title: clamp(2.5rem, max(5lvh, 5dvw), 3rem);
+        --fs-visual-scroll-title: clamp(1.125rem, max(3lvh, 3dvw), 1.25rem);
         .content {
             padding: 2rem;
         }
@@ -279,8 +279,8 @@ svg text {
 
 @media (max-width: 768px) {
     #visual-section {
-        --fs-hero-scroll-title: clamp(2rem, max(5lvh, 5lvw), 2.5rem);
-        --fs-visual-scroll-title: clamp(1rem, max(3lvh, 3lvw), 1.125rem);
+        --fs-hero-scroll-title: clamp(2rem, max(5lvh, 5dvw), 2.5rem);
+        --fs-visual-scroll-title: clamp(1rem, max(3lvh, 3dvw), 1.125rem);
 
         .content {
             padding: 0;

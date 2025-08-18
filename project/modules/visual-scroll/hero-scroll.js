@@ -137,7 +137,7 @@ const app = {
                     calc( var(--clip-path-end-size) * var(--hero-scroll-progress) )
                     calc( var(--fs-primary-title) * var(--hero-scroll-progress) )
                     calc( var(--clip-path-end-size) * var(--hero-scroll-progress) )
-                    round calc( max(5lvh, 5lvw) * var(--hero-scroll-progress) )
+                    round calc( max(5svh, 5svw) * var(--hero-scroll-progress) )
                 )`,
             });
 
