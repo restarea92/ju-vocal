@@ -180,6 +180,7 @@
         grid-row: 2 / 3;
         color: #e0e0e0;
         p {
+			font-size: var(--fs-body);
             margin-bottom: 1.5rem;
             line-height: 1.8;
             color: var(--common-text-color);
