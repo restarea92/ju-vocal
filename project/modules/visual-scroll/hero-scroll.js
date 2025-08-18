@@ -181,7 +181,7 @@ const heroScroll = {
         const containerWidth = background.getBoundingClientRect().width;
         const effectiveWidth = Math.min(contentWidth, window.innerWidth);
         
-        const result = (effectiveWidth / containerWidth) * 50;
+        const result = (effectiveWidth / containerWidth) * 100;
         return result;
     },
 
