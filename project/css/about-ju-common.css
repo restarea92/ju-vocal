@@ -276,7 +276,7 @@
 					color:white
 				}
 				&.message-closing {
-					font-size: 1.125rem !important;
+					font-size: var(--fs-body) !important;
 					font-weight: 600 !important;
 					color: #667eea !important;
 					text-align: center;
