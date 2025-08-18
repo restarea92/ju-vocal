@@ -161,7 +161,7 @@ const app = {
 
     // ========== 상태 관리 ==========
     setHeaderHeightVariable() {
-        const header = document.getElementById('doz_header_wrap');
+        const header = document.querySelector('header');
         const headerHeight = header ? header.getBoundingClientRect().height : 0;
         document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
     },
