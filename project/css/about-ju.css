@@ -459,7 +459,7 @@
 
 	/* CEO Section 모바일 */
 	.ceo-message.common-container {
-        h2 {
+		h2.content-title {
             text-align: center;
         }
 		.ceo-content {
@@ -486,10 +486,8 @@
 		.content-wrapper {
 		}
 		h2.content-title {
-			font-size: 2rem;
-			span {
+            text-align: center;
 
-			}
 			.content-title-text {
 				font-size: clamp(1.5rem, 8vw, 3rem);
 			}
