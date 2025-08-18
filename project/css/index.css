@@ -51,7 +51,7 @@
     text-align: center;
   }
   h3 {
-    font-size: var(--fs-title);
+    font-size: var(--fs-title * 0.5);
     font-weight: 700;
     text-align: center;
     width: 75%;
