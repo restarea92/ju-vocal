@@ -161,7 +161,7 @@
   }
     #visual-section4, #visual-section5 {
         h2 {
-            padding: var(--default-container-padding) / 2;
+            padding: calc(var(--default-container-padding) / 2);
         }
     }
   #visual-section5 {
