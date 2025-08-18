@@ -458,47 +458,8 @@
 			display: grid; grid-template-columns: 1fr;
 		}
 	}
-}
 
-
-@media (max-width: 768px)   {
-    .location-info.common-container {
-        .content {
-
-        }
-        .info-box {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-columns: max-content 1fr;
-            height: fit-content;
-            gap:0.5rem 0.75rem;
-            .info-box-content {
-                display: contents;
-                > span {
-                }
-                > span.table-head {
-                }
-            }
-        }
-        .map-button {
-            display:flex;
-            align-items:center;
-            gap:0.125rem;
-			font-size: calc(var(--fs-body) * 0.75);
-            font-variation-settings:
-                'FILL' 1,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 24;
-            .material-symbols-outlined {
-				font-size: calc(var(--fs-body) * 0.875);
-            }
-        }
-    }
-
-	/* Coach Section 모바일 */
+		/* Coach Section 모바일 */
 	#about-ju-coach.common-container {
 
 		.content-title {
@@ -545,8 +506,46 @@
 				grid-row: 2 / 3;			
 			}
 		}
-
 	}
+}
+
+
+@media (max-width: 768px)   {
+    .location-info.common-container {
+        .content {
+
+        }
+        .info-box {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            height: fit-content;
+            gap:0.5rem 0.75rem;
+            .info-box-content {
+                display: contents;
+                > span {
+                }
+                > span.table-head {
+                }
+            }
+        }
+        .map-button {
+            display:flex;
+            align-items:center;
+            gap:0.125rem;
+			font-size: calc(var(--fs-body) * 0.75);
+            font-variation-settings:
+                'FILL' 1,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24;
+            .material-symbols-outlined {
+				font-size: calc(var(--fs-body) * 0.875);
+            }
+        }
+    }
 }
 
 
@@ -559,4 +558,4 @@
             }
         }
     }
-
+}
