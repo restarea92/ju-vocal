@@ -382,7 +382,7 @@
 		width: 100%;
 	}
 	.content-wrapper {
-		max-width: var(--max-container-width);
+		max-width: var(--max-container-width-small);
 	}
 
 
