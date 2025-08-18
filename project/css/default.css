@@ -19,7 +19,7 @@
 
     /* Body */
     --fs-body: calc(var(--fs-body-base));
-    --fs-copyright: calc(var(--fs-body-base) * 1.25);
+    --fs-copyright: calc(var(--fs-body-base) * 1.125);
 
     /* init widths */
     --logo-width: 100px;
