@@ -94,7 +94,6 @@
 }
 
 #visual-section5 {
-  margin-bottom: var(--fs-subtitle);
   .content-wrapper {
     display: flex;
     gap: 2rem;
@@ -112,7 +111,9 @@
     aspect-ratio: 2 / 1;
     padding: 2rem;
     gap: 0.5rem;
-
+    h2 {
+        margin-bottom: var(--fs-subtitle);
+    }
     h3 {
       font-weight: 750;
       color: black;
