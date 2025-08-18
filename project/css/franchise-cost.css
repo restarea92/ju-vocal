@@ -247,7 +247,7 @@
 				.total-note {
 					text-align: center;
 					color: #6e6e73;
-					font-size: var(--fs-body);
+					font-size: calc(var(--fs-body) * 0.75);
 				}
 			}
 		}
