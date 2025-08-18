@@ -55,6 +55,9 @@ svg text {
 }
 
 #visual-section {
+    --fs-visual-section-title: var(--fs-primary-title);
+    --fs-visual-section-subtitle: calc(var(--fs-visual-section-title) / 2);
+
     --default-margin: 8rem;
     margin-top:0;
     padding-top: 0;
@@ -142,8 +145,8 @@ svg text {
                 h2 {
                     text-align: left;
                     color:white;
-                    font-size: var(--fs-primary-title);
-                    padding-bottom: calc(var(--fs-primary-title) / 2);
+                    font-size: var(--fs-visual-section-title);
+                    padding-bottom: calc(var(--fs-visual-section-title) / 2);
                 }
         }
     }
@@ -175,14 +178,14 @@ svg text {
             width: 100%;
             justify-content: center;
             align-content: flex-end;
-            font-size: var(--h2-font-size);
+            font-size: var(--fs-visual-section-title); 
             line-height: 1;
             display: flex;
             align-items: end;
         }
         h3 {
-            font-size: var(--h3-font-size);
-            padding-top: calc(var(--h3-font-size) / 2 );
+            font-size: var(--fs-visual-section-subtitle);
+            padding-top: calc(var(--fs-visual-section-subtitle) / 2 );
         }
     }
 
@@ -256,8 +259,7 @@ svg text {
 @media (max-width: 1280px) and (min-width: 1025px) {
     /* 1025 ~ 1280 */
     #visual-section {
-        --h2-font-size: 3rem;
-        --h3-font-size: 1.5rem;
+
         .content {
             padding: 3rem;
         }
