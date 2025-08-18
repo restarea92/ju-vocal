@@ -279,9 +279,8 @@
 				border: 1px solid rgba(0, 0, 0, 0.05);
 				
 				.advantage-icon {
-					font-size: var(--fs-title);
 					.material-symbols-outlined {
-						font-size: var(--fs-title);
+						font-size: var(--fs-subtitle);
 					}
 					margin-bottom: 1rem;
 				}
