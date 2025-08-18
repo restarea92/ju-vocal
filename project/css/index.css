@@ -162,7 +162,6 @@
     #visual-section4, #visual-section5 {
         h2, h3 {
             padding: 0 calc(var(--default-container-padding));
-            text-align: left;
         }
     }
   #visual-section5 {
