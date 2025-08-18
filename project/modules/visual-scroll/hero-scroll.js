@@ -1,6 +1,5 @@
 // app.js
 import { initGSAP } from '../gsapUtils.js';
-// import { initGSAP } from 'https://restarea92.github.io/ju/modules/gsapUtils.js';
 
 const app = {
     options: {

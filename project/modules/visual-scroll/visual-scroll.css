@@ -1,0 +1,351 @@
+/*!
+ * END USER LICENSE AGREEMENT (EULA) FOR CSS/JS MODULE
+ * 
+ * This Software is licensed by HScomm Web dev Team ("Licensor") to the end user ("Licensee").
+ * 
+ * 1. License Grants
+ *    1.1 Licensee is granted a non-exclusive, non-transferable license to use one copy of the Software
+ *        solely on a single website domain owned or controlled by Licensee.
+ *    1.2 Third-party library components included are subject to their respective open source licenses
+ *        (e.g., GPL, LGPL, MIT, Apache), which take precedence as applicable.
+ *    1.3 However, GSAP library components are subject to the GSAP Standard "No Charge" License by Webflow.
+ *        Licensee agrees to comply with the GSAP license terms (https://greensock.com/licensing/).
+ *    1.4 For any matters not explicitly covered by third-party licenses, this EULA applies as the final
+ *        governing license, except when conflicting with third-party licenses which take precedence.
+ * 
+ * 2. Usage Restrictions
+ *    - No reproduction, distribution, sale, sublicensing, or transfer of Licensor's original Software parts
+ *      to third parties.
+ *    - No modification, adaptation, or derivative works of Licensor's original Software parts for redistribution.
+ *    - Use limited to one domain; additional licenses required for multiple domains or projects.
+ *    - No third-party use of Licensor's Software components allowed.
+ *    - Proprietary notices or branding of third-party components must not be removed or altered.
+ * 
+ * 3. Ownership
+ *    - Licensor retains all intellectual property rights in original code (excluding third-party components).
+ *    - Third-party components remain property of their respective owners.
+ * 
+ * 4. Limitation of Liability
+ *    - Licensor is not liable for damages from use or inability to use the Software, including third-party parts.
+ * 
+ * 5. Termination
+ *    - License terminates immediately upon violation; Licensee must cease use and delete all copies.
+ * 
+ * 6. Governing Law
+ *    - Governed by the laws of [Jurisdiction].
+ * 
+ * HScomm Web dev Team
+ * Date: 07/25/2025
+ */
+
+/* imweb 헤더의 높이를 계산에서 제외하기 위한 CSS 변수 설정 */
+#doz_header_wrap {
+  position: absolute;
+  width: 100%;
+}
+
+
+/* ----------------------------------------------
+ * init default style
+ * ---------------------------------------------- */
+.canvas-wrapper {
+  min-height: 200lvh;
+  background: #f5f5f7;
+}
+
+.canvas-container {
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100lvh;
+  overflow: hidden;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: 60% top;
+}
+
+svg#center-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: fit-content;
+  height: fit-content;
+  z-index: 10;
+  pointer-events: none;
+  width: 100%;
+  overflow: visible;
+  transform: translateX(-50%) translateY(-50%) translateZ(0) scale(var(--center-svg-scale));
+  opacity: 0.25;
+}
+
+svg text {
+  font-size: 100vw;
+  font-weight: 700;
+  fill: white;
+}
+
+#visual-section {
+    --h2-font-size: 4rem;
+    --h3-font-size: 1.25rem;
+    --default-margin: 8rem;
+    margin-top:0;
+    padding-top: 0;
+    background: #f5f5f7;
+    --brightness-min: 0.33;
+    --brightness-max: 1;
+    --brightness-interpolated: calc( 1 - (var(--brightness-min) + var(--rect-scroll-inverted-progress) * (var(--brightness-max) - var(--brightness-min))) );
+    background: rgba(
+        max(0, calc(245 - var(--brightness-interpolated) * 255 * 1.5)),
+        max(0, calc(245 - var(--brightness-interpolated) * 255 * 1.5)), 
+        max(0, calc(247 - var(--brightness-interpolated) * 255 * 1.5)), 
+        1
+    );
+    .content-wrapper-wide {
+        width: 100lvw;
+        position: relative;
+    }
+    .content-wrapper {
+        width: 100%;
+        max-width: var(--default-container-width);
+        margin: 0 auto;
+        padding: 0 calc(var(--default-container-padding) / 2);
+    }
+    
+    .content {
+        flex: 0 0 100lvw; /* 하나의 화면을 꽉 채우도록 */
+        box-sizing: border-box;
+        padding: 4rem;
+        position: relative;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:repeat(12, 1fr);
+        max-width: var(--small-content-width);
+        max-height: 100%;
+        .content-text {
+            z-index: 2;
+            user-select: none;
+            grid-column: 1 / 9;
+            grid-row: 6 / auto;
+		    will-change: transform;
+            transform: translateZ(0);
+            p {
+                word-break: keep-all;
+                color:#b6b6b9;
+                text-shadow: 
+                    0 0 21px rgba(0, 0, 0, 1), 
+                    0 0 34px rgba(0, 0, 0, 1), 
+                    0 0 55px rgba(0, 0, 0, 1),
+            }
+            strong {
+                color: white;
+                font-weight: 700;
+            }
+        }
+        .content-image { 
+            overflow: visible;
+            visibility: visible;
+            content-visibility: visible;
+            z-index: 1;
+            padding: 1px;
+		    will-change: transform;
+            transform: translateZ(0);
+            user-select: none;
+            grid-column: 5 / 13;
+            grid-row: 4 / 12;
+            img {
+                overflow: visible;
+                visibility: visible;
+                content-visibility: visible;
+                will-change: transform;
+                transform: translateZ(0);
+                object-fit:contain;
+                object-position: right;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .content-title {
+            z-index: 3;
+		    will-change: transform;
+            transform: translateZ(0);
+            grid-column: 1 / 13;
+            grid-row: 1 / 4;
+            user-select: none;
+                h2 {
+                    text-align: left;
+                    color:white;
+                    font-size: var(--h2-font-size);
+                    padding-bottom: calc(var(--h2-font-size) / 2);
+                }
+        }
+    }
+    .content.second {
+        .content-title {
+		  
+        }
+        .content-text {
+		  
+            grid-column: 6 / 13;
+            grid-row: 5 / auto;
+        }        
+        .content-image {
+            grid-column: 1 / 9;
+            grid-row: 4 / 12;
+        }        
+    }
+
+    .title {
+        height:fit-content;
+        position: absolute;
+        inset:0;
+        top:50%;
+        h2 {
+            transition: 0.3s transform cubic-bezier(0.3, 0.1, 0, 1);
+            color:#FFF;
+        }
+        h2 {
+            width: 100%;
+            justify-content: center;
+            align-content: flex-end;
+            font-size: var(--h2-font-size);
+            line-height: 1;
+            display: flex;
+            align-items: end;
+        }
+        h3 {
+            font-size: var(--h3-font-size);
+            padding-top: calc(var(--h3-font-size) / 2 );
+        }
+    }
+
+    #multi-scroll {
+
+    }
+    .multi-scroll-item {
+        width: 100lvw;
+        min-width: 100lvw;
+        height: 100lvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .horizontal-spacer {
+        height: 300lvh;
+    }
+    .horizontal-container {
+        position: sticky;
+        top:0;
+        display: flex;
+        flex-wrap:nowrap;
+    }
+}
+ 
+
+
+#horizontal-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.horizontal-content {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: 100lvh;
+}
+
+.sticky-element {
+    position: sticky;
+    top:0;
+    padding: 0;
+    height: 100%;
+}
+
+.sticky-element-background {
+    position: absolute;
+    background-color:#FFF;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    background-position: bottom;
+    background-size: cover;
+    filter: brightness(var(--rect-scroll-brightness));
+}
+
+.sticky-element-content {
+    .content {
+        display: flex;
+        min-height: 100vh;
+    }
+
+}
+
+
+@media (max-width: 1280px) and (min-width: 1025px) {
+    /* 1025 ~ 1280 */
+    #visual-section {
+        --h2-font-size: 3rem;
+        --h3-font-size: 1.5rem;
+        .content {
+            padding: 3rem;
+        }
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  /* 769 ~ 1024 */
+    #visual-section {
+        --h2-font-size: clamp(2.5rem, max(5lvh, 5lvw), 3rem);
+        --h3-font-size: clamp(1.125rem, max(3lvh, 3lvw), 1.25rem);
+        .content {
+            padding: 2rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #visual-section {
+        --h2-font-size: clamp(2rem, max(5lvh, 5lvw), 2.5rem);
+        --h3-font-size: clamp(1rem, max(3lvh, 3lvw), 1.125rem);
+
+        .content {
+            padding: 0;
+            .content-title {
+            
+            }
+            .content-text {
+            grid-column: 1 / 11;
+            grid-row: 5 / auto;
+
+            }        
+            .content-image {
+            grid-column: 3 / 13;
+            }    
+        }
+
+        .content.second {
+            .content-title {
+            
+            }
+            .content-text {
+                grid-column: 5 / 13;
+                grid-row: 5 / auto;
+            }        
+            .content-image {
+                grid-column: 1 / 11;
+            }        
+        }
+
+    }
+  /* 최대 768 */
+}
