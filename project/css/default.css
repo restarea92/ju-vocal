@@ -61,10 +61,10 @@
 
 @media (max-width: 768px) {
     :root {
-        --fs-body-base: calc(var(--base-font-size) * 1);
-        --fs-title-base: calc(var(--base-font-size) * 1.125);
+        --fs-body-base: calc(var(--base-font-size) * 1.125);
+        --fs-title-base: calc(var(--base-font-size) * 1.5);
         
-        --fs-copyright: calc(var(--fs-body-base) * 1.125);
+        --fs-copyright: calc(var(--fs-body-base) * 1.25);
 
         --max-container-width: calc(100svw - 2rem);
         --max-content-width: calc(var(--max-container-width) - 2rem);
@@ -73,6 +73,14 @@
     }
 }
 
+@media (max-width: 480px) {
+    :root {
+        --fs-body-base: calc(var(--base-font-size) * 1);
+        --fs-title-base: calc(var(--base-font-size) * 1.25);
+        
+        --fs-copyright: calc(var(--fs-body-base) * 1.125);
+    }
+}
 
  /* Override Common Container Style - 공통 컨테이너 스타일 */
 .common-container {
