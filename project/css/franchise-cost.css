@@ -280,6 +280,9 @@
 				
 				.advantage-icon {
 					font-size: var(--fs-title);
+					.material-symbols-outlined {
+						font-size: var(--fs-title);
+					}
 					margin-bottom: 1rem;
 				}
 				
