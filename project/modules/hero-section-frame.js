@@ -50,8 +50,6 @@ const app = {
 
         
         animateFrames() {
-            console.log({ currentFrame: this.currentFrame, targetFrame: this.targetFrame });
-
             if (this.currentFrame !== this.targetFrame) {
                 this.currentFrame = this.targetFrame;
                 this.drawImage(this.currentFrame);
