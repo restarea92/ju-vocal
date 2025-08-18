@@ -20,6 +20,9 @@
     display: grid;
     padding: 0;
 
+    .content-title {
+        color:white;
+    }
     .content-text {
         grid-column: 3 / 11;
         grid-row: 2 / 7;
@@ -149,6 +152,7 @@
     }
 
 }
+
 .courses.common-container {
     padding-top: 8rem;
     background: black;
