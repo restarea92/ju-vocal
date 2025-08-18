@@ -230,7 +230,7 @@ const horizontalScroll = {
         firstInTimeline.to(image, {
             yPercent: 0,
             duration: 0.6,
-            filter: "blur(0px) brightness(0.25)",
+            filter: "blur(0px) brightness(0.33)",
         }, 0);
         
         firstInTimeline.to(title, {
