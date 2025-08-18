@@ -93,7 +93,7 @@
 				content: counter(step-counter);
 				position: absolute;
 				top: -15px;
-				left: 1rem;
+				left: 2rem;
 				width: var(--fs-title);
 				height: var(--fs-title);
 				background: #1d1d1f;
