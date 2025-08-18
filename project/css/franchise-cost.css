@@ -92,7 +92,7 @@
 			&::before {
 				content: counter(step-counter);
 				position: absolute;
-				top: calc(-1 * var(--fs-title) / 2);
+				top: calc(var(--fs-title) / 2);
 				left: 2rem;
 				width: var(--fs-title);
 				height: var(--fs-title);
