@@ -359,7 +359,7 @@
 
 	.ceo-message-text {
 		background: var(--bg-glass);
-		padding: calc(var(--default-container-padding));
+		padding: calc(var(--default-container-padding) / 2);
 		border-radius: 25px;
 		backdrop-filter: var(--backdrop-blur);
 		border: var(--border-glass);
