@@ -51,8 +51,8 @@
     :root {
         --fs-base-title: calc(var(--fs-base) * 1.75);
 
-        --max-container-width: 992px;
-        --max-content-width: 944px;
+        --max-container-width: 736px;
+        --max-content-width: 702px;
         --max-container-width-small: var(--max-container-width);
         --max-content-width-small: var(--max-content-width);
     }
