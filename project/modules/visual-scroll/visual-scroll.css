@@ -356,7 +356,7 @@ svg text {
             
             }
             .content-text {
-                grid-column: 4 / 13;
+                grid-column: 3 / 13;
                 grid-row: 5 / auto;
             }        
             .content-image {
