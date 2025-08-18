@@ -94,8 +94,8 @@
 				position: absolute;
 				top: -15px;
 				left: 2rem;
-				width: 50px;
-				height: 50px;
+				width: var(--fs-title);
+				height: var(--fs-title);
 				background: #1d1d1f;
 				color: white;
 				border-radius: 50%;
