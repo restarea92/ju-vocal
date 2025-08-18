@@ -123,11 +123,11 @@ const horizontalScroll = {
         const { text, image, title, text2, image2, title2 } = elements;
 
         if (text)  gsap.set(text,  { xPercent: 0, yPercent: 75 });
-        if (image) gsap.set(image, { xPercent: 0, yPercent: 100, filter: "blur(4px) brightness(0.25)"});
+        if (image) gsap.set(image, { xPercent: 0, yPercent: 100, filter: "blur(0) brightness(0.25)"});
         if (title) gsap.set(title, { xPercent: 0, yPercent: 100 });
 
         if (text2)  gsap.set(text2,  { xPercent: 75, yPercent: 0, });
-        if (image2) gsap.set(image2, { xPercent: 50, yPercent: 0, filter: "blur(4px) brightness(0.25)"});
+        if (image2) gsap.set(image2, { xPercent: 50, yPercent: 0, filter: "blur(0) brightness(0.25)"});
         if (title2) gsap.set(title2, { xPercent: 25, yPercent: 0, });
     },
 
@@ -279,7 +279,7 @@ const horizontalScroll = {
         secondInTimeline.to(image2, {
             xPercent: 0,
             duration: 0.6,
-            filter: "blur(0px) brightness(0.5)",
+            filter: "blur(0px) brightness(0.33)",
         }, 0);
         
         secondInTimeline.to(title2, {
