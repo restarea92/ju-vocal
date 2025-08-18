@@ -143,7 +143,7 @@ svg text {
         margin:0 auto;
         display:grid;
         grid-template-columns:repeat(12, 1fr);
-        max-width: var(--max-container-width);
+        max-width: var(--max-content-width);
         max-height: 100%;
         .content-text {
             z-index: 2;
