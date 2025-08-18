@@ -103,7 +103,6 @@
 				align-items: center;
 				justify-content: center;
 				font-weight: bold;
-				font-size: var(--font-big);
 				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 			}
 			
@@ -117,7 +116,6 @@
 			
 			.step-description {
 				color: #6e6e73;
-				font-size: var(--font-small);
 				line-height: 1.6;
 				margin: 0;
 				padding-left: 1rem;
