@@ -241,7 +241,7 @@
                 margin-top: 8rem;
             }
             h3, h2 {
-                font-size: calc(var(--font-size-common-title));
+                font-size: calc(var(--fs-title));
                 grid-column: 2 / 12;
                 word-break: keep-all;
             }
@@ -486,7 +486,7 @@
 			margin: 0 auto;
 
 			h2 {
-				font-size: var(--font-size-common-title);
+				font-size: var(--fs-title);
 				color: white;
 				margin-bottom: 2rem;
 				background: linear-gradient(45deg, #ffffff, #aafff9);
@@ -572,11 +572,11 @@
 			}
 
 			.card-icon {
-				font-size: var(--fs-primary-title);
+				font-size: var(--fs-title);
 				margin-bottom: 1.5rem;
 				display: block;
 				span.material-symbols-outlined {
-					font-size: var(--font-h1);
+					font-size: var(--fs-title);
 				}
 			}
 			
@@ -590,7 +590,7 @@
 			.card-description {
 				color: #666;
 				line-height: 1.6;
-				font-size: var(--font-body);
+				font-size: var(--fs-body);
 				margin-bottom: 1.5rem;
 			}
 			
