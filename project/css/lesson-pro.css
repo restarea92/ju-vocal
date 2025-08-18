@@ -262,32 +262,32 @@ a.contact-button:hover {
     .faq-item {
         background: #2c2c3c;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    }
-    .faq-item:hover {
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
-    }
 
-    .faq-question {
-        background: #2c2c3c;
-    }
+        &:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+        }
 
-    .faq-question:hover {
-        background: rgba(99, 102, 241, 0.15);
-    }
+        .faq-question {
+            background: #2c2c3c;
+        }
 
-    .faq-question span {
-        color: #ffffff;
-    }
+        .faq-question:hover {
+            background: rgba(99, 102, 241, 0.15);
+        }
 
-    .faq-answer {
-        background: rgba(45, 45, 65, 0.85);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
+        .faq-question span {
+            color: #ffffff;
+        }
 
-    .faq-answer p {
-        color: rgba(255, 255, 255, 0.85);
-    }
+        .faq-answer {
+            background: rgba(45, 45, 65, 0.85);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
+        .faq-answer p {
+            color: rgba(255, 255, 255, 0.85);
+        }
+    }
 }
 
 
