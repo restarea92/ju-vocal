@@ -478,8 +478,8 @@
 
 	/* 코치들 사이 간격 추가 */
 	.coach-content + .coach-content {
-		margin-top: 8rem;
-		padding-top: 8rem;
+		margin-top: var(--fs-primary-title);
+		margin-top: var(--fs-primary-title);
 		border-top: 1px solid rgba(0,0,0,0.1);
 	}
 
@@ -529,9 +529,6 @@
 				grid-row: 2 / 3;			
 			}
 		}
-		.coach-content + .coach-content {
-			margin-top: 4rem;
-			padding-top: 4rem;
-		}
+
 	}
 }
