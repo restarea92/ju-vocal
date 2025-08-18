@@ -5,7 +5,7 @@
 .hidden-comment {
     display: none!important;
 }
-div:has(.hidden-comment) {
+div.inside:has(.hidden-comment) {
     display: none!important;
 }
 
