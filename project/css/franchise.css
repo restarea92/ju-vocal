@@ -582,6 +582,7 @@
 			margin: 0 auto;
 
 			h2 {
+				font-size: var(--fs-title);
 				color: white;
 				margin-bottom: 2rem;
 				background: linear-gradient(45deg, #ffffff, #aafff9);
@@ -591,6 +592,7 @@
 			}
 
 			p {
+				font-size: var(--fs-body);
 				color: #e0e0e0;
 				line-height: 1.475;
 				margin-bottom: 2rem;
@@ -610,6 +612,7 @@
 				border: var(--border-glass);
 
 				.stat-number {
+					font-size: var(--fs-subtitle);
 					font-weight: bold;
 					color: #4ECDC4;
 					margin-bottom: 0.5rem;
