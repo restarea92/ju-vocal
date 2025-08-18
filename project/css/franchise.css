@@ -297,7 +297,7 @@
 					
 					.detail-text {
 						color: #555;
-						font-size: var(--fs-copyright);
+						font-size: var(--fs-body);
 						line-height: 1.5;
 					}
 				}
