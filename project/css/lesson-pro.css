@@ -75,6 +75,7 @@
         display: grid;
         grid-template-columns: 1fr;
     }
+
     .content {
         #landscapeVideo {
             display: block;
@@ -106,7 +107,6 @@
         padding: 0;
         border: none;
         border-radius: 50px;
-        font-size: var(--font-body);
         font-weight: 600;
         cursor: pointer;
         transition: all 0.3s ease;
