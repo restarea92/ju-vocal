@@ -278,6 +278,7 @@
         .course-card {
             padding: 0;
         }
+
         h2.content-title {
             margin-bottom:2rem;
         }
@@ -292,7 +293,7 @@
         }
 
         .course-features {
-            padding: 1rem;
+            padding: 2rem;
             grid-column: 1 / 3;
             grid-row: 1 / 2;
             z-index: 1;
