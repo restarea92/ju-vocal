@@ -6,16 +6,17 @@
     --base-body-font-size: 17px;
     --base-font-size: 1rem;
 
-    --fs-base: var(--base-font-size);
+    --fs-body-base: var(--base-font-size);
+    --fs-title-base: calc(var(--base-font-size) * 2);
 
-    --fs-primary-title: calc(var(--fs-base) * 4);
-    --fs-title: calc(var(--fs-base) * 3);
+    --fs-primary-title: calc(var(--fs-title-base) * 2);
+    --fs-title: calc(var(--fs-title-base) * 3 / 2);
     --fs-subtitle: calc(var(--fs-title) * 0.625);
 
-    --fs-section-title: calc(var(--fs-base-title) * 3 / 4);
+    --fs-section-title: calc(var(--fs-title-base) * 3 / 4);
     --fs-section-subtitle: calc(var(--fs-section-title) * 0.625);
 
-    --fs-body: calc(var(--fs-base) * 1.25);
+    --fs-body: calc(var(--fs-body-base) * 1.25);
     --fs-copyright: calc(var(--fs-body) * 1.25);
 
     /* init widths */
@@ -59,7 +60,6 @@
 
 @media (max-width: 768px) {
     :root {
-        --fs-base: calc(var(--fs-base) / 1.25);
 
         --max-container-width: calc(100svw - 2rem);
         --max-content-width: calc(var(--max-container-width) - 2rem);
