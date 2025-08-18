@@ -375,6 +375,7 @@
 					}
 				}
                 h3 {
+					font-size: var(--fs-primary-title);
 					text-align: center;
 					padding-right: 0;
                     grid-column: 4 / 10;
@@ -468,104 +469,104 @@
 
 @media (max-width: 768px) {
 
-/* Services Section */
-.services.common-container {
-    .grid-box {
-        .content-title {
-            grid-column: 2 / 12;
-        }
-        .grid-content {
-			grid-template-columns: repeat(12, minmax(0, 1fr));
-            display: grid;
-			gap: 0.5rem 0;
-            grid-column: 1 / 13;
-            margin-top: 4rem;
-            &:nth-child(n+2) {
-                margin-top: 4rem;
-            }
+	/* Services Section */
+	.services.common-container {
+		.grid-box {
+			.content-title {
+				grid-column: 2 / 12;
+			}
+			.grid-content {
+				grid-template-columns: repeat(12, minmax(0, 1fr));
+				display: grid;
+				gap: 0.5rem 0;
+				grid-column: 1 / 13;
+				margin-top: 4rem;
+				&:nth-child(n+2) {
+					margin-top: 4rem;
+				}
 
-            .content-text {
-                grid-column: 2 / 12;
-            }
+				.content-text {
+					grid-column: 2 / 12;
+				}
 
-            &.content1 {
-                h3 {
-                    grid-column: 2 / 12;
-                }
-                .content-text {
-                    grid-column: 1 / 13;
-                }
-            }
-
-            &.content2 {
-                h3 {
-                    grid-column: 1 / 13;
-					grid-row: 1 / 2;
-                }
-                .content-text {
-                    grid-column: 1 / 13;
-					grid-row: 3 / 4;
-                }
-				.content-visual {
-					grid-column: 1 / 13;
-					grid-row: 2 / 3;
-					width: 100%;
-					height: 200px;
-					img {
-						height: 100%;
-						width: 100%;
+				&.content1 {
+					h3 {
+						grid-column: 2 / 12;
+					}
+					.content-text {
+						grid-column: 1 / 13;
 					}
 				}
-            }
 
-            &.content3 {
-                h3 {
-                    grid-column: 1 / 13;
-					grid-row: 1 / 2;
-                }
-                .content-text {
-                    grid-column: 1 / 13;
-					grid-row: 3 / 7;
-					a {
-						font-size: 0.875rem;
-						color: #06c;
-						text-decoration: none;
-						span {
-							text-decoration: none;
+				&.content2 {
+					h3 {
+						grid-column: 1 / 13;
+						grid-row: 1 / 2;
+					}
+					.content-text {
+						grid-column: 1 / 13;
+						grid-row: 3 / 4;
+					}
+					.content-visual {
+						grid-column: 1 / 13;
+						grid-row: 2 / 3;
+						width: 100%;
+						height: 200px;
+						img {
+							height: 100%;
+							width: 100%;
 						}
-						&:hover {
+					}
+				}
+
+				&.content3 {
+					h3 {
+						grid-column: 1 / 13;
+						grid-row: 1 / 2;
+					}
+					.content-text {
+						grid-column: 1 / 13;
+						grid-row: 3 / 7;
+						a {
+							font-size: 0.875rem;
+							color: #06c;
 							text-decoration: none;
 							span {
-								text-decoration: underline;
+								text-decoration: none;
 							}
-							span.material-symbols-outlined {
-								text-decoration: none!important;
+							&:hover {
+								text-decoration: none;
+								span {
+									text-decoration: underline;
+								}
+								span.material-symbols-outlined {
+									text-decoration: none!important;
+								}
 							}
 						}
+						.shape-element {
+							display: none;
+						}
 					}
-					.shape-element {
-						display: none;
-					}
-                }
-				.content-visual {
-					padding: 0.5rem 0;
-					grid-column: 1 / 13;
-					grid-row: 2 / 3;
-					display: flex;
-					justify-content: center;
-					z-index: -1;
-					height: 100%;
-					img {
-						width: 100%;
+					.content-visual {
+						padding: 0.5rem 0;
+						grid-column: 1 / 13;
+						grid-row: 2 / 3;
+						display: flex;
+						justify-content: center;
+						z-index: -1;
 						height: 100%;
-						object-fit: cover;
-						object-position: center;
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							object-position: center;
+						}
 					}
 				}
-            }
-        }
-    }
-}
+			}
+		}
+	}
 }
 
 /* Vision Section */
