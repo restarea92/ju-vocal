@@ -159,26 +159,21 @@
 				color: white;
 			}
 		}
-		a {
-			display: inline-block;
-			padding: 0.5em 1.2em;
-			background: linear-gradient(90deg, #4da3ff 0%, #667eea 100%);
-			color: white;
-			font-size: var(--fs-body);
-			border: none;
-			border-radius: 8px;
-			font-weight: 600;
-			text-decoration: none;
-			transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-			box-shadow: 0 2px 8px rgba(77,163,255,0.08);
-
-			&:hover {
-				background: linear-gradient(90deg, #667eea 0%, #4da3ff 100%);
-				box-shadow: 0 4px 16px rgba(77,163,255,0.15);
-				transform: translateY(-2px) scale(1.04);
-				text-decoration: none;
-			}
-		}
+        a {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            position: relative;
+            background: var(--white);
+            transition: all 0.3s ease;
+            display: flex;
+            gap:0.5rem;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            &:hover {
+                background: rgba(99, 102, 241, 0.05);
+            }
+        }
 	}
 
 	.story-visual {
