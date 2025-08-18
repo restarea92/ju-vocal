@@ -20,9 +20,6 @@
     display: grid;
     padding: 0;
 
-    h2.content-title {
-        color:white;
-    }
     .content-text {
         grid-column: 3 / 11;
         grid-row: 2 / 7;
@@ -305,7 +302,9 @@
 /* Process Section - Dark Theme */
 .process.common-container {
     background: #121212; /* 어두운 배경 */
-
+    .content-title {
+        color:white;
+    }
     .step {
         background: rgba(255, 255, 255, 0.03); /* 살짝 밝은 카드 배경 */
         border: 1px solid rgba(255, 255, 255, 0.08);
