@@ -63,13 +63,6 @@
     --backdrop-blur: blur(20px);
     --transition-smooth: all 0.3s ease;
     --title-overlay-scale: 2;
-    
-    /* Typography Scale */
-    --fs-primary-title: 4rem;
-    --fs-title: 3rem;
-    --fs-subtitle: 2rem;
-    --fs-body: 1.125rem;
-    --fs-copyright: 0.875rem;
 
 	--fs-typography: 2rem;
 
