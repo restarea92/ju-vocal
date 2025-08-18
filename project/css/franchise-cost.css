@@ -137,14 +137,14 @@
 		margin-bottom: 4rem;
 		
 		.cost-title {
-			font-size: var(--font-h2);
+			font-size: var(--fs-title);
 			font-weight: 800;
 			margin-bottom: 1rem;
 			color: #1d1d1f;
 		}
 		
 		.cost-subtitle {
-			font-size: var(--font-big);
+			font-size: var(--fs-subtitle);
 			color: #6e6e73;
 			margin-bottom: 2rem;
 		}
@@ -156,7 +156,7 @@
 			border: 1px solid rgba(0, 0, 0, 0.05);
 			
 			.highlight-text {
-				font-size: var(--font-sub-title);
+				font-size: var(--fs-subtitle);
 				font-weight: 700;
 				margin-bottom: 0.5rem;
 				color: #1d1d1f;
