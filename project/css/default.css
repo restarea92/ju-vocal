@@ -6,7 +6,7 @@
     --base-body-font-size: 17px;
     --base-font-size: 1rem;
 
-    --fs-base: calc(var(--base-font-size) * 1.25);
+    --fs-base: var(--base-font-size);
 
     --fs-primary-title: calc(var(--fs-base) * 4);
     --fs-title: calc(var(--fs-base) * 3);
@@ -15,7 +15,7 @@
     --fs-section-title: calc(var(--fs-base-title) * 3 / 4);
     --fs-section-subtitle: calc(var(--fs-section-title) * 0.625);
 
-    --fs-body: calc(var(--fs-base));
+    --fs-body: calc(var(--fs-base) * 1.25);
     --fs-copyright: calc(var(--fs-body) * 1.25);
 
     /* init widths */
