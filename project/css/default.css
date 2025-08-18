@@ -63,7 +63,7 @@
 @media (max-width: 768px) {
     :root {
         --fs-body-base: calc(var(--base-font-size) * 1);
-        --fs-title-base: calc(var(--base-font-size) * 1.25);
+        --fs-title-base: calc(var(--base-font-size) * 1.125);
         
         --fs-copyright: calc(var(--fs-body-base) * 1.125);
 
