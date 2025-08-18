@@ -18,8 +18,6 @@
     min-height: fit-content;
     background: black;
     display: grid;
-    align-items: center;
-    position: relative;
     padding: 0;
 
     .content-text {
