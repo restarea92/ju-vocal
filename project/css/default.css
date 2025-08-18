@@ -12,14 +12,14 @@
     /* Title */
     --fs-primary-title: calc(var(--fs-title-base) * 2);
     --fs-title: calc(var(--fs-title-base) * 1.5);
-    --fs-subtitle: calc(var(--fs-title) * 0.625);
+    --fs-subtitle: calc(var(--fs-title) * 0.75);
 
     --fs-section-title: calc(var(--fs-title-base) * 3 / 4);
     --fs-section-subtitle: calc(var(--fs-section-title) * 0.625);
 
     /* Body */
     --fs-body: calc(var(--fs-body-base));
-    --fs-copyright: calc(var(--fs-body-base) * 1.125);
+    --fs-copyright: calc(var(--fs-body-base) * 1.25);
 
     /* init widths */
     --logo-width: 100px;
