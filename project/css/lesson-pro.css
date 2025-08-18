@@ -20,7 +20,7 @@
     display: grid;
     padding: 0;
 
-    .content-title {
+    h2.content-title {
         color:white;
     }
     .content-text {
