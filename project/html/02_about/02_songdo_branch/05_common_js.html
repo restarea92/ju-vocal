@@ -1,0 +1,57 @@
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+const options = {
+	observerOptions: {
+		threshold: 0.1,
+		rootMargin: '0px 0px -50px 0px'
+	},
+	transformYOffset: 30 // 예: transform: translateY(100px) 고려용
+};
+
+
+	const observer = new IntersectionObserver(function(entries) {
+		entries.forEach(entry => {
+			const el = entry.target;
+
+			if (entry.isIntersecting) {
+				if (!el.classList.contains('visible')) {
+					el.classList.add('visible');
+				}
+
+			} else {
+				const elementTop = entry.boundingClientRect.top;
+				const viewportTop = entry.rootBounds.top;
+
+				// 아래로 스크롤해 나간 경우에만 클래스 제거
+				if (elementTop > viewportTop) {
+					el.classList.remove('visible');
+				}
+			}
+		});
+	}, options.observerOptions);
+
+	document.querySelectorAll('.fade-in').forEach(el => {
+		const rect = el.getBoundingClientRect();
+		console.log(rect.bottom);
+		if (rect.bottom < 0) {
+			el.classList.add('visible');
+		}
+
+		// 관찰 시작
+		observer.observe(el);
+	});
+
+    document.querySelectorAll('.entrance-up').forEach(el => {
+		const rect = el.getBoundingClientRect();
+		console.log(rect.bottom);
+		if (rect.bottom < 0) {
+			el.classList.add('visible');
+		}
+
+		// 관찰 시작
+		observer.observe(el);
+	});
+
+});
+</script>

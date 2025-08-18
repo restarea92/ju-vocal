@@ -1,0 +1,323 @@
+/* ==========================================================================
+   CSS Variables Reference
+   ==========================================================================
+   📌 Font 관련
+   --default-font-family
+   --base-body-font-size
+   --base-font-size
+   --fs-body-base
+   --fs-title-base
+   --fs-primary-title
+   --fs-title
+   --fs-subtitle
+   --fs-section-title
+   --fs-section-subtitle
+   --fs-body
+   --fs-copyright
+
+   📌 Width 관련
+   --logo-width
+   --default-container-width
+   --default-content-width
+   --default-container-width-small
+   --default-content-width-small
+
+   --max-container-width
+   --max-content-width
+   --max-container-width-small
+   --max-content-width-small
+
+   📌 Spacing 관련
+   --default-container-padding
+   --default-logo-margin
+   --default-navbar-padding
+
+   📌 Media Query에서 변경되는 변수
+   - (1025px~1280px)
+     --max-container-width
+     --max-content-width
+     --max-container-width-small
+     --max-content-width-small
+
+   - (769px~1024px)
+     --max-container-width
+     --max-content-width
+     --max-container-width-small
+     --max-content-width-small
+
+   - (최대 768px)
+     --fs-body-base
+     --fs-title-base
+     --max-container-width
+     --max-content-width
+     --max-container-width-small
+     --max-content-width-small
+================================================================== */
+
+
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary: #ec4899;
+    --accent: #f59e0b;
+    --bg-dark: #0f172a;
+    --bg-light: #f8fafc;
+    --text-dark: #86868b;
+    --text-light: #a6a6a9;
+    --white: #ffffff;
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 1280px) and (min-width: 1025px) {
+    /* 1025 ~ 1280 */
+    :root {        
+        --font-size-primary-title: 3rem;
+        --font-size-common-title: 2.5rem;
+        --font-size-sub-title: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+/* 769 ~ 1024 */
+    :root {    
+        --font-size-primary-title: clamp(2.5rem, max(5lvh, 5lvw), 3rem);
+        --font-size-common-title: 2rem;
+        --font-size-sub-title: clamp(1.125rem, max(3lvh, 3lvw), 1.25rem);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {   
+        --font-size-common-title: 1.75rem;
+        --font-size-primary-title: clamp(2rem, max(5lvh, 5lvw), 2.5rem);
+        --font-size-sub-title: clamp(1rem, max(3lvh, 3lvw), 1.125rem);
+    }
+}
+
+
+.inside:has(.hidden-comment) {
+    display: none;
+}
+
+
+
+/* 공통 컨테이너 스타일 override */
+
+
+/* 공통 컨테이너 스타일 */
+.common-container {
+	position: relative;
+	h2, h3, h4, h5 {
+		margin: 0;
+	}
+	padding: 4rem 0;
+	.content-wrapper {
+        max-width: var(--default-container-width);
+        padding: 0 calc(var(--default-container-padding) / 2);
+		margin: 0 auto;
+        display: block;
+	}
+    h2.content-title {
+        text-align: center;
+        font-weight: 800;
+        margin-bottom: 4rem;
+        font-size: var(--font-size-common-title);
+    }
+    .content {
+        border-radius: 1rem;
+        min-height: 50lvh;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        width: 100%;
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 750;
+            color: black;
+        }
+        a {
+            color: #06c;
+            &:hover {
+                text-decoration: underline;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+
+
+
+.lesson.common-container {
+    min-height: 75vh;
+    background: linear-gradient(135deg, 
+        rgba(99, 102, 241, 0.1) 0%, 
+        rgba(236, 72, 153, 0.1) 50%, 
+        rgba(245, 158, 11, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* Typography */
+    h1 {
+        font-size: var(--font-h1);
+        font-weight: 800;
+    }
+
+    h2 {
+        font-size: var(--font-h2);
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: var(--font-h3);
+        font-weight: 600;
+    }
+
+    p {
+        font-size: var(--font-body);
+    }
+
+    .content {
+        background: unset;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .content-text h1 {
+        margin-bottom: 24px;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .content-text p {
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 40px;
+    }
+
+    .cta-button {
+        background: var(--gradient);
+        color: var(--white);
+        padding: 18px 36px;
+        border: none;
+        border-radius: 50px;
+        font-size: var(--font-body);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        a {
+            color: inherit;
+            text-decoration: unset;
+            &:hover {
+                text-decoration: unset;
+            }
+        }
+    }
+
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.3);
+    }
+
+    .cta-button:active {
+        transform: translateY(-1px);
+    }
+
+    .content-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        overflow: hidden;
+        color: var(--white);
+        font-size: 1.5rem;
+        font-weight: 600;
+        box-shadow: var(--shadow);
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 968px) {
+    :root {
+        --font-h1: 3rem;
+        --font-h2: 2rem;
+        --font-h3: 1.5rem;
+        
+    }
+
+    .lesson.common-container {
+        min-height: unset;
+        padding:0;
+        align-items: stretch;
+        .content {
+            min-height: 500px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin:0;
+            height: 100%;
+        }
+        .content-wrapper {
+            padding: 0;
+            max-width: 100%;
+        }
+        .content-text, .content-visual {
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+            height: fit-content;
+            flex:1;
+        }
+        .content-text {
+            z-index: 2;
+            padding: 1rem;
+        }
+        .content-text p {
+            color: var(--text-light);
+        }
+        .content-text h1 {
+            margin-top:0;
+        }
+        .content-visual {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            border-radius: 0;
+            background: black;
+            img {
+                filter: brightness(0.5) blur(4px);
+            }
+        }
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+    :root {
+        --font-h1: 2rem;
+        --font-h2: 1.75rem;
+        --font-h3: 1.5rem;
+        --font-body: 1rem;
+    }
+
+
+}

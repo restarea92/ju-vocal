@@ -1,0 +1,355 @@
+<style>
+
+
+/* Contact CTA */
+.contact-cta {
+    background: var(--gradient);
+    text-align: center;
+    color: var(--white);
+}
+
+.contact-cta .content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.contact-cta h2 {
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    font-size: var(--font-size-common-title);
+}
+
+.contact-cta p {
+    font-size: var(--font-body);
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.contact-button {
+    background: var(--white);
+    color: var(--primary);
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: var(--font-body);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+    
+
+/* FAQ Section */
+.faq.common-container {
+    background: linear-gradient(135deg, 
+        rgba(99, 102, 241, 0.05) 0%, 
+        rgba(236, 72, 153, 0.05) 100%);
+
+    .content-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .content-title {
+        text-align: center;
+        font-weight: 800;
+        color: var(--text-primary);
+    }
+
+    .faq-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .faq-item {
+        background: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .faq-question {
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            position: relative;
+            background: var(--white);
+            transition: all 0.3s ease;
+            display: flex;
+            gap:0.5rem;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            &:hover {
+                background: rgba(99, 102, 241, 0.05);
+            }
+
+            span {
+                font-size: 1rem;
+                font-weight: 800;
+                color: var(--text-primary);
+                line-height: 1.4;
+            }
+        }
+
+        .faq-answer {
+            max-height: 0;
+            height: 0;
+            overflow: hidden;
+            background: rgba(248, 250, 252, 0.8);
+            padding: 0 2rem;
+            border-top: 1px solid #e5e7eb;
+
+            p {
+                color: var(--text-secondary);
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+            }
+        }
+            .expand-icon {
+                transition: transform 0.3s ease;
+            }
+        &.active {
+            .faq-answer {
+                max-height: fit-content;
+                height: auto;
+                padding: 1rem 2rem;
+            }
+            .expand-icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+}
+</style>
+<!-- FAQ Section -->
+<div id="faq" class="faq common-container">
+    <div class="content-wrapper">
+        <h2 class="content-title">무엇이 궁금하세요?</h2>
+        <div class="faq-container">
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>나이가 많은데도 배울 수 있을까요?</span>
+                    <span class="material-symbols-outlined expand-icon">stat_minus_1</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        발성은 추상적인 느낌이 아닌, 몸을 통해 소리를 내는 것이며 나이가 들어도 운동을 하면 체력이 늘 듯, 보컬과 발성도 마찬가지입니다. 힘을 정확하게 주는 법을 배우는데에 있어서 나이는 중요하지 않으며 노래의 표현은 오히려 나이가 들수록 더욱 깊어지는 경향을 보입니다. 용기를 내어 방문해 주세요!
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>몇달을 배워야 음역대가 상승할까요?</span>
+                    <span class="material-symbols-outlined expand-icon">stat_minus_1</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        음역대를 상승하는 것은 그렇게 긴 기간이 걸리지 않습니다. 고음을 내지 못하는 것은 보통 올바른 위치의 힘을 주지 못하기 때문입니다. 올바른 위치에 힘을 줄 수 있는 수업을 받게 되신다면, 통계상 빠른 분들은 당일 보통 분들은 1달에서 2달정도 시간이 소요됩니다!
+                    </p>                
+                </div>
+            </div>
+
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>저는 음치에 박치인 것 같아요</span>
+                    <span class="material-symbols-outlined expand-icon">stat_minus_1</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        많은 분들이 말씀하시는 음치라는 개념은 보통 음정이 떨어지거나 고음이 올라가지 않을 때 많이 사용하시는 경향이 있습니다. 또한 박치는 이러한 분들이 노래를 부르실 때 체력적인 과부하가 걸려 박자가 밀리는 경향이 있습니다. 이는 발성으로 해결이 가능합니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>노래를 해본 적이 없어도 될까요?</span>
+                    <span class="material-symbols-outlined expand-icon">stat_minus_1</span>
+                </div>
+                <div class="faq-answer">
+                    <p></p>
+                        노래 뿐만이 아닌 음악은 반드시 해본사람만 할 수 있는 그런 특권이 주어지는 분야가 아닙니다! 누구든 할 수 있고, 누구든 배울 수 있으며, 가장 진입장벽이 낮은 분야가 노래라고 생각합니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>어떤 노래는 되고 어떤 노래는 안돼요</span>
+                    <span class="material-symbols-outlined expand-icon">stat_minus_1</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        노래마다 차이점이 있는 것은 우리가 발성의 중심이 없는 것이 가장 큰 이유입니다. 가수마다 음색이 다르고 그 음색을 따라가려고 하는 경향이 많은 분들이 특히 이런 증상을 많이 호소합니다. 이는 발성과정에서의 정확한 힘의 위치를 배우게 된다면 쉽고 빠르게 해결됩니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>2~3곡만 불러도 목이 나가요</span>
+                    <span class="material-symbols-outlined expand-icon">stat_minus_1</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        목이 빨리 쉬는 이유는 주로 숨의 낭비가 심하거나 성대의 사용량이 높게 되면 나타나는 보컬의 흔한 증상입니다. 이는 균형있는 발성을 필요로 하며, 이는 JU가 강조하는 정확한 힘으로서 해결이 가능합니다!
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>고음이 되는 발음과 안되는 발음들이 있어요</span>
+                    <span class="material-symbols-outlined expand-icon">stat_minus_1</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        발음은 여러가지 요인이 있지만 주로 숨의 낭비가 심하신 분들이 숨이 강하고 빠르게 나가면서 입모양을 유지를 못하는 경우. 즉, 입이 과하게 옆으로 찢어지거나 과하게 커지면 과한 힘의 사용으로 발성이 올바르지 못한 방향으로 흘러가게 되며 생기는 증상으로, JU의 커리큘럼 중 올바른 힘과 작은 입모양으로 쉽게 해결이 가능합니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>어떤날엔 잘되고 어떤날엔 진짜 안돼요</span>
+                    <span class="material-symbols-outlined expand-icon">stat_minus_1</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        해당 질문이 바로 기복에 대한 질문입니다. 기복 또한 발성의 중심이 되는 힘을 사용하게 되면 쉽게 해결이 가능합니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>고음은 타고나야 한다고 들었는데요.</span>
+                    <span class="material-symbols-outlined expand-icon">stat_minus_1</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        고음을 타고난 분들도 계십니다. 다만 이 것은 정제된 발성이 아닌 경우가 압도적으로 많습니다. 또 고음은 타고나지 못했다 해서 못하는 것이 아닌 단순한 반복연습으로도 누구나 고음을 낼 수 있습니다.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>두성이, 믹스보이스가 뭐에요?</span>
+                    <span class="material-symbols-outlined expand-icon">stat_minus_1</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        보컬을 하며 가장 어려웠던 시기가 언제냐고 묻는다면 바로 이러한 용어가 무분별하게 사용되며, 만들어졌던 시기라고 자신있게 말씀드릴 정도입니다. 우리가 근육의 이름을 안다고 운동선수와 같은 퍼포먼스를 낼 수 없 듯 용어 또한 마찬가지입니다.<br>
+                        두성은 고음 믹스보이는 중음 등등 쉬운 용어를 그럴싸하게 쓰는 것은 JU에서 가장 경계하고 있는 것들입니다!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact CTA -->
+<div id="contact" class="contact-cta common-container">
+    <div class="content-wrapper">
+        <h2>그럼, 바로 시작해볼까요?</h2>
+        <p>전문 강사진과 함께하는 특별한 여정을 시작하세요.</p>
+        <a href="/23" class="contact-button">
+            무료 상담 신청하기
+        </a>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // FAQ 초기화
+    function initializeFAQ() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            question.addEventListener('click', () => {
+                toggleFAQItem(item, question, answer);
+            });
+        });
+        closeAllFAQItems();
+
+    }
+
+ 
+
+    // FAQ 아이템 토글
+    function toggleFAQItem(item, question, answer) {
+        const isActive = item.classList.contains('active');
+        
+        if (isActive) {
+            closeAllFAQItems();
+            // 닫기
+            closeFAQItem(item);
+        } else {
+            closeAllFAQItems();
+            
+            // 현재 아이템 열기
+            openFAQItem(item);
+        }
+    }
+
+    // FAQ 아이템 열기
+    function openFAQItem(item) {
+        item.classList.add('active');
+    }
+
+    // FAQ 아이템 닫기
+    function closeFAQItem(item) {
+        item.classList.remove('active');
+    }
+
+    // 모든 FAQ 아이템 닫기
+    function closeAllFAQItems() {
+        const items = document.querySelectorAll('.faq-item');
+        items.forEach(item => item.classList.remove('active'));
+    }
+
+    // 부드러운 스크롤 (FAQ 링크 클릭시)
+    function smoothScrollTo(elementId) {
+        const element = document.getElementById(elementId);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+
+    initializeFAQ();
+});
+
+
+// 페이지 로드시 URL 해시에 따른 스크롤
+window.addEventListener('load', () => {
+    if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        setTimeout(() => {
+            smoothScrollTo(targetId);
+        }, 100);
+    }
+});
+</script>
