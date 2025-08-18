@@ -297,7 +297,7 @@
 					
 					.detail-text {
 						color: #555;
-						font-size: var(--fs-body);
+						font-size: calc(var(--fs-body) * 0.875);
 						line-height: 1.5;
 					}
 				}
