@@ -39,9 +39,9 @@
     /* 1025 ~ 1280 */
     :root {
         --max-container-width: 1024px;
-        --max-content-width: 896px;
-        --max-container-width-small: 768px;
-        --max-content-width-small: 640px;
+        --max-content-width: 960px;
+        --max-container-width-small: var(--max-container-width);
+        --max-content-width-small: var(--max-content-width);
     }
 }
 
