@@ -7,14 +7,14 @@
     --base-font-size: 1rem;
 
     --fs-base: var(--base-font-size);
-    --fs-base-title: calc(var(--fs-base) * 2);
+    --fs-base-title: calc(var(--fs-base) * 4);
 
-    --fs-title: calc(var(--fs-base-title) * 3 / 2);
-    --fs-primary-title: calc(var(--fs-base-title) * 2);
-    --fs-subtitle: calc(var(--fs-title) * 2 / 3);
+    --fs-title: calc(var(--fs-base-title) * 3 / 4);
+    --fs-primary-title: calc(var(--fs-base-title) * 1);
+    --fs-subtitle: calc(var(--fs-title) * 2 / 4);
 
-    --fs-section-title: calc(var(--fs-base-title) * 2 / 3);
-    --fs-section-subtitle: calc(var(--fs-section-title) * 1.5);
+    --fs-section-title: calc(var(--fs-base-title) * 3 / 4);
+    --fs-section-subtitle: calc(var(--fs-section-title) * 0.5);
 
     --fs-body: var(--fs-base);
 
