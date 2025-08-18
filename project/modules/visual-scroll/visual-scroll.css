@@ -183,8 +183,8 @@ svg text {
             align-items: end;
         }
         h3 {
-            font-size: var(--fs-visual-section-subtitle);
-            padding-top: calc(var(--fs-visual-section-subtitle) / 2 );
+            font-size: var(--fs-visual-section-title);
+            padding-top: calc(var(--fs-visual-section-title) / 2 );
         }
     }
 
