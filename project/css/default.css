@@ -16,7 +16,7 @@
     --fs-section-title: calc(var(--fs-base-title) * 3 / 4);
     --fs-section-subtitle: calc(var(--fs-section-title) * 0.5);
 
-    --fs-body: var(--fs-base);
+    --fs-body: calc(var(--fs-base) * 1.25);
     --fs-copyright: calc(var(--fs-body) * 1.25);
 
     /* init widths */
