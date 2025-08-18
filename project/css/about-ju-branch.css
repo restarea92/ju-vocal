@@ -71,12 +71,7 @@
     position: relative;
     padding: var(--fs-primary-title) 0 8rem 0;
     color: var(--common-text-color);
-    &:first-of-type {
-        min-height: 100lvh;
-        display: flex;
-        align-items: center;
-        background-color: white;
-    }
+
     & + .common-container {
         padding: 4rem 0;
     }
