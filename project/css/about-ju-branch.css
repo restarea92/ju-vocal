@@ -69,7 +69,7 @@
     --common-text-color: #86868b;
     --strong-text-color: black;
     position: relative;
-    padding: var(--fs-primary-title) 0 8rem 0;
+    padding: var(--fs-primary-title);
     color: var(--common-text-color);
 
     & + .common-container {
