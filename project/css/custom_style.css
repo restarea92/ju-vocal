@@ -5,7 +5,9 @@
 .hidden-comment {
     display: none!important;
 }
-
+div:has(.hidden-comment) {
+    display: none!important;
+}
 
 /* ----------------------------------------------
  * common header default style
