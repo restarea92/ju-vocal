@@ -1,4 +1,4 @@
-// heroScrolljs
+// heroScroll.js
 import { initGSAP } from '../gsapUtils.js';
 
 const heroScroll = {
@@ -16,30 +16,30 @@ const heroScroll = {
         rafId: null,
 
         getFrameUrl(index) {
-            return `${heroScrolloptions.FRAME_BASE_URL}/rdframe_${index.toString().padStart(4, '0')}.jpg`;
+            return `${heroScroll.options.FRAME_BASE_URL}/rdframe_${index.toString().padStart(4, '0')}.jpg`;
         },
 
         setCanvasSize(img) {
-            heroScrollelements.canvas.width = img.naturalWidth;
-            heroScrollelements.canvas.height = img.naturalHeight;
+            heroScroll.elements.canvas.width = img.naturalWidth;
+            heroScroll.elements.canvas.height = img.naturalHeight;
         },
 
         drawImage(index) {
             const img = this.images[index];
             if (img && img.complete) {
-                heroScrollelements.context.clearRect(0, 0, heroScrollelements.canvas.width, heroScrollelements.canvas.height);
-                heroScrollelements.context.drawImage(img, 0, 0);
+                heroScroll.elements.context.clearRect(0, 0, heroScroll.elements.canvas.width, heroScroll.elements.canvas.height);
+                heroScroll.elements.context.drawImage(img, 0, 0);
             }
         },
 
         preloadImages(onComplete) {
             let loaded = 0;
-            for (let i = 0; i < heroScrolloptions.FRAME_COUNT; i++) {
+            for (let i = 0; i < heroScroll.options.FRAME_COUNT; i++) {
                 const img = new Image();
                 img.src = this.getFrameUrl(i + 1);
                 img.onload = () => {
                     loaded++;
-                    if (loaded === heroScrolloptions.FRAME_COUNT && onComplete) {
+                    if (loaded === heroScroll.options.FRAME_COUNT && onComplete) {
                         onComplete();
                     }
                 };
@@ -76,7 +76,7 @@ const heroScroll = {
 
             this.timeline = gsap.timeline({
                 scrollTrigger: {
-                    trigger: heroScrollelements.canvasWrapper,
+                    trigger: heroScroll.elements.canvasWrapper,
                     start: "top top",
                     end: "bottom top",
                     scrub: 0.5,  // 0.5초 정도 스크럽 딜레이 줌 (부드럽게 따라감)
@@ -86,7 +86,7 @@ const heroScroll = {
             this.timeline.to(this, {
                 onUpdate: (self) => {
                     const progress = this.timeline.progress();
-                   const frame = Math.min(heroScrolloptions.FRAME_COUNT, Math.max(1, Math.ceil(progress * this.images.length)));
+                   const frame = Math.min(heroScroll.options.FRAME_COUNT, Math.max(1, Math.ceil(progress * this.images.length)));
                     if (frame !== this.targetFrame) {
                         this.targetFrame = frame;
                         debugFrame.innerHTML = `${this.targetFrame}`;
