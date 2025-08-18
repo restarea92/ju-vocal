@@ -1,0 +1,18 @@
+<div class="canvas-wrapper" id="canvas-wrapper">
+  <div id="maskLayer" class="canvas-container">
+    <span id="debug-frame" style="position: fixed; z-index: 999; top:100px; left: 100px; color: white; font-size: 2rem; font-weight: 900;">0</span>
+    <svg id="center-svg">
+      <text id="center-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
+        가능성을 넘어, 무한한 표현의 시작.
+      </text>
+    </svg>
+    <canvas id="hero-lightpass" style="will-change: transform; transform: translateZ(0);"></canvas>
+  </div>
+</div>
+
+<script type="module">
+import app from 'https://restarea92.github.io/ju-vocal/modules/hero-section-frame.js';
+document.addEventListener('DOMContentLoaded', () => {
+    app.init();
+});
+</script>
