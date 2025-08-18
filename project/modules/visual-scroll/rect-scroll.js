@@ -163,7 +163,10 @@ const app = {
     setHeaderHeightVariable() {
         const header = document.querySelector('#doz_header_wrap');
         const headerHeight = header ? header.getBoundingClientRect().height : 0;
-        document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+        const headerHeightProperty = document.documentElement.style.getPropertyValue('--header-height');
+        if (headerHeightProperty !== `${headerHeight}px`) {
+            document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+        }
     },
 
 
