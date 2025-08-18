@@ -279,12 +279,12 @@
 				border: 1px solid rgba(0, 0, 0, 0.05);
 				
 				.advantage-icon {
-					font-size: var(--font-h2);
+					font-size: var(--fs-title);
 					margin-bottom: 1rem;
 				}
 				
 				.advantage-title {
-					font-size: var(--font-body);
+					font-size: var(--fs-body);
 					font-weight: 600;
 					margin-bottom: 0.5rem;
 					color: #1d1d1f;
@@ -292,7 +292,7 @@
 				
 				.advantage-desc {
 					color: #6e6e73;
-					font-size: var(--font-small);
+					font-size: var(--fs-body);
 					line-height: 1.5;
 				}
 			}
