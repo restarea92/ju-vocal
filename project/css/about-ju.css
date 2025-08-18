@@ -459,6 +459,9 @@
 
 	/* CEO Section 모바일 */
 	.ceo-message.common-container {
+        h2 {
+            text-align: center;
+        }
 		.ceo-content {
 			grid-template-columns: 1fr;
 			gap: 2rem;
