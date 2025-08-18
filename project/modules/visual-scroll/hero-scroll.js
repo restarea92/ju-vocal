@@ -82,18 +82,6 @@ const heroScroll = {
                     scrub: 0.5,  // 0.5초 정도 스크럽 딜레이 줌 (부드럽게 따라감)
                 }
             });
-            const debugFrame = document.querySelector('#debug-frame');
-            this.timeline.to(this, {
-                onUpdate: (self) => {
-                    const progress = this.timeline.progress();
-                   const frame = Math.min(heroScroll.options.FRAME_COUNT, Math.max(1, Math.ceil(progress * this.images.length)));
-                    if (frame !== this.targetFrame) {
-                        this.targetFrame = frame;
-                        debugFrame.innerHTML = `${this.targetFrame}`;
-                        this.animateFrames();
-                    }
-                }
-            });
         }
     },
 
