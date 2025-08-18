@@ -49,7 +49,6 @@
 @media (max-width: 1024px) and (min-width: 769px) {
     /* 769 ~ 1024 */
     :root {
-        --fs-body: calc(var(--fs-base) * 1.125);
 
         --max-container-width: 736px;
         --max-content-width: 680px;
@@ -60,7 +59,7 @@
 
 @media (max-width: 768px) {
     :root {
-        --fs-body: calc(var(--fs-base) * 1);
+        --fs-base: calc(var(--fs-base) / 1.25);
 
         --max-container-width: calc(100svw - 2rem);
         --max-content-width: calc(var(--max-container-width) - 2rem);
