@@ -294,7 +294,7 @@
         list-style: none;
         padding: 0;
         p {
-            font-size: var(--fs-body);
+            font-size: var(--fs-copyright);
         }
     }
 
