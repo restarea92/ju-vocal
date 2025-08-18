@@ -50,7 +50,7 @@
 @media (max-width: 1024px) and (min-width: 769px) {
     /* 769 ~ 1024 */
     :root {
-        --fs-base-title: calc(var(--fs-base) * 1.75);
+        --fs-base-title: calc(var(--fs-base) * 3);
 
         --max-container-width: 736px;
         --max-content-width: 680px;
@@ -61,7 +61,7 @@
 
 @media (max-width: 768px) {
     :root {
-        --fs-base-title: calc(var(--fs-base) * 1.5);
+        --fs-base-title: calc(var(--fs-base) * 2);
 
         --max-container-width: calc(100svw - 2rem);
         --max-content-width: calc(var(--max-container-width) - 2rem);
