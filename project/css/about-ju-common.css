@@ -85,10 +85,10 @@
 		display: block;
 	}
 	.content-title {
-		font-size: 3rem;
+		font-size: var(--fs-title);
 		font-weight: 800;
 		text-align: center;
-		margin-bottom: 4rem;
+		margin-bottom: var(--fs-title);
 		color: var(--common-text-color);
 		position: relative;
 	}
