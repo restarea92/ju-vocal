@@ -96,7 +96,7 @@
 #visual-section5 {
     
   .content-wrapper {
-    margin-top: var(--fs-subtitle);
+    margin: var(--fs-subtitle) auto;
     display: flex;
     gap: 2rem;
     flex-wrap: nowrap;
