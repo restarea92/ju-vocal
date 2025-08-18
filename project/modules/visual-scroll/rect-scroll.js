@@ -144,7 +144,7 @@ const rectScroll = {
     },
     
     getInitialSize() {
-        const content = this.elements.stickyElement?.querySelector('.sticky-element-content');
+        const content = this.elements.stickyElement?.querySelector('.sticky-element-content content');
 
         if (!content || !this.elements.background) {
             return 50
@@ -154,8 +154,7 @@ const rectScroll = {
         const containerWidth = this.elements.background.getBoundingClientRect().width;
         const effectiveWidth = Math.min(contentWidth, window.innerWidth);
         
-        const result = (effectiveWidth / contentWidth) * 100;
-        console.log({contentWidth, containerWidth, effectiveWidth, result})
+        const result = (effectiveWidth / containerWidth) * 100;
         return result;
     },
 
