@@ -42,6 +42,7 @@
   margin-top: 16rem;
   h2, h3, h4, h5 {
     margin:0;
+    word-break: keep-all;
   }
 
   h2 {
