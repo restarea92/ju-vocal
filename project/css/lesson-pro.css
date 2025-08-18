@@ -1,14 +1,14 @@
 
 :root {
-    --primary: #6366f1;
-    --primary-dark: #4f46e5;
-    --secondary: #ec4899;
-    --accent: #f59e0b;
-    --bg-dark: #0f172a;
-    --bg-light: #f8fafc;
-    --text-dark: #86868b;
-    --text-light: #a6a6a9;
-    --white: #ffffff;
+    --primary: #007AFF;           /*  블루 */
+    --primary-dark: #0056CC;      
+    --secondary: #5856D6;         /*  퍼플 */
+    --accent: #FF9500;            /*  오렌지 */
+    --bg-dark: #000000;           /* 완전한 블랙 */
+    --bg-light: #1C1C1E;          /* 다크 그레이 */
+    --text-dark: #FFFFFF;         /* 순백 텍스트 */
+    --text-light: #98989D;        /* 회색 텍스트 */
+    --white: #FFFFFF;
     --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
-    --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --gradient-bg: radial-gradient(circle at center top, rgba(0, 122, 255, 0.1) 0%, rgba(0, 0, 0, 1) 70%);
 }
