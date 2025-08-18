@@ -426,7 +426,6 @@
                     grid-column: 2 / 8;
 					grid-row: 3 / 7;
 					a {
-						font-size: 1.25rem;
 						color: #06c;
 						text-decoration: none;
 						span {
@@ -528,7 +527,6 @@
 						grid-column: 1 / 13;
 						grid-row: 3 / 7;
 						a {
-							font-size: 0.875rem;
 							color: #06c;
 							text-decoration: none;
 							span {
@@ -618,12 +616,10 @@
 
 			.stat-label {
 				color: #b0b0b0;
-				font-size: 1rem;
 			}
 			
 			.reference {
 				color: #666669;
-				font-size: 0.75rem;
 			}
 		}
 	}
