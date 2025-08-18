@@ -53,19 +53,6 @@
      --max-container-width-small
      --max-content-width-small
 ================================================================== */
-:root {
-    --primary: #6366f1;
-    --primary-dark: #4f46e5;
-    --secondary: #ec4899;
-    --accent: #f59e0b;
-    --bg-dark: #0f172a;
-    --bg-light: #f8fafc;
-    --text-dark: #86868b;
-    --text-light: #a6a6a9;
-    --white: #ffffff;
-    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
-    --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
 
 .inside:has(.hidden-comment) {
     display: none;
