@@ -216,3 +216,412 @@
 		}
 	}
 }
+
+/* Services Section */
+.services.common-container {
+	--common-text-color: white;
+	background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 40px;
+		margin-top: 60px;
+	}
+
+	.service-card {
+		background: var(--bg-glass);
+		padding: 40px 30px;
+		border-radius: 20px;
+		text-align: center;
+		backdrop-filter: var(--backdrop-blur);
+		border: var(--border-glass);
+		transition: var(--transition-smooth);
+		position: relative;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+			transition: left 0.3s ease;
+		}
+
+		&:hover {
+			transform: translateY(-10px);
+			box-shadow: var(--shadow-hover);
+
+			&::before {
+				left: 100%;
+			}
+		}
+
+		.service-icon {
+			font-size: var(--fs-title);
+			margin-bottom: var(--fs-title);
+			background: var(--gradient-primary);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		h4 {
+			font-size: var(--fs-subtitle);
+			color: white;
+			margin-bottom: 1rem;
+		}
+
+		p {
+			color: #b0b0b0;
+			line-height: 1.6;
+		}
+	}
+}
+
+
+/* CEO Message Section */
+.ceo-message.common-container {
+	margin-top: -1px;
+	--common-text-color: white;
+	background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+	position: relative;
+	min-height: 120lvh;
+	h2 {
+		text-align: left;
+	}
+	h3 {
+		width: 100%;
+	}
+
+	.ceo-content {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 4rem;
+		align-items: start;
+		margin-top: 4rem;
+	}
+
+	.ceo-profile {
+		text-align: center;
+		position: sticky;
+		top: 4rem;
+
+		.profile-image {
+			margin-bottom: 2rem;
+			display: flex;
+			justify-content: center;
+			aspect-ratio: 3 / 4;
+			box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+			position: relative;
+			overflow: hidden;
+			border-radius: 1.5rem;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+
+			}
+
+		}
+
+		.ceo-info h3 {
+            font-size: var(--fs-subtitle);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            text-align: center !important;
+            color: white;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+		}
+
+		.ceo-title {
+			color: #667eea;
+			font-size: var(--fs-copyright);
+			font-weight: 500;
+			margin-bottom: 1rem;
+		}
+
+		.signature {
+			display: flex;
+			justify-content: center;
+			opacity: 0.8;
+			svg {
+				width: 50%;
+				transform: rotate(-5deg);
+			}
+		}
+	}
+
+	.ceo-message-text {
+		background: var(--bg-glass);
+		padding: calc(var(--default-container-padding));
+		border-radius: 25px;
+		backdrop-filter: var(--backdrop-blur);
+		border: var(--border-glass);
+		transition: var(--transition-smooth);
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 25px 50px rgba(102, 126, 234, 0.15);
+		}
+		.message-content {
+			h3 {
+				font-size: var(--fs-subtitle);
+				color: white;
+				margin-bottom: 2rem;
+				background: var(--gradient-primary);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				font-weight: 700;
+				width: 100%;
+				text-align: left;
+			}
+
+			p {
+				color: #a6a6ab;
+				font-size: var(--fs-body);
+				line-height: 1.475;
+				margin-bottom: 1.5rem;
+				font-weight: 600;
+				strong {
+					font-weight: 600;
+					color:white
+				}
+				&.message-closing {
+					font-size: var(--fs-body) !important;
+					font-weight: 600 !important;
+					color: #667eea !important;
+					text-align: center;
+					margin-top: 2.5rem !important;
+					padding-top: 2rem;
+					border-top: var(--border-glass);
+				}
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: 1024px) and (min-width: 991px) {
+	.story.common-container {
+
+		h2.content-title {
+			.content-title-text {
+				padding: 0 calc(var(--default-container-padding));
+			}
+		}
+
+		.story-text {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		.story-visual {
+			aspect-ratio: 16 / 9;
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+	}
+}
+
+/* Responsive */
+@media (max-width: 990px) and (min-width: 769px)  {
+
+	.story.common-container {
+		h2.content-title {
+			.content-title-text {
+				font-size: clamp(3rem, 8vw, 4rem);
+			}
+		}
+
+		.story-text {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+
+		.story-visual {
+			aspect-ratio: 16 / 9;
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+
+	}
+
+	.story.common-container {
+		--fixed-wrapper-top: var(--header-height);
+		--content-title-padding-top: var(--header-height);
+	}
+
+	/* CEO Section 모바일 */
+	.ceo-message.common-container {
+		.ceo-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.ceo-profile {
+			position: static;
+
+			.profile-image {
+				margin: 0 auto 2rem auto;
+				width: 50%;
+			}
+		}
+
+		.ceo-message-text {
+			.message-content  {
+				h3 {
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+
+	.story.common-container {
+		--fixed-wrapper-top: var(--header-height);
+		--content-title-padding-top: var(--header-height);
+		.content-wrapper {
+		}
+		h2.content-title {
+			font-size: 2rem;
+			span {
+
+			}
+			.content-title-text {
+				font-size: clamp(1.5rem, 8vw, 3rem);
+			}
+		}
+
+
+		.story-content {
+			gap: 2rem;
+		}
+
+		.story-text {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+			h3 {
+				font-size: 1.5rem;
+				margin-bottom: 0.75rem;
+			}
+			p {
+				font-size: 1rem;
+			}
+		}
+
+		.story-visual {
+			aspect-ratio: 16 / 9;
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+	}
+
+	/* CEO Section 모바일 */
+	.ceo-message.common-container {
+		.ceo-content {
+			margin-top: 2rem;
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.ceo-profile {
+			position: static;
+
+			.profile-image {
+				width: 62.5%;
+				margin: 0 auto 2rem auto;
+			}
+
+			.ceo-info h3 {
+				font-size: 1.6rem;
+			}
+		}
+
+		.ceo-message-text {
+			padding: calc(var(--default-container-padding) * 1.5);
+
+			.message-content  {
+				h3 {
+					font-size: 1.5rem;
+				}
+				p {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+
+
+	/* Coach Section 모바일 */
+	#about-ju-coach.common-container {
+		.content-wrapper {
+			padding: calc(var(--default-container-padding) * 1.5);
+		}
+		.coach-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.coach-profile {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+
+			position: static;
+
+			.profile-image {
+				width: 62.5%;
+				margin: 0 auto 2rem auto;
+			}
+
+			.coach-info h3 {
+				font-size: 1.6rem;
+			}
+		}
+
+		.coach-message-text {
+				grid-column: 1 / 2;
+				grid-row: 2 / 3;
+			.message-content  {
+
+				h3 {
+					font-size: 1.5rem;
+				}
+				p {
+					font-size: 1rem;
+				}
+			}
+		}
+
+		.coach-content:nth-of-type(even) {
+			.coach-profile {
+				grid-column: 1 / 2;
+				grid-row: 1 / 2;			
+			}
+			.coach-message-text {
+				grid-column: 1 / 2;
+				grid-row: 2 / 3;			
+			}
+		}
+		.coach-content + .coach-content {
+			margin-top: 4rem;
+			padding-top: 4rem;
+		}
+	}
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+	.services-grid {
+		grid-template-columns: 1fr;
+		gap: 30px;
+	}
+}
+
