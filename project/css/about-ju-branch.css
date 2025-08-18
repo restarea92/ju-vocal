@@ -486,14 +486,14 @@
             display:flex;
             align-items:center;
             gap:0.125rem;
-			font-size: calc(var(--fs-body) * 0.625);
+			font-size: calc(var(--fs-body) * 0.75);
             font-variation-settings:
                 'FILL' 1,
                 'wght' 400,
                 'GRAD' 0,
                 'opsz' 24;
             .material-symbols-outlined {
-				font-size: calc(var(--fs-body) * 0.75);
+				font-size: calc(var(--fs-body) * 0.875);
             }
         }
     }
@@ -549,3 +549,16 @@
 	}
 }
 
+
+@media (max-width: 480px)   {
+    .location-info.common-container {
+        .map-button {
+			font-size: calc(var(--fs-body) * 0.625);
+            .material-symbols-outlined {
+				font-size: calc(var(--fs-body) * 0.75);
+            }
+        }
+    }
+
+
+}
