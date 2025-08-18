@@ -207,6 +207,9 @@
 
 .common-container.branch-gallary {
     background-color: #f5f5f7;
+	.content-title {
+		text-align: center;
+	}
 }
 
 
