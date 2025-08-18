@@ -337,6 +337,7 @@
                 font-size: calc(var(--fs-title));
                 grid-column: 2 / 12;
                 word-break: keep-all;
+				text-align: left;
             }
 
 
