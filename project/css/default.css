@@ -39,7 +39,7 @@
     /* 1025 ~ 1280 */
     :root {
         --max-container-width: 968px;
-        --max-content-width: 968px;
+        --max-content-width: 940px;
         --max-container-width-small: var(--max-container-width);
         --max-content-width-small: var(--max-content-width);
     }
