@@ -35,6 +35,15 @@
     --default-navbar-padding: 12px;
 }
 
+@media (max-width: 1280px) and (min-width: 1025px) {
+    /* 1025 ~ 1280 */
+    :root {
+        --max-container-width: 928px;
+        --max-content-width: 832px;
+        --max-container-width-small: 832px;
+        --max-content-width-small: var(--max-content-width);
+    }
+}
 
 
 @media (max-width: 1024px) and (min-width: 769px) {
