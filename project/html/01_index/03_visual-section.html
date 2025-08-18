@@ -1,0 +1,90 @@
+<!-- Visual Section Start { -->
+<div class="visual-section sticky-wrapper" id="visual-section" > 
+    <!-- Sticky Element Start { -->
+    <div class="sticky-element">
+        <div class="sticky-element-background">
+            <video id="landscapeVideo" autoplay muted playsinline loop style="width:100%; height:100%; display:none; object-fit: cover; filter:brightness(0.75)">
+                <source src="https://restarea92.github.io/ju/vttsp.mp4" type="video/mp4" />
+            </video>
+
+            <video id="portraitVideo" autoplay muted playsinline loop style="width:100%; height:100%; display:none; object-fit: cover; filter:brightness(0.75)">
+                <source src="https://restarea92.github.io/ju/vttsm.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="content-wrapper sticky-element-content">
+		    <div class="content" style="display:flex; min-height: 100lvh; ">
+                <div class="title">
+                    <h2>
+                        JU가 제시하는 보컬 교육의 미래.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div> <!-- } Sticky Element End -->
+
+    <div id="scroll-trigger" style="position:relative; min-height: 100lvh; background: transparent; user-select: none; z-index: -1;">
+    </div>
+
+    <!-- Multi Scroll Section Start { -->
+    <div id="multi-scroll"> 
+        <!-- horizontal-spacer Start { -->
+        <div class="horizontal-spacer">
+            <div class="horizontal-container" style="background: radial-gradient(circle,rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%); backdrop-filter: blur(16px);">
+                
+                <section id="multi-scroll-item1" class="multi-scroll-item">
+                    <div class="content">
+                        <div class="content-title">
+                            <h2>
+                                첫 단추부터 제대로.
+                            </h2>
+                        </div>
+                        <div class="content-text">
+                            <p>
+                                <strong>지피지기 백전불태.</strong> 맞춤형 솔루션으로 설계하는 체계적 커리큘럼. 아는 길로 나아가는 것보다 더 쉬운 것은 없죠. <br>
+                                JU의 커리큘럼은 현재 나의 상태를 정확하게 아는 것, 그리고 앞으로 나아갈 길을 정하는 것으로부터 시작합니다.
+                                다양한 발성적 문제들을 과학적 관점으로 분석하고 <strong>개개인에 맞춘 체계적 커리큘럼</strong>을 제시합니다. 
+                            </p>
+                        </div>
+                        <div class="content-image">
+                            <img src="https://restarea92.github.io/ju/image/ynin.jpg">
+                        </div>
+                    </div>
+                </section>
+
+                <section id="multi-scroll-item2" class="multi-scroll-item">
+                    <div class="content second">
+                        <div class="content-title">
+                            <h2>
+                                이렇게 쉽다니.
+                            </h2>
+                        </div>
+                        <div class="content-text">
+                        <p>
+                            <strong>목표는 높게, 성장은 쉽게.</strong> 누구나 쉽게 이해할 수 있도록, 빠른 성장을 위해 설계된 JU만의 특별한 교육과정. 무엇이든 확실히 이해해야 비로소 내 것이 될 수 있죠.<br>
+                            더 이상 어려운 이론들로 고민하지 마세요. 앞으로 일어날 놀라운 변화에만 집중하세요. 여러분들의 성장을 위한 고민은 이미 JU가 했으니까요.
+                        </p>
+                        </div>
+                        <div class="content-image">
+                            <img src="https://restarea92.github.io/ju/media/es.jpg">
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div> <!-- } horizontal-spacer End -->
+    </div> <!-- } Multi Scroll Section End -->
+</div> <!-- } Visual Section End -->
+
+<script type="module">
+    import app from 'https://restarea92.github.io/ju-vocal/project/modules/visual-scroll/rect-scroll.js';
+    document.addEventListener('DOMContentLoaded', () => {
+        app.init();
+    });
+</script>
+
+<script type="module">
+    import app from 'https://restarea92.github.io/ju-vocal/project/modules/visual-scroll/horizontal-scroll.js';
+    document.addEventListener('DOMContentLoaded', () => {
+        app.init();
+    });
+</script>
