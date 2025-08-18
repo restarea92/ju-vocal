@@ -177,7 +177,6 @@
         text-align: center;
         width: 100%;
         font-weight: 800;
-        font-size: var(--font-size-common-title);
         margin-bottom: 4rem;
         color:white;
     }
@@ -212,7 +211,6 @@
         flex-direction: column;
         h3 {
             color:white;
-            font-size: var(--font-h2);
             font-weight: 700;
             margin-bottom: 1rem;
         }
@@ -237,7 +235,6 @@
 
     .course-card > p {
         color:white;
-        font-size: var(--font-size-sub-title);
         line-height: 1.5;
         margin-bottom: 1rem;
     }
@@ -248,7 +245,6 @@
         padding: 0;
         p {
             color:white;
-            font-size: var(--font-body);
         }
     }
 
