@@ -161,9 +161,11 @@
 		}
 		a {
             color: #06c;
+			font-size: var(--fs-body);
+
             &:hover {
                 text-decoration: underline;
-                font-size: var(--fs-body);
+				font-size: var(--fs-body);
             }
         }
 	}
