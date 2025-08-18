@@ -459,7 +459,7 @@
 
 	/* CEO Section 모바일 */
 	.ceo-message.common-container {
-		h2.content-title {
+        h2 {
             text-align: center;
         }
 		.ceo-content {
@@ -486,8 +486,7 @@
 		.content-wrapper {
 		}
 		h2.content-title {
-            text-align: center;
-
+			font-size: 2rem;
 			.content-title-text {
 				font-size: clamp(1.5rem, 8vw, 3rem);
 			}
@@ -512,6 +511,9 @@
 
 	/* CEO Section 모바일 */
 	.ceo-message.common-container {
+        h2 {
+            text-align: center;
+        }
 		.ceo-content {
 			margin-top: 2rem;
 			grid-template-columns: 1fr;
