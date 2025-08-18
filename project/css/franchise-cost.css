@@ -237,7 +237,7 @@
 				
 				.total-range {
 					text-align: center;
-					font-size: var(--font-copyright);
+					font-size: var(--fs-copyright);
 					color:#34c759;
 					font-weight: 800;
 					margin: 1rem 0;
