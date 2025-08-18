@@ -531,7 +531,6 @@
 
 		}
 		.ceo-message-text {
-			padding: calc(var(--default-container-padding) * 1.5);
 		}
 	}
 
