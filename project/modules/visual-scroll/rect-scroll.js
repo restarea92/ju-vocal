@@ -6,7 +6,7 @@
 
 import { initGSAP } from '../gsapUtils.js';
 
-const app = {
+const rectScroll = {
     // ========== Configuration ==========
     CONFIG: {
         VERSION: '1.0.7',
@@ -193,33 +193,4 @@ const app = {
         });
     },
 }
-export default app;
-
-document.addEventListener('DOMContentLoaded', () => {
-    function isLandscape() {
-        return window.innerWidth > window.innerHeight;
-    }
-
-    function updateVideo() {
-        const landscapeVideo = document.getElementById('landscapeVideo');
-        const portraitVideo = document.getElementById('portraitVideo');
-
-        if (isLandscape()) {
-        landscapeVideo.style.display = 'block';
-        portraitVideo.style.display = 'none';
-        landscapeVideo.play();
-        portraitVideo.pause();
-        } else {
-        landscapeVideo.style.display = 'none';
-        portraitVideo.style.display = 'block';
-        portraitVideo.play();
-        landscapeVideo.pause();
-        }
-    }
-
-    updateVideo();
-
-    window.addEventListener('resize', updateVideo);
-    window.addEventListener('orientationchange', updateVideo);
-});
-
+export default rectScroll;

@@ -1,7 +1,7 @@
 // app.js
 import { initGSAP } from '../gsapUtils.js';
 
-const app = {
+const heroScroll = {
     options: {
         FRAME_COUNT: 125,
         FRAME_BASE_URL: 'https://raw.githubusercontent.com/restarea92/ju/main/media/webp_frames',
@@ -218,4 +218,4 @@ const app = {
 };
 
 
-export default app;
+export default heroScroll;

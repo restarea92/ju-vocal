@@ -1,0 +1,57 @@
+<script type="module">
+    import heroScroll from 'https://git.byunyohan.com/project/modules/visual-scroll/hero-scroll.js';
+    document.addEventListener('DOMContentLoaded', () => {
+        heroScroll.init();
+    });
+</script>
+
+<script type="module">
+    import rectScroll from 'https://git.byunyohan.com/project/modules/visual-scroll/rect-scroll.js';
+    document.addEventListener('DOMContentLoaded', () => {
+        rectScroll.init();
+    });
+</script>
+
+<script type="module">
+    import horizontalScroll from 'https://git.byunyohan.com/project/modules/visual-scroll/horizontal-scroll.js';
+    document.addEventListener('DOMContentLoaded', () => {
+        horizontalScroll.init();
+    });
+</script>
+
+<script type="module">
+    import infiniteScroll from 'https://git.byunyohan.com/project/modules/infinite-scroll/infinite-scroll.js';
+    document.addEventListener('DOMContentLoaded', () => {
+        infiniteScroll.init();
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        function isLandscape() {
+            return window.innerWidth > window.innerHeight;
+        }
+
+        function updateVideo() {
+            const landscapeVideo = document.getElementById('landscapeVideo');
+            const portraitVideo = document.getElementById('portraitVideo');
+
+            if (isLandscape()) {
+                landscapeVideo.style.display = 'block';
+                portraitVideo.style.display = 'none';
+                landscapeVideo.play();
+                portraitVideo.pause();
+            } else {
+                landscapeVideo.style.display = 'none';
+                portraitVideo.style.display = 'block';
+                portraitVideo.play();
+                landscapeVideo.pause();
+            }
+        }
+
+        updateVideo();
+
+        window.addEventListener('resize', updateVideo);
+        window.addEventListener('orientationchange', updateVideo);
+    });
+</script>

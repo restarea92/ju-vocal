@@ -1,4 +1,4 @@
-const header = {
+const headerSize = {
     element: document.querySelector('#doz_header_wrap'),
     state: {
         height: 0,
@@ -18,12 +18,4 @@ const header = {
     }
 };
 
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    header.init();
-});
-
-document.addEventListener('resize', () => {
-    header.updateState();
-});
+export default { headerSize };

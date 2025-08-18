@@ -6,7 +6,7 @@
 
 import { initGSAP } from '../gsapUtils.js';
 
-const app = {
+const horizontalScroll = {
 
     // ========== Configuration ==========
     CONFIG: {
@@ -369,4 +369,4 @@ const app = {
     },
 };
 
-export default app;
+export default horizontalScroll;
