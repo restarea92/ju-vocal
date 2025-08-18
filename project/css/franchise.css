@@ -516,7 +516,7 @@
 			}
 			
 			.reference {
-				font-size: calc(var(--fs-body) * 0.875);
+				font-size: calc(var(--fs-body) * 0.75);
 				color: #666669;
 			}
 		}
