@@ -77,7 +77,7 @@ svg text {
     }
     .content-wrapper {
         width: var(--default-container-width);
-        max-width: var(--max-container-width);
+        max-width: var(--max-container-width-small);
         margin: 0 auto;
         padding: 0 calc(var(--default-container-padding) / 2);
     }
