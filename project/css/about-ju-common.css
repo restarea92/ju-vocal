@@ -69,6 +69,7 @@
 	z-index: 1;
 	--common-text-color: #333;
 	color: var(--common-text-color);
+	padding: 0 var(--fs-primary-title);
 	h2, h3, h4, h5 {
 		margin: 0;
 	}
