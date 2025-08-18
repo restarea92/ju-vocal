@@ -70,6 +70,22 @@
     --fs-subtitle: 2rem;
     --fs-body: 1.125rem;
     --fs-copyright: 0.875rem;
+
+	--fs-typography: 2rem;
+
+	}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+/* 769 ~ 1024 */
+    :root {
+		--fs-typography: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+		--fs-typography: 1.5rem;
+    }
 }
 
 
@@ -205,7 +221,7 @@
                 max-width: 40ch;
                 color: white;
                 font-weight: 700;
-				font-size: var(--fs-body);
+				font-size: var(--fs-typography);
             }
         }
     }
