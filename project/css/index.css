@@ -94,7 +94,7 @@
 }
 
 #visual-section5 {
-  margin-bottom: 4rem;
+  margin-bottom: var(--fs-subtitle);
   .content-wrapper {
     display: flex;
     gap: 2rem;

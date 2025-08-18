@@ -68,7 +68,7 @@
 	position: relative;
 	z-index: 1;
 	height: var(--flow-scroll-slide-width);
-	margin-top: var(--fs-title);
+	margin-top: var(--fs-subtitle);
 }
 #slide-container.is-dragging {
 	cursor: -webkit-grabbing;
