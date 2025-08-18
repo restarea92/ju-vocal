@@ -422,7 +422,7 @@
         gap:0.75rem;
     }
     .map-button {
-		font-size: var(--fs-body);
+		font-size: calc(var(--fs-body) * 0.875);
         display:flex;
         align-items:center;
 		justify-content: center;
