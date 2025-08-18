@@ -100,6 +100,7 @@
     display: flex;
     gap: 2rem;
     flex-wrap: nowrap;
+    max-width: var(--max-content-width);
   }
   .content {
     border-radius: 1rem;
