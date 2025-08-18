@@ -11,7 +11,7 @@
 
     /* Title */
     --fs-primary-title: calc(var(--fs-title-base) * 2);
-    --fs-title: calc(var(--fs-title-base) * 3 / 2);
+    --fs-title: calc(var(--fs-title-base) * 1.25);
     --fs-subtitle: calc(var(--fs-title) * 0.625);
 
     --fs-section-title: calc(var(--fs-title-base) * 3 / 4);
