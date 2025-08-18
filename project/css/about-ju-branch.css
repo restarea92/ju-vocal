@@ -329,7 +329,7 @@
 		width: 100%;
 	}
 	.content-wrapper {
-		max-width: var(--small-container-width);
+		max-width: var(--max-container-width-small);
 	}
 
 
