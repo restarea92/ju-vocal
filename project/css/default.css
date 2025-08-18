@@ -8,8 +8,8 @@
 
     --fs-base: var(--base-font-size);
 
-    --fs-primary-title: calc(var(--fs-base-title) * 4);
-    --fs-title: calc(var(--fs-base-title) * 3);
+    --fs-primary-title: calc(var(--fs-base) * 4);
+    --fs-title: calc(var(--fs-base) * 3);
     --fs-subtitle: calc(var(--fs-title) * 2);
 
     --fs-section-title: calc(var(--fs-base-title) * 3 / 4);
