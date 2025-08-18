@@ -7,6 +7,20 @@
 
 </script>
 
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const g3 = document.querySelector('.grid-content.content3');
+		const g3Title = g3.querySelector('h3');
+		const g3TitleHeight = g3Title ? g3Title.getBoundingClientRect().height : 0;
+		const g3ContentVisual = g3.querySelector('.content-visual');
+		const g3ContentVisualHeight = g3ContentVisual ? g3ContentVisual.getBoundingClientRect().height : 0;
+		const floatHeight = g3ContentVisualHeight - (g3TitleHeight / 2);
+		const floatElement = g3.querySelector('.shape-element');
+		if (floatElement) {
+			floatElement.style.height = `${floatHeight}px`;
+		}
+	});
+</script>
 
 
 <script>

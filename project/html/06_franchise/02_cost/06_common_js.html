@@ -1,0 +1,125 @@
+<script type="module">
+    import franchiseApp from 'https://git.byunyohan.com/project/modules/franchise.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        franchiseApp.init();
+    });
+
+</script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const g3 = document.querySelector('.grid-content.content3');
+		const g3Title = g3.querySelector('h3');
+		const g3TitleHeight = g3Title ? g3Title.getBoundingClientRect().height : 0;
+		const g3ContentVisual = g3.querySelector('.content-visual');
+		const g3ContentVisualHeight = g3ContentVisual ? g3ContentVisual.getBoundingClientRect().height : 0;
+		const floatHeight = g3ContentVisualHeight - (g3TitleHeight / 2);
+		const floatElement = g3.querySelector('.shape-element');
+		if (floatElement) {
+			floatElement.style.height = `${floatHeight}px`;
+		}
+	});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+// 기존 스크롤 애니메이션 코드 + 카운터 애니메이션 추가
+const options = {
+	observerOptions: {
+		threshold: 0.1,
+		rootMargin: '0px 0px -50px 0px'
+	},
+	transformYOffset: 30 // 예: transform: translateY(100px) 고려용
+};
+// 카운터 애니메이션 함수
+
+function animateCounter(element) {
+	const target = parseFloat(element.dataset.target);
+	const unit = element.dataset.unit || '';
+	const duration = 2000;
+	let current = 0;
+
+	const step = target / (duration / 16);
+
+	const timer = setInterval(() => {
+		current += step;
+		if (current >= target) {
+			current = target;
+			clearInterval(timer);
+		}
+
+		const isFinal = current === target;
+		let displayValue;
+
+		if (target < 1000 && current < 1000) {
+			displayValue = Math.floor(current).toString();
+
+		} else if (current < 1000) {
+			displayValue = Math.floor(current).toString();
+
+		} else {
+			const kValue = current / 1000;
+			const rounded = Math.round(kValue * 10) / 10;
+
+			if (isFinal && rounded % 1 === 0) {
+				displayValue = `${Math.floor(rounded)}k`;
+			} else {
+				displayValue = `${rounded.toFixed(1)}k`;
+			}
+		}
+
+		// unit이 '+'일 때는 마지막에만 붙임
+		if (unit === '+') {
+			element.textContent = isFinal ? displayValue + '+' : displayValue;
+		} else {
+			element.textContent = displayValue + unit;
+		}
+
+	}, 16);
+}
+
+	const observer = new IntersectionObserver(function(entries) {
+		entries.forEach(entry => {
+			const el = entry.target;
+
+			if (entry.isIntersecting) {
+				if (!el.classList.contains('visible')) {
+					el.classList.add('visible');
+
+					if (el.classList.contains('stat-number')) {
+						animateCounter(el); // 중복 실행 방지
+					}
+				}
+
+			} else {
+				const elementTop = entry.boundingClientRect.top;
+				const viewportTop = entry.rootBounds.top;
+
+				// 아래로 스크롤해 나간 경우에만 클래스 제거
+				if (elementTop > viewportTop) {
+					el.classList.remove('visible');
+				}
+			}
+		});
+	}, options.observerOptions);
+
+	document.querySelectorAll('.fade-in').forEach(el => {
+		const rect = el.getBoundingClientRect();
+		console.log(rect.bottom);
+		if (rect.bottom < 0) {
+			el.classList.add('visible');
+		}
+
+		// 관찰 시작
+		observer.observe(el);
+	});
+
+	// stat-number 개별 관찰 추가
+	document.querySelectorAll('.stat-number').forEach(el => {
+		observer.observe(el);
+	});
+});
+</script>
