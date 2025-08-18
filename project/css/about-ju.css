@@ -159,19 +159,13 @@
 				color: white;
 			}
 		}
-        a {
-            padding: 1rem 1.5rem;
-            cursor: pointer;
-            position: relative;
-            background: var(--white);
-            transition: all 0.3s ease;
-            display: flex;
-            gap:0.5rem;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: nowrap;
+		a {
+			color: #4da3ff;
+			font-size: var(--fs-body);
+
             &:hover {
-                background: rgba(99, 102, 241, 0.05);
+                text-decoration: underline;
+				font-size: var(--fs-body);
             }
         }
 	}
