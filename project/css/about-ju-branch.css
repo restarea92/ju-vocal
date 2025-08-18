@@ -1,3 +1,59 @@
+/* ==========================================================================
+   CSS Variables Reference
+   ==========================================================================
+   📌 Font 관련
+   --default-font-family
+   --base-body-font-size
+   --base-font-size
+   --fs-body-base
+   --fs-title-base
+   --fs-primary-title
+   --fs-title
+   --fs-subtitle
+   --fs-section-title
+   --fs-section-subtitle
+   --fs-body
+   --fs-copyright
+
+   📌 Width 관련
+   --logo-width
+   --default-container-width
+   --default-content-width
+   --default-container-width-small
+   --default-content-width-small
+
+   --max-container-width
+   --max-content-width
+   --max-container-width-small
+   --max-content-width-small
+
+   📌 Spacing 관련
+   --default-container-padding
+   --default-logo-margin
+   --default-navbar-padding
+
+   📌 Media Query에서 변경되는 변수
+   - (1025px~1280px)
+     --max-container-width
+     --max-content-width
+     --max-container-width-small
+     --max-content-width-small
+
+   - (769px~1024px)
+     --max-container-width
+     --max-content-width
+     --max-container-width-small
+     --max-content-width-small
+
+   - (최대 768px)
+     --fs-body-base
+     --fs-title-base
+     --max-container-width
+     --max-content-width
+     --max-container-width-small
+     --max-content-width-small
+================================================================== */
+
 /* 공통 컨테이너 스타일 override */
 :root {
     --gradient-primary: linear-gradient(45deg, #667eea, #764ba2);
@@ -119,6 +175,7 @@
     }
 
     .content-text {
+		font-size: var(--fs-body);
         grid-column: 1 / 2;
         grid-row: 2 / 3;
         color: #e0e0e0;
