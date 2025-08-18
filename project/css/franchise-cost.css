@@ -118,7 +118,7 @@
 			
 			.step-description {
 				color: #6e6e73;
-				font-size: var(--font-small);
+				font-size: var(--fs-body);
 				line-height: 1.6;
 				margin: 0;
 				padding-left: 1rem;
