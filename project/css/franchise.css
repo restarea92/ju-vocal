@@ -233,15 +233,15 @@
 
 .advantages.common-container {
 	background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-	
+	.content-title {
+		font-size: var(--fs-title);
+	}
 	.advantages-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 		gap: 2rem;
 		margin-top: 3rem;
-		.content-title {
-			font-size: var(--fs-title);
-		}
+
 		.advantage-card {
 			background: white;
 			padding: 2.5rem;
