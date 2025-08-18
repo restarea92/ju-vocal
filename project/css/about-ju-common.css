@@ -225,7 +225,7 @@
 
 		.ceo-title {
 			color: #667eea;
-			font-size: 1.125rem;
+			font-size: var(--fs-copyright);
 			font-weight: 500;
 			margin-bottom: 1rem;
 		}
@@ -254,7 +254,7 @@
 		}
 		.message-content {
 			h3 {
-				font-size: 2rem;
+				font-size: var(--fs-subtitle);
 				color: white;
 				margin-bottom: 2rem;
 				background: var(--gradient-primary);
@@ -267,7 +267,7 @@
 
 			p {
 				color: #a6a6ab;
-				font-size: 1.125rem;
+				font-size: var(--fs-body);
 				line-height: 1.475;
 				margin-bottom: 1.5rem;
 				font-weight: 600;
