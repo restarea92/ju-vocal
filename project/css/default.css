@@ -52,11 +52,10 @@
 @media (max-width: 1024px) and (min-width: 769px) {
     /* 769 ~ 1024 */
     :root {
-
-        --max-container-width: 736px;
-        --max-content-width: 680px;
-        --max-container-width-small: var(--max-container-width);
-        --max-content-width-small: var(--max-content-width);
+        --max-container-width: calc(100svw - 4rem);
+        --max-content-width: calc(var(--max-container-width) - 4rem);
+        --max-container-width-small: 736px;
+        --max-content-width-small: 680px;
     }
 }
 
