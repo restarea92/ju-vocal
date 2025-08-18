@@ -134,9 +134,9 @@ const app = {
             gsap.set(maskLayer, { 
                 "--clip-path-end-size": `${50 - endSize / 2}%`,
                 clipPath: `inset(
-                    calc( (var(--h2-font-size) + var(--header-height)) * var(--hero-scroll-progress) )
+                    calc( (var(--fs-primary-title) + var(--header-height)) * var(--hero-scroll-progress) )
                     calc( var(--clip-path-end-size) * var(--hero-scroll-progress) )
-                    calc( var(--h2-font-size) * var(--hero-scroll-progress) )
+                    calc( var(--fs-primary-title) * var(--hero-scroll-progress) )
                     calc( var(--clip-path-end-size) * var(--hero-scroll-progress) )
                     round calc( max(5lvh, 5lvw) * var(--hero-scroll-progress) )
                 )`,
