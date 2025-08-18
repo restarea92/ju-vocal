@@ -305,9 +305,6 @@
     background: var(--white);
 
     .content-wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 40px;
     }
 
     .process-steps {
