@@ -489,9 +489,13 @@
             }
         }
     }
-	
+
 	/* Coach Section 모바일 */
 	#about-ju-coach.common-container {
+
+		.content-title {
+			text-align: center;
+		}
 		.content-wrapper {
 			max-width: var(--max-container-width);
 			padding: calc(var(--default-container-padding) / 2);
