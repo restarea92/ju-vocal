@@ -84,11 +84,10 @@ const heroScroll = {
             });
             this.timeline.to(this, {
                 onUpdate: (self) => {
-                    const progress = this.timeline.progress();
+                const progress = this.timeline.progress();
                    const frame = Math.min(heroScroll.options.FRAME_COUNT, Math.max(1, Math.ceil(progress * this.images.length)));
                     if (frame !== this.targetFrame) {
                         this.targetFrame = frame;
-                        debugFrame.innerHTML = `${this.targetFrame}`;
                         this.animateFrames();
                     }
                 }
