@@ -122,7 +122,7 @@
         text-align: center;
         font-weight: 800;
         margin-bottom: 4rem;
-        font-size: var(--font-size-common-title);
+        font-size: var(--fs-title);
     }
     .content {
         border-radius: 1rem;
@@ -134,7 +134,7 @@
         flex: 1;
         width: 100%;
         h3 {
-            font-size: 1.25rem;
+            font-size: var(--fs-subtitle);
             font-weight: 750;
             color: black;
         }
@@ -142,7 +142,7 @@
             color: #06c;
             &:hover {
                 text-decoration: underline;
-                font-size: 1rem;
+                font-size: var(--fs-body);
             }
         }
     }
@@ -160,24 +160,25 @@
     display: flex;
     align-items: center;
     position: relative;
+
     /* Typography */
     h1 {
-        font-size: var(--font-h1);
+        font-size: var(--fs-primary-title);
         font-weight: 800;
     }
 
     h2 {
-        font-size: var(--font-h2);
+        font-size: var(--fs-title);
         font-weight: 700;
     }
 
     h3 {
-        font-size: var(--font-h3);
+        font-size: var(--fs-subtitle);
         font-weight: 600;
     }
 
     p {
-        font-size: var(--font-body);
+        font-size: var(--fs-body);
     }
 
     .content {
@@ -208,7 +209,7 @@
         padding: 18px 36px;
         border: none;
         border-radius: 50px;
-        font-size: var(--font-body);
+        font-size: var(--fs-body);
         font-weight: 600;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -241,7 +242,7 @@
         border-radius: 1rem;
         overflow: hidden;
         color: var(--white);
-        font-size: 1.5rem;
+        font-size: var(--fs-subtitle);
         font-weight: 600;
         box-shadow: var(--shadow);
         position: relative;
@@ -256,12 +257,6 @@
 
 /* Mobile Responsiveness */
 @media (max-width: 968px) {
-    :root {
-        --font-h1: 3rem;
-        --font-h2: 2rem;
-        --font-h3: 1.5rem;
-        
-    }
 
     .lesson.common-container {
         min-height: unset;
@@ -312,12 +307,6 @@
 
 @media (max-width: 768px) {
 
-    :root {
-        --font-h1: 2rem;
-        --font-h2: 1.75rem;
-        --font-h3: 1.5rem;
-        --font-body: 1rem;
-    }
 
 
 }
