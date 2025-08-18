@@ -9,15 +9,15 @@
     --fs-base: var(--base-font-size);
     --fs-base-title: calc(var(--fs-base) * 4);
 
-    --fs-title: calc(var(--fs-base-title) * 3 / 4);
     --fs-primary-title: calc(var(--fs-base-title) * 1);
+    --fs-title: calc(var(--fs-base-title) * 3 / 4);
     --fs-subtitle: calc(var(--fs-title) * 3 / 4);
 
     --fs-section-title: calc(var(--fs-base-title) * 3 / 4);
     --fs-section-subtitle: calc(var(--fs-section-title) * 0.5);
 
-    --fs-copyright: calc(var(--fs-body) * 1.25);
     --fs-body: var(--fs-base);
+    --fs-copyright: calc(var(--fs-body) * 1.25);
 
     /* init widths */
     --logo-width: 100px;
