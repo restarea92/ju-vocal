@@ -231,6 +231,88 @@
 	}
 }
 
+.advantages.common-container {
+	background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+	
+	.advantages-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+		
+		.advantage-card {
+			background: white;
+			padding: 2.5rem;
+			border-radius: 20px;
+			box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			transition: var(--transition-smooth);
+			position: relative;
+			overflow: hidden;
+			
+			&:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+			}
+
+			.card-icon {
+				font-size: var(--fs-title);
+				display: block;
+				span.material-symbols-outlined {
+					font-size: var(--fs-title);
+				}
+			}
+			
+			.card-title {
+				text-align: left;
+				font-size: var(--fs-subtitle);
+				font-weight: 800;
+				color: #333;
+				margin-bottom: 1rem;
+			}
+			
+			.card-description {
+				color: #666;
+				line-height: 1.6;
+				font-size: var(--fs-body);
+				margin-bottom: 1.5rem;
+			}
+			
+			.card-details {
+				background: #f8f9fa;
+				padding: 1.5rem;
+				border-radius: 12px;
+				margin-top: 1.5rem;
+				
+				.detail-item {
+					display: flex;
+					align-items: flex-start;
+					margin-bottom: 0.8rem;
+					
+					&:last-child {
+						margin-bottom: 0;
+					}
+					
+					.detail-bullet {
+						color: var(--gradient-primary);
+						margin-right: 0.5rem;
+						font-weight: bold;
+						flex-shrink: 0;
+					}
+					
+					.detail-text {
+						color: #555;
+						font-size: var(--fs-copyright);
+						line-height: 1.5;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
 /* Services Section */
 .services.common-container {
 	padding: 0;
@@ -560,85 +642,5 @@
 		opacity: 1;
 		transform: translateY(0);
 		
-	}
-}
-
-.advantages.common-container {
-	background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-	
-	.advantages-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 2rem;
-		margin-top: 3rem;
-		
-		.advantage-card {
-			background: white;
-			padding: 2.5rem;
-			border-radius: 20px;
-			box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-			border: 1px solid rgba(255, 255, 255, 0.3);
-			transition: var(--transition-smooth);
-			position: relative;
-			overflow: hidden;
-			
-			&:hover {
-				transform: translateY(-8px);
-				box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-			}
-
-			.card-icon {
-				font-size: var(--fs-title);
-				margin-bottom: 1.5rem;
-				display: block;
-				span.material-symbols-outlined {
-					font-size: var(--fs-title);
-				}
-			}
-			
-			.card-title {
-				font-size: var(--fs-subtitle);
-				font-weight: 800;
-				color: #333;
-				margin-bottom: 1rem;
-			}
-			
-			.card-description {
-				color: #666;
-				line-height: 1.6;
-				font-size: var(--fs-body);
-				margin-bottom: 1.5rem;
-			}
-			
-			.card-details {
-				background: #f8f9fa;
-				padding: 1.5rem;
-				border-radius: 12px;
-				margin-top: 1.5rem;
-				
-				.detail-item {
-					display: flex;
-					align-items: flex-start;
-					margin-bottom: 0.8rem;
-					
-					&:last-child {
-						margin-bottom: 0;
-					}
-					
-					.detail-bullet {
-						color: var(--gradient-primary);
-						margin-right: 0.5rem;
-						font-weight: bold;
-						flex-shrink: 0;
-					}
-					
-					.detail-text {
-						color: #555;
-						font-size: var(--fs-copyright);
-						line-height: 1.5;
-					}
-				}
-			}
-		}
 	}
 }
