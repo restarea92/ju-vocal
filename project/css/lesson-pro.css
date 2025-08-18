@@ -275,6 +275,9 @@
     .courses.common-container {
         padding-top: 4rem;
 
+        .course-card {
+            padding: 0;
+        }
         h2.content-title {
             margin-bottom:2rem;
         }
