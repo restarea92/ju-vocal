@@ -440,6 +440,7 @@
 								text-decoration: underline;
 							}
 							span.material-symbols-outlined {
+								font-size: calc(var(--fs-body) * 0.875);
 								text-decoration: none!important;
 							}
 						}
