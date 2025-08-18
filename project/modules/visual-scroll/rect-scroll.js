@@ -154,7 +154,7 @@ const rectScroll = {
         const containerWidth = this.elements.background.getBoundingClientRect().width;
         const effectiveWidth = Math.min(contentWidth, window.innerWidth);
         
-        const result = (effectiveWidth / containerWidth) * 100;
+        const result = (effectiveWidth / contentWidth) * 100;
         console.log({contentWidth, containerWidth, effectiveWidth, result})
         return result;
     },
