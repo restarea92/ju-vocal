@@ -23,10 +23,10 @@
     padding: 0;
     /* Typography */
     h1 {
-        -webkit-text-fill-color: unset;
         background: unset;
         background-clip: unset;
         -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
         
         font-size: var(--font-h1);
         font-weight: 800;
