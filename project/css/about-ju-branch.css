@@ -114,3 +114,62 @@
 	}
 
 }
+
+@media (max-width: 768px) {
+
+	/* Coach Section 모바일 */
+	#about-ju-coach.common-container {
+		.content-wrapper {
+			padding: calc(var(--default-container-padding) * 1.5);
+		}
+		.coach-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.coach-profile {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+
+			position: static;
+
+			.profile-image {
+				width: 62.5%;
+				margin: 0 auto 2rem auto;
+			}
+
+			.coach-info h3 {
+				font-size: 1.6rem;
+			}
+		}
+
+		.coach-message-text {
+				grid-column: 1 / 2;
+				grid-row: 2 / 3;
+			.message-content  {
+
+				h3 {
+					font-size: 1.5rem;
+				}
+				p {
+					font-size: 1rem;
+				}
+			}
+		}
+
+		.coach-content:nth-of-type(even) {
+			.coach-profile {
+				grid-column: 1 / 2;
+				grid-row: 1 / 2;			
+			}
+			.coach-message-text {
+				grid-column: 1 / 2;
+				grid-row: 2 / 3;			
+			}
+		}
+		.coach-content + .coach-content {
+			margin-top: 4rem;
+			padding-top: 4rem;
+		}
+	}
+}
