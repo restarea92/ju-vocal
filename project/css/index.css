@@ -62,7 +62,7 @@
     p {
       color: #6e6e73;
       font-weight: 700;
-      font-size: var(--fs-body);
+      font-size: var(--fs-copyright);
       line-height: 1.54;
     }
     strong {
