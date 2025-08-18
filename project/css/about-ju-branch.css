@@ -454,6 +454,7 @@
 			}
 
 			p {
+				font-size: var(--fs-body);
 				color: #86868b;
 				line-height: 1.475;
 				margin-bottom: 1.5rem;
