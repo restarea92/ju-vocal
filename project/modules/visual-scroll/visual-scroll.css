@@ -1,5 +1,58 @@
-/* Ai 리팩토링 시 AI_REFERENCE.md 반드시 참고 */
-/* 참고: CSS 기본 변수 정의는 project/css/default.css를 참고하여 작성 */
+/* ==========================================================================
+   CSS Variables Reference
+   ==========================================================================
+   📌 Font 관련
+   --default-font-family
+   --base-body-font-size
+   --base-font-size
+   --fs-body-base
+   --fs-title-base
+   --fs-primary-title
+   --fs-title
+   --fs-subtitle
+   --fs-section-title
+   --fs-section-subtitle
+   --fs-body
+   --fs-copyright
+
+   📌 Width 관련
+   --logo-width
+   --default-container-width
+   --default-content-width
+   --default-container-width-small
+   --default-content-width-small
+
+   --max-container-width
+   --max-content-width
+   --max-container-width-small
+   --max-content-width-small
+
+   📌 Spacing 관련
+   --default-container-padding
+   --default-logo-margin
+   --default-navbar-padding
+
+   📌 Media Query에서 변경되는 변수
+   - (1025px~1280px)
+     --max-container-width
+     --max-content-width
+     --max-container-width-small
+     --max-content-width-small
+
+   - (769px~1024px)
+     --max-container-width
+     --max-content-width
+     --max-container-width-small
+     --max-content-width-small
+
+   - (최대 768px)
+     --fs-body-base
+     --fs-title-base
+     --max-container-width
+     --max-content-width
+     --max-container-width-small
+     --max-content-width-small
+================================================================== */
 
 
 /* imweb 헤더의 높이를 계산에서 제외하기 위한 CSS 변수 설정 */
@@ -113,7 +166,8 @@ svg text {
             }
         }
         .content-image { 
-            overflow: visible;
+            overflow: hidden;
+            border-radius: var(--fs-body);
             visibility: visible;
             content-visibility: visible;
             z-index: 1;
