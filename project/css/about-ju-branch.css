@@ -258,9 +258,6 @@
 @media (max-width: 768px) {
     .common-container {
         padding: 2rem 0;
-        .content-title {
-            margin-bottom: 1rem;
-        }
         .content {
             margin: 0;
         }
