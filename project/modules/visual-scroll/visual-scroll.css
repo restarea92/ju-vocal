@@ -56,7 +56,6 @@ svg text {
 
 #visual-section {
     --fs-visual-section-title: var(--fs-primary-title);
-    --fs-visual-section-subtitle: calc(var(--fs-visual-section-title) * 2 / 3);
 
     --default-margin: 8rem;
     margin-top:0;
