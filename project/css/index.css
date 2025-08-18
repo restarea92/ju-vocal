@@ -96,12 +96,11 @@
 #visual-section5 {
     
   .content-wrapper {
-    margin: var(--fs-subtitle) 0;
+    margin: var(--fs-subtitle) auto;
     display: flex;
     gap: 2rem;
     flex-wrap: nowrap;
     max-width: var(--max-content-width);
-    margin: 0 auto;
   }
   .content {
     border-radius: 1rem;
