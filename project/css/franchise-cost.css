@@ -108,6 +108,7 @@
 			}
 			
 			.step-title {
+				text-align: left;
 				font-size: var(--fs-subtitle);
 				font-weight: 700;
 				color: #1d1d1f;
