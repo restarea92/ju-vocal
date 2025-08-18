@@ -9,8 +9,8 @@
     --fs-base: var(--base-font-size);
     --fs-base-title: calc(var(--fs-base) * 2);
 
-    --fs-primary-title: calc(var(--fs-base) * 2);
     --fs-title: calc(var(--fs-base-title) * 3 / 2);
+    --fs-primary-title: calc(var(--fs-base-title) * 2);
     --fs-subtitle: calc(var(--fs-title) * 2 / 3);
 
     --fs-section-title: calc(var(--fs-base-title) * 2 / 3);
