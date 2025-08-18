@@ -167,7 +167,7 @@ svg text {
         }
         .content-image { 
             overflow: hidden;
-            border-radius: var(--fs-body);
+            border-radius: var(--fs-subtitle);
             visibility: visible;
             content-visibility: visible;
             z-index: 1;
