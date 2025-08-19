@@ -234,7 +234,7 @@
 							content: " ";
 							position: absolute;
 							width: 100%;
-							border-top:1px solid red;
+							border-top:1px solid #666;
 							left: 0;
 							top: 50%;
 							transform: translateY(-50%);
