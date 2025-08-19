@@ -235,6 +235,9 @@
 							position: absolute;
 							width: 100%;
 							border-top:10px solid red;
+							left: 0;
+							top: 50%;
+							transform: translateY(-50%);
 						}
 					}
 				}
