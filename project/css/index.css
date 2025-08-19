@@ -121,14 +121,15 @@
         }
 
         a {
+            --fs-temp: calc(var(--fs-body) * 0.875);
             display: flex;
             align-items: center;
-            font-size: var(--fs-body);
+            font-size: var(--fs-temp);
             span {
-                font-size: var(--fs-body);
+                font-size: var(--fs-temp);
             }
             span.material-symbols-outlined {
-                font-size: var(--fs-body);
+                font-size: var(--fs-temp);
             }
             
             color: #06c;
