@@ -228,6 +228,14 @@
 					}
 					s {
 						color: #ddd;
+						text-decoration: none;
+						position: relative;
+						&::after {
+							content: " ";
+							position: absolute;
+							width: 100%;
+							border-top:10px solid red;
+						}
 					}
 				}
 			}
