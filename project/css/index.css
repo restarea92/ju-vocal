@@ -122,7 +122,7 @@
 
         a {
             --fs-temp: calc(var(--fs-body) * 0.875);
-            gap: calc(var(--fs-temp) / 2);
+            gap: calc(var(--fs-temp) / 4);
             display: flex;
             align-items: center;
             font-size: var(--fs-temp);
