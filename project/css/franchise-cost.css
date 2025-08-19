@@ -233,9 +233,9 @@
 						&::after {
 							content: " ";
 							position: absolute;
-							width: 100%;
+							width: calc(100% + 1rem);
 							border-top:1px solid #666;
-							left: 0;
+							left: -0.5rem;
 							top: 50%;
 							transform: translateY(-50%);
 						}
