@@ -224,7 +224,7 @@
 					color: #1d1d1f;
 					
 					&.free {
-						color: #34c759;
+						color: #eee;
 						font-weight: 700;
 					}
 				}
