@@ -16,6 +16,9 @@ div.inside:has(.hidden-comment) {
 #doz_header_wrap {
 
 }
+body {
+    padding-top: var(--header-height);
+}
 
 /* ----------------------------------------------
  * common Footer default style
