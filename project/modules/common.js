@@ -1,74 +1,73 @@
-const documentRootElement = document.documentElement;
-
-const getStringValueToPx = (value) => {
-    if (!document.body) return '0px'; // fallback
-    const tempElement = document.createElement('div');
-    tempElement.style.height = value;
-    document.body.appendChild(tempElement);
-    const px = getComputedStyle(tempElement).height;
-    document.body.removeChild(tempElement);
-    return px;
-};
-
-const getStringValueToNum = (value) => {
-    if (!document.body) return 0; // fallback
-    const tempElement = document.createElement('div');
-    tempElement.style.height = value;
-    document.body.appendChild(tempElement);
-    const num = parseFloat(getComputedStyle(tempElement).height);
-    document.body.removeChild(tempElement);
-    return num;
-};
-
-const headerSize = {
-    element: document.querySelector('#doz_header_wrap'),
-    state: {
-        height: 0,
-        heightProperty: '',
-    },
-
-    init() {
-        this.updateState();
-    },
-
-    updateState() {
-        const headerHeight = this.element ? this.element.getBoundingClientRect().height : 0;
-        const headerHeightProperty = documentRootElement.style.getPropertyValue('--header-height');
-        if (headerHeightProperty !== `${headerHeight}px`) {
-            documentRootElement.style.setProperty('--header-height', `${headerHeight}px`);
-        }
-    }
-};
-
 const commonState = {
-    lvh: `${getStringValueToNum('1lvh')}`,
+    /**
+     * DOM elements used throughout the module.
+     */
+    elements: {
+        header: document.querySelector('#doz_header_wrap'),
+        docRoot: document.documentElement,
+    },
+
+    /**
+     * The current state of the module.
+     * @property {Object} state - Contains properties that represent the current state.
+     * @property {number} state.headerHeight - The height of the header element.
+     * @property {number} state.lvh - The logical viewport height.
+     */
+    state: {
+        headerHeight: this.elements.header ? this.elements.header.getBoundingClientRect().height : 0,
+        lvh: toPx('1lvh'),
+    },
 
     init() {
-        documentRootElement.style.setProperty('--lvh', `${this.lvh}px`);
         this.updateState();
     },
 
     updateState() {
-        const originLvh = this.lvh;
+        this.setLvh();
+        this.setHeaderHeight();
+    },
+
+    setLvh() {
+        const originLvh = this.state.lvh;
         const newLvh =  getStringValueToNum('1lvh');
 
         if (originLvh < newLvh) {
             documentRootElement.style.setProperty('--lvh', `${newLvh}px`);
-            this.lvh = newLvh;
+            this.state.lvh = newLvh;
         }
-    }
-}
+    },
+
+    setHeaderHeight() {
+        const originHeaderHeight = this.state.headerHeight;
+        const newHeaderHeight = this.elements.header ? this.elements.header.getBoundingClientRect().height : 0;
+
+        if (originHeaderHeight !== newHeaderHeight) {
+            documentRootElement.style.setProperty('--header-height', `${newHeaderHeight}px`);
+            this.state.headerHeight = newHeaderHeight;
+        }
+    },
+    
+
+    /* Utility functions ======================================================== */
+    /**
+     * Convert a CSS length value to pixels.
+     * @param {*} value - The CSS length value to convert.
+     * @returns {number} - The equivalent pixel value.
+     */
+    toPx(value) {
+        if (!this.elements.docRoot) return 0; // fallback
+        const tempElement = document.createElement('div');
+        tempElement.style.height = value;
+        this.elements.docRoot.appendChild(tempElement);
+        const num = parseFloat(getComputedStyle(tempElement).height);
+        this.elements.docRoot.removeChild(tempElement);
+        return num;
+    },
+};
 
 document.addEventListener('DOMContentLoaded', () => {
-    headerSize.init();
     commonState.init();
 });
-
-window.addEventListener('resize', () => {
-    headerSize.updateState();
-    commonState.updateState();
-});
-
 
 
 
