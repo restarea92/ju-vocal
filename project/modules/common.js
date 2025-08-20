@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const getVhToPx = (value) => {
+    const getStringValueToPx = (value) => {
         const tempElement = document.createElement('div');
         tempElement.style.height = value;
         document.body.appendChild(tempElement);
@@ -105,15 +105,20 @@ document.addEventListener('DOMContentLoaded', () => {
             //100vh
             //100svh
             //100lvh의 높이
-            '100vh': `${getVhToPx('100vh')}`,
-            '100dvh': `${getVhToPx('100dvh')}`,
-            '100lvh': `${getVhToPx('100lvh')}`,
-            '100svh': `${getVhToPx('100svh')}`,
+            '100vh': `${getStringValueToPx('100vh')}`,
+            '100dvh': `${getStringValueToPx('100dvh')}`,
+            '100lvh': `${getStringValueToPx('100lvh')}`,
+            '100svh': `${getStringValueToPx('100svh')}`,
             '': '',
-            '1vh': `${getVhToPx('1vh')}`,
-            '1dvh': `${getVhToPx('1dvh')}`,
-            '1lvh': `${getVhToPx('1lvh')}`,
-            '1svh': `${getVhToPx('1svh')}`,
+            '1vh': `${getStringValueToPx('1vh')}`,
+            '1dvh': `${getStringValueToPx('1dvh')}`,
+            '1lvh': `${getStringValueToPx('1lvh')}`,
+            '1svh': `${getStringValueToPx('1svh')}`,
+            '': '',
+            'iOS SAFE TOP': `${getStringValueToPx('env(safe-area-inset-top)')}`,
+            'iOS SAFE BOTTOM': `${getStringValueToPx('env(safe-area-inset-bottom)')}`,
+            'iOS SAFE LEFT': `${getStringValueToPx('env(safe-area-inset-left)')}`,
+            'iOS SAFE RIGHT': `${getStringValueToPx('env(safe-area-inset-right)')}`,
         };
         return debugInfo;
     };
