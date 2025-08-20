@@ -44,11 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
     debugContainer.style.border = '2px solid #fff';
     debugContainer.style.borderRadius = '1rem';
     debugContainer.style.color = '#000';
-    debugContainer.style.padding = '05rem';
+    debugContainer.style.padding = '1rem';
     debugContainer.style.zIndex = '9999';
     debugContainer.style.minWidth = '200px';
     debugContainer.style.minHeight = '100px';
     debugContainer.classList.add('debug-viewport-size');
+    debugContainer.style.display = 'flex';
+    debugContainer.style.flexDirection = 'column';
+    debugContainer.style.gap = '0.5rem';
 
     debugContainer.innerHTML = `
         <span style="font-size:2rem">Debug Info</span>
