@@ -111,7 +111,7 @@ const rectScroll = {
         window.addEventListener('resize', () => { 
             const startSize = this.getInitialSize();
             gsap.to(background, {
-                "--clip-path-end-size": `${50 - startSize / 2}%`,
+                "--clip-path-start-size": `${50 - startSize / 2}%`,
             });
         });
 
