@@ -102,7 +102,7 @@ svg#center-svg {
 }
 
 svg text {
-  font-size: 100vw;
+  font-size: 100lvw;
   font-weight: 700;
   fill: white;
 }
@@ -306,7 +306,7 @@ svg text {
 .sticky-element-content {
     .content {
         display: flex;
-        min-height: 100vh;
+        min-height: calc(var(--lvh, 1lvh) * 100);
     }
 
 }
