@@ -178,7 +178,6 @@ svg text {
             grid-column: 5 / 13;
             grid-row: 4 / 12;
             max-height: calc(var(--lvh) * 75);
-            box-shadow: 0 4px 128px 0 rgba(222,222,255,0.5);
             img {
                 overflow: visible;
                 visibility: visible;
