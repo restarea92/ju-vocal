@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
     createDebugInfo(debugInfo);
 
     window.addEventListener('resize', () => {
-        debugContents.querySelectorAll('span').forEach(span => span.remove());
         createDebugInfo(debugInfo);
     });
 });
