@@ -2,11 +2,10 @@ const getStringValueToPx = (value) => {
     const tempElement = document.createElement('div');
     tempElement.style.height = value;
     document.body.appendChild(tempElement);
-    const vhValue = getComputedStyle(tempElement).height;
+    const px = getComputedStyle(tempElement).height;
     document.body.removeChild(tempElement);
-    return vhValue;
+    return px;
 };
-
 
 const headerSize = {
     element: document.querySelector('#doz_header_wrap'),
@@ -104,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             debugContents.appendChild(createValueSpan);
         });
     };
+
 
 
     const getDebugInfo = () => {
