@@ -1,21 +1,12 @@
 const commonState = {
-    /**
-     * DOM elements used throughout the module.
-     */
     elements: {
         header: document.querySelector('#doz_header_wrap'),
         docRoot: document.documentElement,
     },
 
-    /**
-     * The current state of the module.
-     * @property {Object} state - Contains properties that represent the current state.
-     * @property {number} state.headerHeight - The height of the header element.
-     * @property {number} state.lvh - The logical viewport height.
-     */
     state: {
-        headerHeight: this.elements.header ? this.elements.header.getBoundingClientRect().height : 0,
-        lvh: toPx('1lvh'),
+        headerHeight: 0,
+        lvh: 0,
     },
 
     init() {
@@ -29,41 +20,45 @@ const commonState = {
 
     setLvh() {
         const originLvh = this.state.lvh;
-        const newLvh =  getStringValueToNum('1lvh');
+        const newLvh = this.toPx('1lvh');
 
         if (originLvh < newLvh) {
-            documentRootElement.style.setProperty('--lvh', `${newLvh}px`);
+            this.elements.docRoot.style.setProperty('--lvh', `${newLvh}px`);
             this.state.lvh = newLvh;
         }
     },
 
     setHeaderHeight() {
         const originHeaderHeight = this.state.headerHeight;
-        const newHeaderHeight = this.elements.header ? this.elements.header.getBoundingClientRect().height : 0;
+        const newHeaderHeight = this.elements.header
+            ? this.elements.header.getBoundingClientRect().height
+            : 0;
 
         if (originHeaderHeight !== newHeaderHeight) {
-            documentRootElement.style.setProperty('--header-height', `${newHeaderHeight}px`);
+            this.elements.docRoot.style.setProperty('--header-height', `${newHeaderHeight}px`);
             this.state.headerHeight = newHeaderHeight;
         }
     },
-    
 
-    /* Utility functions ======================================================== */
     /**
      * Convert a CSS length value to pixels.
-     * @param {*} value - The CSS length value to convert.
+     * @param {string} value - The CSS length value to convert.
      * @returns {number} - The equivalent pixel value.
      */
     toPx(value) {
-        if (!this.elements.docRoot) return 0; // fallback
+        if (!document.body) return 0; // fallback
         const tempElement = document.createElement('div');
         tempElement.style.height = value;
-        this.elements.docRoot.appendChild(tempElement);
+        document.body.appendChild(tempElement);
         const num = parseFloat(getComputedStyle(tempElement).height);
-        this.elements.docRoot.removeChild(tempElement);
+        document.body.removeChild(tempElement);
         return num;
     },
 };
+
+// 실행
+document.addEventListener('DOMContentLoaded', () => commonState.init());
+window.addEventListener('resize', () => commonState.updateState());
 
 document.addEventListener('DOMContentLoaded', () => {
     commonState.init();
