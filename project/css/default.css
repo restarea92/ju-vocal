@@ -39,12 +39,7 @@
 
     --lvh: 1lvh;
 }
-/* for iOS Firefox and old browsers */
-@supports (-webkit-touch-callout: none) {
-    :root {
-        --lvh: calc(var(--lvh) * 1);
-    }
-}
+
 
 
 
