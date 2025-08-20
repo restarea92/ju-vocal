@@ -114,6 +114,7 @@ const rectScroll = {
                 "--clip-path-end-size": `${50 - startSize / 2}%`,
             });
         });
+        
         this.createTimeline({
             start: "top 80%",
             end: "bottom center",
