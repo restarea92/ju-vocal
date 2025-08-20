@@ -1,4 +1,5 @@
 const getStringValueToPx = (value) => {
+    if (!document.body) return '0px'; // fallback
     const tempElement = document.createElement('div');
     tempElement.style.height = value;
     document.body.appendChild(tempElement);
