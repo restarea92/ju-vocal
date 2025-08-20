@@ -69,7 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
     commonState.init();
 });
 
-
+document.addEventListener('resize', () => {
+    commonState.updateState();
+});
 
 
 
