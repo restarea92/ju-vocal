@@ -118,8 +118,56 @@ document.addEventListener('DOMContentLoaded', () => {
         return debugInfo;
     };
 
+    const getDebugInfoFull = () => {
+        const debugInfo = {
+            // 브라우저 창 내부 높이 (스크롤바 제외)
+            'w.innerHeight': `${window.innerHeight}px`,
+            'w.innerWidth': `${window.innerWidth}px`,
+
+            // 브라우저 창 전체 높이 (툴바 포함)
+            'w.outerHeight': `${window.outerHeight}px`,
+            'w.outerWidth': `${window.outerWidth}px`,
+
+            // 화면 전체 높이 (모바일/데스크탑)
+            's.height': `${window.screen.height}px`,
+            's.width': `${window.screen.width}px`,
+            's.availHeight': `${window.screen.availHeight}px`, // OS UI 제외
+            's.availWidth': `${window.screen.availWidth}px`,
+
+            // 문서/HTML 요소 관련
+            'document.documentElement.clientHeight': `${document.documentElement.clientHeight}px`,
+            'document.documentElement.clientWidth': `${document.documentElement.clientWidth}px`,
+            'document.documentElement.scrollHeight': `${document.documentElement.scrollHeight}px`,
+            'document.documentElement.scrollWidth': `${document.documentElement.scrollWidth}px`,
+            'document.body.clientHeight': `${document.body.clientHeight}px`,
+            'document.body.clientWidth': `${document.body.clientWidth}px`,
+            'document.body.scrollHeight': `${document.body.scrollHeight}px`,
+            'document.body.scrollWidth': `${document.body.scrollWidth}px`,
+
+            // CSS 뷰포트 단위
+            '100vh': `${getVhToPx('100vh')}`,
+            '100dvh': `${getVhToPx('100dvh')}`,
+            '100lvh': `${getVhToPx('100lvh')}`,
+            '100svh': `${getVhToPx('100svh')}`,
+            '1vh': `${getVhToPx('1vh')}`,
+            '1dvh': `${getVhToPx('1dvh')}`,
+            '1lvh': `${getVhToPx('1lvh')}`,
+            '1svh': `${getVhToPx('1svh')}`,
+
+            // 스크롤 위치
+            'window.scrollY': `${window.scrollY}px`,
+            'window.scrollX': `${window.scrollX}px`,
+
+            // 화면 DPI / 배율
+            'devicePixelRatio': window.devicePixelRatio,
+        };
+
+        return debugInfo;
+    };
+
+
     window.addEventListener('load', () => {
-        createDebugInfo(getDebugInfo());
+        createDebugInfo(getDebugInfoFull());
     });
 
     window.addEventListener('resize', () => {
