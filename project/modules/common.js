@@ -46,8 +46,11 @@ const commonState = {
     },
 
     updateState() {
-        const lvh = getStringValueToNum('1lvh');
-        this.lvh = lvh;
+        const originLvh = this.lvh;
+        const newLvh =  getStringValueToNum('1lvh');
+        if (originLvh < newLvh) {
+            this.lvh = newLvh;
+        }
     }
 }
 
