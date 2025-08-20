@@ -141,8 +141,8 @@ const heroScroll = {
 
             // resize X
             document.addEventListener('resize', () => { 
-                // 가로가 리사이즈될때, 세로는아님
                 if (window.innerWidth !== this.elements.canvasWrapper.clientWidth) {
+                    const endSize = this.getInitialSize();
                     gsap.set(maskLayer, {
                         "--clip-path-end-size": `${50 - endSize / 2}%`,
                     });
