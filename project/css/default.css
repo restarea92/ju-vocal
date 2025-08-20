@@ -67,7 +67,7 @@
         --fs-body-base: calc(var(--base-font-size) * 1.125);
         --fs-title-base: calc(var(--base-font-size) * 1.75);
 
-        --max-container-width: calc(100svw - 4rem);
+        --max-container-width: calc(100lvw - 4rem);
         --max-content-width: calc(var(--max-container-width) - 4rem);
         --max-container-width-small: 736px;
         --max-content-width-small: 680px;
@@ -81,7 +81,7 @@
         
         --fs-copyright: calc(var(--fs-body-base) * 1.25);
 
-        --max-container-width: calc(100svw - 2rem);
+        --max-container-width: calc(100lvw - 2rem);
         --max-content-width: calc(var(--max-container-width) - 2rem);
         --max-container-width-small: var(--max-container-width);
         --max-content-width-small: var(--max-content-width);
