@@ -140,7 +140,6 @@ const heroScroll = {
             });
 
             // resize X
-            let lastWidth = window.innerWidth;
             document.addEventListener('resize', () => { 
                 const endSize = this.getInitialSize();
                 gsap.to(maskLayer, {
