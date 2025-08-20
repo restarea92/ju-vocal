@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     commonState.init();
 });
 
-document.addEventListener('resize', () => {
+window.addEventListener('resize', () => {
     headerSize.updateState();
     commonState.updateState();
 });
