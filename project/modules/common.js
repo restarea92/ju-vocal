@@ -76,6 +76,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    const getVhToPx = (value) => {
+        const tempElement = document.createElement('div');
+        tempElement.style.height = value;
+        document.body.appendChild(tempElement);
+        const vhValue = getComputedStyle(tempElement).height;
+        document.body.removeChild(tempElement);
+        return vhValue;
+    };
+
     const debugInfo = {
         // 브라우저 창 내부 높이 (스크롤바 제외)
         'window.innerHeight': `${window.innerHeight}px`,
@@ -92,6 +101,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 문서의 실제 높이
         'document.documentElement.clientHeight': `${document.documentElement.clientHeight}px`,
+
+        //100vh
+        //100svh
+        //100lvh의 높이
+        '100vh': `${getVhToPx('100vh')}px`,
+        '100lvh': `${getVhToPx('100lvh')}px`,
+        '100svh': `${getVhToPx('100svh')}px`
+        
+
     };
 
 
