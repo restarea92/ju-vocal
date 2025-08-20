@@ -8,6 +8,16 @@ const getStringValueToPx = (value) => {
     return px;
 };
 
+const getStringValueToNum = (value) => {
+    if (!document.body) return 0; // fallback
+    const tempElement = document.createElement('div');
+    tempElement.style.height = value;
+    document.body.appendChild(tempElement);
+    const num = parseFloat(getComputedStyle(tempElement).height);
+    document.body.removeChild(tempElement);
+    return num;
+};
+
 const headerSize = {
     element: document.querySelector('#doz_header_wrap'),
     state: {
@@ -29,14 +39,14 @@ const headerSize = {
 };
 
 const commonState = {
-    lvh: `${getStringValueToPx('1lvh')}`,
+    lvh: `${getStringValueToNum('1lvh')}`,
 
     init() {
         this.updateState();
     },
 
     updateState() {
-        const lvh = getStringValueToPx('1lvh');
+        const lvh = getStringValueToNum('1lvh');
         this.lvh = lvh;
     }
 }
@@ -109,9 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const getDebugInfo = () => {
         const debugInfo = {
             'css 100lvh': `${getStringValueToPx('100lvh')}`,
-            'current 100lvh': `${commonState.lvh * 100}`,
+            'current 100lvh': `${commonState.lvh * 100}px`,
             'css 1lvh': `${getStringValueToPx('1lvh')}`,
-            'current 1lvh': `${commonState.lvh}`,
+            'current 1lvh': `${commonState.lvh}px`,
         };
         return debugInfo;
     };
