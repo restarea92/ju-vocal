@@ -117,3 +117,4 @@ document.addEventListener('DOMContentLoaded', () => {
         debugContents.querySelectorAll('span').forEach(span => span.remove());
         createDebugInfo(debugInfo);
     });
+});
