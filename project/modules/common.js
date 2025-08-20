@@ -108,11 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
         '100vh': `${getVhToPx('100vh')}`,
         '100lvh': `${getVhToPx('100lvh')}`,
         '100svh': `${getVhToPx('100svh')}`
-        
-
     };
 
 
-
     updateDebugInfo(debugInfo);
+
+    document.addEventListener('resize', () => {
+        updateDebugInfo(debugInfo);
+    });
 });
