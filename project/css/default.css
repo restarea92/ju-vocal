@@ -36,6 +36,8 @@
     --default-container-padding: calc(var(--max-container-width) - var(--max-content-width));
     --default-logo-margin: 20px;
     --default-navbar-padding: 12px;
+
+    --lvh: 1lvh;
 }
 /* for iOS Firefox and old browsers */
 @supports (-webkit-touch-callout: none) {
