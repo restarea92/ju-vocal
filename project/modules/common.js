@@ -87,20 +87,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const debugInfo = {
         // 브라우저 창 내부 높이 (스크롤바 제외)
-        'window.innerHeight': `${window.innerHeight}px`,
+        'w.innerHeight': `${window.innerHeight}px`,
 
         // 브라우저 창 전체 높이 (툴바 포함)
-        'window.outerHeight': `${window.outerHeight}px`,
+        'w.outerHeight': `${window.outerHeight}px`,
 
         // 뷰포트 단위 계산용 변수
         '--vh (1% of viewport height)': `${window.innerHeight * 0.01}px`,
 
         // 화면 전체 높이 (모바일/데스크탑)
-        'screen.height': `${window.screen.height}px`,
-        'screen.availHeight': `${window.screen.availHeight}px`, // OS UI 제외
+        's.height': `${window.screen.height}px`,
+        's.availHeight': `${window.screen.availHeight}px`, // OS UI 제외
 
         // 문서의 실제 높이
-        'document.documentElement.clientHeight': `${document.documentElement.clientHeight}px`,
+        'clientHeight': `${document.documentElement.clientHeight}px`,
 
         //100vh
         //100svh
