@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     debugContainer.style.color = '#000';
     debugContainer.style.padding = '1rem';
     debugContainer.style.zIndex = '9999';
-    debugContainer.style.minWidth = '200px';
+    debugContainer.style.minWidth = 'max(200px, 20%)';
     debugContainer.style.minHeight = '100px';
     debugContainer.classList.add('debug-viewport-size');
     debugContainer.style.display = 'flex';
