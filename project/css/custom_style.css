@@ -51,48 +51,6 @@ div.inside:has(.hidden-comment) {
 }
 
 
-#dropdown_w2025072190d07aa84cf05 {
-    .tse-content {
-        max-width:var(--default-content-width);
-        width:100%;
-        margin: 0 auto;
-        > div {
-            display:contents;
-        } 
-        .mega_dropdown {
-              width:100%;
-              padding-left: calc(var(--logo-width) + var(--default-logo-margin) + var(--default-navbar-padding));
-        }
-    }
-}
-  
-#dropdown_w2025072190d07aa84cf05 .mega_dropdown_wrap {
-  .mega_dropdown {
-      display: grid; 
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fill, 128px);   
-        .title_menu > a {
-            font-size:15px;
-            font-weight:750;
-        }
-        .sub_menu li {
-            line-height:1;
-            height:fit-content;
-        }
-        .sub_menu a {
-            font-size:13px;
-        }
-      &.clearfix:after, &.clearfix:before {
-        content:unset;
-      }
-    > div {
-        float: unset;
-    }
-  }
-}
-
-
-
 
 /* ----------------------------------------------
  * common Footer default style
