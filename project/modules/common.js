@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create Debug display viewport size
     const debugContainer = document.createElement('div');
     debugContainer.style.position = 'fixed';
-    debugContainer.style.top = '10%';
-    debugContainer.style.left = '10%';
+    debugContainer.style.top = 'calc(var(--header-height) + 2rem)';
+    debugContainer.style.left = '2rem';
     debugContainer.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
     debugContainer.style.backdropFilter = 'blur(16px)';
     debugContainer.style.border = '1px solid #000';
