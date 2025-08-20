@@ -95,8 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // 화면 전체 높이 (모바일/데스크탑)
         'screen.height': `${window.screen.height}px`,
         'screen.availHeight': `${window.screen.availHeight}px`, // OS UI 제외
-        'screen.width': `${window.screen.width}px`,
-        'screen.availWidth': `${window.screen.availWidth}px`,
 
         // 문서의 실제 높이
         'document.documentElement.clientHeight': `${document.documentElement.clientHeight}px`,
