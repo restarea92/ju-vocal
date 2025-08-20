@@ -272,7 +272,7 @@
 	--common-text-color: black;
 	background:linear-gradient(180deg, #f5f5f7, #ffffff);
 	position: relative;
-	min-height: 120lvh;
+	min-height: calc(var(--lvh, 1lvh) * 120);
 	h3 {
 		width: 100%;
 	}

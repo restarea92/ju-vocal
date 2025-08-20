@@ -37,6 +37,14 @@
     --default-logo-margin: 20px;
     --default-navbar-padding: 12px;
 }
+/* for iOS Firefox and old browsers */
+@supports (-webkit-touch-callout: none) {
+    :root {
+        --lvh: 1lvh;
+    }
+}
+
+
 
 @media (max-width: 1280px) and (min-width: 1025px) {
     /* 1025 ~ 1280 */
