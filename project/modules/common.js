@@ -49,5 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
     debugContainer.style.minWidth = '200px';
     debugContainer.style.minHeight = '100px';
     debugContainer.classList.add('debug-viewport-size');
+
+    debugContainer.innerHTML = `
+        <span style="font-size:2rem">Debug Info</span>
+    `;
     document.body.appendChild(debugContainer);
+
+    
 });
