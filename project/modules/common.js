@@ -83,9 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // 브라우저 창 전체 높이 (툴바 포함)
         'window.outerHeight': `${window.outerHeight}px`,
 
-        // 장치 픽셀 비율
-        'devicePixelRatio': window.devicePixelRatio,
-
         // 뷰포트 단위 계산용 변수
         '--vh (1% of viewport height)': `${window.innerHeight * 0.01}px`,
 
