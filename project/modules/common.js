@@ -118,7 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return debugInfo;
     };
 
-    createDebugInfo(getDebugInfo());
+    window.addEventListener('load', () => {
+        createDebugInfo(getDebugInfo());
+    });
 
     window.addEventListener('resize', () => {
         debugContents.innerHTML = '';
