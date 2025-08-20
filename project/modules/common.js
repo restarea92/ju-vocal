@@ -1,4 +1,4 @@
-const commonState = {
+const common = {
     elements: {
         header: document.querySelector('#doz_header_wrap'),
         docRoot: document.documentElement,
@@ -57,23 +57,11 @@ const commonState = {
 };
 
 // 실행
-document.addEventListener('DOMContentLoaded', () => commonState.init());
-window.addEventListener('resize', () => commonState.updateState());
-
-document.addEventListener('DOMContentLoaded', () => {
-    commonState.init();
-});
-
-document.addEventListener('resize', () => {
-    commonState.updateState();
-});
-
+document.addEventListener('DOMContentLoaded', () => common.init());
+window.addEventListener('resize', () => common.updateState());
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    /**
-     * Set the --lvh variable
-     */
 
 
     // Create Debug display viewport size
@@ -122,10 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getDebugInfo = () => {
         const debugInfo = {
-            'css 100lvh': `${getStringValueToPx('100lvh')}`,
-            'current 100lvh': `${commonState.state.lvh * 100}px`,
-            'css 1lvh': `${getStringValueToPx('1lvh')}`,
-            'current 1lvh': `${commonState.state.lvh}px`,
+            'css 100lvh': `${common.toPx('100lvh')}px`,
+            'current 100lvh': `${common.state.lvh * 100}px`,
+            'css 1lvh': `${common.toPx('1lvh')}px`,
+            'current 1lvh': `${common.state.lvh}px`,
         };
         return debugInfo;
     };
