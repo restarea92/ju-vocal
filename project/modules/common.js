@@ -106,14 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
             //100svh
             //100lvh의 높이
             '100vh': `${getVhToPx('100vh')}`,
+            '100dvh': `${getVhToPx('100dvh')}`,
             '100lvh': `${getVhToPx('100lvh')}`,
             '100svh': `${getVhToPx('100svh')}`,
-            '100dvh': `${getVhToPx('100dvh')}`,
-
+            '': '',
             '1vh': `${getVhToPx('1vh')}`,
+            '1dvh': `${getVhToPx('1dvh')}`,
             '1lvh': `${getVhToPx('1lvh')}`,
             '1svh': `${getVhToPx('1svh')}`,
-            '1dvh': `${getVhToPx('1dvh')}`
         };
         return debugInfo;
     };
