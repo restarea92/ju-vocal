@@ -105,9 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
         //100vh
         //100svh
         //100lvh의 높이
-        '100vh': `${getVhToPx('100vh')}px`,
-        '100lvh': `${getVhToPx('100lvh')}px`,
-        '100svh': `${getVhToPx('100svh')}px`
+        '100vh': `${getVhToPx('100vh')}`,
+        '100lvh': `${getVhToPx('100lvh')}`,
+        '100svh': `${getVhToPx('100svh')}`
         
 
     };
