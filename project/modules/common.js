@@ -23,3 +23,7 @@ export default { headerSize };
 document.addEventListener('DOMContentLoaded', () => {
     headerSize.init();
 });
+
+document.addEventListener('resize', () => {
+    headerSize.updateState();
+});
