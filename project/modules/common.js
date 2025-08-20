@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     debugContainer.style.gap = '0.5rem';
 
     debugContainer.innerHTML = `
-        <span style="font-size:1.5rem; font-weight:700">Debug & State Info</span>
+        <span style="font-size:1.5rem; font-weight:700">Debug & Status Info</span>
         <div style="display:grid; grid-template-columns: max-content 1fr; gap:0 1rem;">
             <span style="font-weight:600">Header Height:</span><span style="font-weight:400">Null</span>
             <span style="font-weight:600">Viewport Size:</span><span style="font-weight:400">Null</span>
