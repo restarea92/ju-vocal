@@ -50,5 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     debugContainer.style.zIndex = '9999';
     debugContainer.style.minWidth = '200px';
     debugContainer.style.minHeight = '100px';
+    debugContainer.classList.add('debug-viewport-size');
     document.body.appendChild(debugContainer);
 });
