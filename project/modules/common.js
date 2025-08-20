@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateDebugInfo(debugInfo);
 
-    document.addEventListener('resize', () => {
+    window.addEventListener('resize', () => {
         updateDebugInfo(debugInfo);
     });
 });
