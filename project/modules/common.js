@@ -83,9 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // 브라우저 창 전체 높이 (툴바 포함)
         'window.outerHeight': `${window.outerHeight}px`,
 
-        // 화면 높이 (deprecated, 거의 사용 안함)
-        'window.height': `${window.height || 'N/A'}px`,
-
         // 장치 픽셀 비율
         'devicePixelRatio': window.devicePixelRatio,
 
