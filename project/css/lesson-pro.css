@@ -51,7 +51,7 @@
             object-fit: contain;
         }
         video#landscapeVideo {
-            max-height: calc(var(--lvh, 1lvh) * 60);
+            max-height: calc(var(--lvh) * 60);
         }
         video#portraitVideo {
         }

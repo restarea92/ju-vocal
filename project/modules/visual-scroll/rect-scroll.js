@@ -102,7 +102,7 @@ const rectScroll = {
                     calc( var(--clip-path-start-size) * var(--rect-scroll-inverted-progress) )
                     calc( var(--fs-primary-title) * var(--rect-scroll-inverted-progress) )
                     calc( var(--clip-path-start-size) * var(--rect-scroll-inverted-progress) )
-                    round calc( max(5svh, 5svw) * var(--rect-scroll-inverted-progress) )
+                    round calc( max(calc(var(--lvh) * 5), 5lvw) * var(--rect-scroll-inverted-progress) )
                 )`,
                 filter: "brightness(var(--rect-scroll-brightness))",
             });

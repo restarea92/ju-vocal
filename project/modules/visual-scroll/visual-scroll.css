@@ -306,7 +306,7 @@ svg text {
 .sticky-element-content {
     .content {
         display: flex;
-        min-height: calc(var(--lvh, 1lvh) * 100);
+        min-height: calc(var(--lvh) * 100);
     }
 
 }
@@ -325,8 +325,8 @@ svg text {
 @media (max-width: 1024px) and (min-width: 769px) {
   /* 769 ~ 1024 */
     #visual-section {
-        --fs-hero-scroll-title: clamp(2.5rem, max(5lvh, 5dvw), 3rem);
-        --fs-visual-scroll-title: clamp(1.125rem, max(3lvh, 3dvw), 1.25rem);
+        --fs-hero-scroll-title: clamp(2.5rem, max(calc(var(--lvh) * 5), 5dvw), 3rem);
+        --fs-visual-scroll-title: clamp(1.125rem, max(calc(var(--lvh) * 3), 3dvw), 1.25rem);
         .content {
             padding: 2rem;
         }
@@ -335,8 +335,8 @@ svg text {
 
 @media (max-width: 768px) {
     #visual-section {
-        --fs-hero-scroll-title: clamp(2rem, max(5lvh, 5dvw), 2.5rem);
-        --fs-visual-scroll-title: clamp(1rem, max(3lvh, 3dvw), 1.125rem);
+        --fs-hero-scroll-title: clamp(2rem, max(calc(var(--lvh) * 5), 5dvw), 2.5rem);
+        --fs-visual-scroll-title: clamp(1rem, max(calc(var(--lvh) * 3), 3dvw), 1.125rem);
 
         .content {
             padding: 0;

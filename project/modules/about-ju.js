@@ -99,7 +99,7 @@ const aboutJuScroll = {
 		
 			gsap.set(fixedWrapper, { 
 				width:"100%",
-				minHeight:"100lvh",
+				minHeight:"calc(var(--lvh) * 100)",
 				position: "sticky",
 			});
 

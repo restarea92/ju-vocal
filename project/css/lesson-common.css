@@ -108,7 +108,7 @@
 
 
 .lesson.common-container {
-    min-height: calc(var(--lvh, 1lvh) * 75);
+    min-height: calc(var(--lvh) * 75);
     background: linear-gradient(135deg, 
         rgba(99, 102, 241, 0.1) 0%, 
         rgba(236, 72, 153, 0.1) 50%, 
