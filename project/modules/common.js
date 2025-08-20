@@ -118,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     createDebugInfo(getDebugInfo());
 
     window.addEventListener('resize', () => {
+        debugContents.innerHTML = '';
         createDebugInfo(getDebugInfo());
     });
 
