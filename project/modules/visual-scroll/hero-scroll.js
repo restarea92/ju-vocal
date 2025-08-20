@@ -142,6 +142,7 @@ const heroScroll = {
             // resize X
             document.addEventListener('resize', () => { 
                 const endSize = this.getInitialSize();
+                console.log(endSize);
                 gsap.to(maskLayer, {
                     "--clip-path-end-size": `${50 - endSize / 2}%`,
                 });
