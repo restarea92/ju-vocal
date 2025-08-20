@@ -108,7 +108,12 @@ const rectScroll = {
             });
         } 
         
-    
+        window.addEventListener('resize', () => { 
+            const startSize = this.getInitialSize();
+            gsap.to(maskLayer, {
+                "--clip-path-end-size": `${50 - startSize / 2}%`,
+            });
+        });
         this.createTimeline({
             start: "top 80%",
             end: "bottom center",
