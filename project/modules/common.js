@@ -128,9 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const getDebugInfo = () => {
         const debugInfo = {
             'css 100lvh': `${getStringValueToPx('100lvh')}`,
-            'current 100lvh': `${commonState.lvh * 100}px`,
+            'current 100lvh': `${commonState.state.lvh * 100}px`,
             'css 1lvh': `${getStringValueToPx('1lvh')}`,
-            'current 1lvh': `${commonState.lvh}px`,
+            'current 1lvh': `${commonState.state.lvh}px`,
         };
         return debugInfo;
     };
