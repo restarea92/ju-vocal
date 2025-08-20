@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(debugContainer);
 
 
-    const updateDebugInfo = (obj) => {
+    const createDebugInfo = (obj) => {
         Object.keys(obj).forEach(key => {
             const createLabelSpan = document.createElement('span');
             createLabelSpan.style.fontWeight = '600';
@@ -111,9 +111,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
 
-    updateDebugInfo(debugInfo);
+    createDebugInfo(debugInfo);
 
-    window.addEventListener('resize', () => {
-        updateDebugInfo(debugInfo);
-    });
+    // 리사이즈시 값 반영하는 함수 생성
+    const updateDebugInfo = () => {
+        debugContainer.querySelectorAll('span').forEach(span => span.remove());
+        createDebugInfo(debugInfo);
+    };
+
+    window.addEventListener('resize', updateDebugInfo);
 });
