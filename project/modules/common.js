@@ -1,64 +1,60 @@
 const common = {
     elements: {
         header: document.querySelector('#doz_header_wrap'),
-        docRoot: document.documentElement,
+        root: document.documentElement
     },
-
+    
     state: {
         headerHeight: 0,
-        lvh: 0,
+        lvh: 0
     },
-
+    
     init() {
-        this.updateState();
-    },
+        this.refreshDimensions();
 
-    updateState() {
-        this.setLvh();
-        this.setHeaderHeight();
+        window.addEventListener('resize', () => this.refreshDimensions());
     },
-
-    setLvh() {
-        const originLvh = this.state.lvh;
+    
+    refreshDimensions() {
+        this.updateViewportHeight();
+        this.updateHeaderHeight();
+    },
+    
+    updateViewportHeight() {
         const newLvh = this.toPx('1lvh');
-
-        if (originLvh < newLvh) {
-            this.elements.docRoot.style.setProperty('--lvh', `${newLvh}px`);
+        
+        if (this.state.lvh < newLvh) {
+            this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
             this.state.lvh = newLvh;
         }
     },
-
-    setHeaderHeight() {
-        const originHeaderHeight = this.state.headerHeight;
-        const newHeaderHeight = this.elements.header
-            ? this.elements.header.getBoundingClientRect().height
-            : 0;
-
-        if (originHeaderHeight !== newHeaderHeight) {
-            this.elements.docRoot.style.setProperty('--header-height', `${newHeaderHeight}px`);
-            this.state.headerHeight = newHeaderHeight;
+    
+    updateHeaderHeight() {
+        const newHeight = this.elements.header?.getBoundingClientRect().height || 0;
+        
+        if (this.state.headerHeight !== newHeight) {
+            this.elements.root.style.setProperty('--header-height', `${newHeight}px`);
+            this.state.headerHeight = newHeight;
         }
     },
-
-    /**
-     * Convert a CSS length value to pixels.
-     * @param {string} value - The CSS length value to convert.
-     * @returns {number} - The equivalent pixel value.
-     */
-    toPx(value) {
-        if (!document.body) return 0; // fallback
-        const tempElement = document.createElement('div');
-        tempElement.style.height = value;
-        document.body.appendChild(tempElement);
-        const num = parseFloat(getComputedStyle(tempElement).height);
-        document.body.removeChild(tempElement);
-        return num;
-    },
+    
+    toPx(cssValue) {
+        if (!document.body) return 0;
+        
+        const temp = document.createElement('div');
+        temp.style.height = cssValue;
+        document.body.appendChild(temp);
+        
+        const pixels = parseFloat(getComputedStyle(temp).height);
+        temp.remove();
+        
+        return pixels;
+    }
 };
 
-// 실행
 document.addEventListener('DOMContentLoaded', () => common.init());
-window.addEventListener('resize', () => common.updateState());
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
