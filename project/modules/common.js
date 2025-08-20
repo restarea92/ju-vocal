@@ -48,5 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     debugContainer.style.color = '#000';
     debugContainer.style.padding = '05rem';
     debugContainer.style.zIndex = '9999';
+    debugContainer.style.minWidth = '200px';
+    debugContainer.style.minHeight = '100px';
     document.body.appendChild(debugContainer);
 });
