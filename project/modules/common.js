@@ -100,11 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 문서의 실제 높이
         'document.documentElement.clientHeight': `${document.documentElement.clientHeight}px`,
-        'document.body.clientHeight': `${document.body.clientHeight}px`,
-        
-        // 스크롤 높이
-        'document.documentElement.scrollHeight': `${document.documentElement.scrollHeight}px`,
-        'document.body.scrollHeight': `${document.body.scrollHeight}px`
     };
 
 
