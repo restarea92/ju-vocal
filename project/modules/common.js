@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     debugContainer.style.color = '#000';
     debugContainer.style.padding = '1rem';
     debugContainer.style.zIndex = '9999';
-    debugContainer.style.minWidth = 'max(200px, 20%)';
+    debugContainer.style.minWidth = '200px';
     debugContainer.style.minHeight = '100px';
     debugContainer.classList.add('debug-viewport-size');
     debugContainer.style.display = 'flex';
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     debugContainer.innerHTML = `
         <span style="font-size:1.5rem; font-weight:700">Debug Info</span>
-        <div style="display:grid; grid-template-columns: max-content 1fr">
+        <div style="display:grid; grid-template-columns: max-content 1fr; gap:1rem;">
             <span style="font-weight:600">Viewport Size:</span><span style="font-weight:400">Null</span>
             <span style="font-weight:600">Header Height:</span><span style="font-weight:400">Null</span>
         </div>
