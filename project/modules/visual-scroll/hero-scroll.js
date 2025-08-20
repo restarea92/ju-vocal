@@ -143,7 +143,7 @@ const heroScroll = {
             document.addEventListener('resize', () => { 
                 if (window.innerWidth !== this.elements.canvasWrapper.clientWidth) {
                     const endSize = this.getInitialSize();
-                    gsap.set(maskLayer, {
+                    gsap.to(maskLayer, {
                         "--clip-path-end-size": `${50 - endSize / 2}%`,
                     });
                 }
