@@ -74,7 +74,7 @@ const lessonApp = {
         });
 
         gsap.set(spacer, {
-            height: `calc(clamp(2000px, calc(var(--lvh) * 200), 3000px)`,
+            height: `calc(var(--lvh) * 200)`,
         });
 
         gridCards.forEach((card, i) => {
