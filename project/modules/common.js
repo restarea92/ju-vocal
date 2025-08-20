@@ -126,6 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('load', () => {
         createDebugInfo(getDebugInfo());
+        //3초 뒤 한번더
+        setTimeout(() => {
+            debugContents.innerHTML = '';
+            createDebugInfo(getDebugInfo());
+        }, 3000);
     });
 
     window.addEventListener('resize', () => {
