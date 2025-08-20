@@ -77,10 +77,37 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const debugInfo = {
-        'Viewport Size': `${window.innerWidth} x ${window.innerHeight}`,
-        'Header Height': `${headerSize.state.height}px`,
-        'Header Height Property': headerSize.state.heightProperty,
+        // 브라우저 창 내부 높이 (스크롤바 제외)
+        'window.innerHeight': `${window.innerHeight}px`,
+
+        // 브라우저 창 전체 높이 (툴바 포함)
+        'window.outerHeight': `${window.outerHeight}px`,
+
+        // 화면 높이 (deprecated, 거의 사용 안함)
+        'window.height': `${window.height || 'N/A'}px`,
+
+        // 장치 픽셀 비율
+        'devicePixelRatio': window.devicePixelRatio,
+
+        // 뷰포트 단위 계산용 변수
+        '--vh (1% of viewport height)': `${window.innerHeight * 0.01}px`,
+
+        // 화면 전체 높이 (모바일/데스크탑)
+        'screen.height': `${window.screen.height}px`,
+        'screen.availHeight': `${window.screen.availHeight}px`, // OS UI 제외
+        'screen.width': `${window.screen.width}px`,
+        'screen.availWidth': `${window.screen.availWidth}px`,
+
+        // 문서의 실제 높이
+        'document.documentElement.clientHeight': `${document.documentElement.clientHeight}px`,
+        'document.body.clientHeight': `${document.body.clientHeight}px`,
+        
+        // 스크롤 높이
+        'document.documentElement.scrollHeight': `${document.documentElement.scrollHeight}px`,
+        'document.body.scrollHeight': `${document.body.scrollHeight}px`
     };
+
+
 
     updateDebugInfo(debugInfo);
 });
