@@ -55,24 +55,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     debugContainer.innerHTML = `
         <span style="font-size:1.5rem; font-weight:700">Debug & Status Info</span>
-        <div style="display:grid; grid-template-columns: max-content 1fr; gap:0 1rem;">
+        <div class="debug-contents" style="display:grid; grid-template-columns: max-content 1fr; gap:0 1rem;">
 
         </div>
     `;
     document.body.appendChild(debugContainer);
 
-
+    const debugContents = debugContainer.querySelector('.debug-contents');
     const createDebugInfo = (obj) => {
         Object.keys(obj).forEach(key => {
             const createLabelSpan = document.createElement('span');
             createLabelSpan.style.fontWeight = '600';
             createLabelSpan.textContent = key + ':';
-            debugContainer.querySelector('div').appendChild(createLabelSpan);
+            debugContents.appendChild(createLabelSpan);
 
             const createValueSpan = document.createElement('span');
             createValueSpan.style.fontWeight = '400';
             createValueSpan.textContent = obj[key];
-            debugContainer.querySelector('div').appendChild(createValueSpan);
+            debugContents.appendChild(createValueSpan);
         });
     };
 
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 리사이즈시 값 반영하는 함수 생성
     const updateDebugInfo = () => {
-        debugContainer.querySelectorAll('span').forEach(span => span.remove());
+        debugContents.querySelectorAll('span').forEach(span => span.remove());
         createDebugInfo(debugInfo);
     };
 
