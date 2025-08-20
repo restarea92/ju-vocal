@@ -95,9 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // 브라우저 창 전체 높이 (툴바 포함)
             'w.outerHeight': `${window.outerHeight}px`,
 
-            // 뷰포트 단위 계산용 변수
-            '--vh (1% of viewport height)': `${window.innerHeight * 0.01}px`,
-
             // 화면 전체 높이 (모바일/데스크탑)
             's.height': `${window.screen.height}px`,
             's.availHeight': `${window.screen.availHeight}px`, // OS UI 제외
@@ -110,7 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
             //100lvh의 높이
             '100vh': `${getVhToPx('100vh')}`,
             '100lvh': `${getVhToPx('100lvh')}`,
-            '100svh': `${getVhToPx('100svh')}`
+            '100svh': `${getVhToPx('100svh')}`,
+            '100dvh': `${getVhToPx('100dvh')}`,
+
+            '1vh': `${getVhToPx('1vh')}`,
+            '1lvh': `${getVhToPx('1lvh')}`,
+            '1svh': `${getVhToPx('1svh')}`,
+            '1dvh': `${getVhToPx('1dvh')}`
         };
         return debugInfo;
     };
