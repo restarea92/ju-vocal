@@ -139,6 +139,16 @@ const heroScroll = {
                 )`,
             });
 
+            // resize X
+            document.addEventListener('resize', () => { 
+                // 가로가 리사이즈될때, 세로는아님
+                if (window.innerWidth !== this.elements.canvasWrapper.clientWidth) {
+                    gsap.set(maskLayer, {
+                        "--clip-path-end-size": `${50 - endSize / 2}%`,
+                    });
+                }
+            });
+
             gsap.set(canvas, {
                 filter: "brightness(var(--hero-scroll-brightness))",
             });
@@ -180,6 +190,7 @@ const heroScroll = {
             }, 0);
         }
     },
+
     getInitialSize() {
         const content = document.querySelector('.sticky-element-content .content');
         const background = document.querySelector('.sticky-element-background');
@@ -211,7 +222,6 @@ const heroScroll = {
         this.initElements();
         this.frameManager.init();
         this.initMaskScroll();
-
     }
 };
 
