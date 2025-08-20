@@ -64,10 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const updateDebugInfo = (obj) => {
         Object.keys(obj).forEach(key => {
-            const createSpan = document.createElement('span');
-            createSpan.style.fontWeight = '400';
-            createSpan.textContent = obj[key];
-            debugContainer.querySelector('div').appendChild(createSpan);
+            const createLabelSpan = document.createElement('span');
+            createLabelSpan.style.fontWeight = '600';
+            createLabelSpan.textContent = key + ':';
+            debugContainer.querySelector('div').appendChild(createLabelSpan);
+
+            const createValueSpan = document.createElement('span');
+            createValueSpan.style.fontWeight = '400';
+            createValueSpan.textContent = obj[key];
+            debugContainer.querySelector('div').appendChild(createValueSpan);
         });
     };
 
