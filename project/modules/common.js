@@ -113,11 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createDebugInfo(debugInfo);
 
-    // 리사이즈시 값 반영하는 함수 생성
-    const updateDebugInfo = () => {
+    window.addEventListener('resize', () => {
         debugContents.querySelectorAll('span').forEach(span => span.remove());
         createDebugInfo(debugInfo);
-    };
-
-    window.addEventListener('resize', updateDebugInfo);
-});
+    });
