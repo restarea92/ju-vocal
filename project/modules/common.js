@@ -85,35 +85,40 @@ document.addEventListener('DOMContentLoaded', () => {
         return vhValue;
     };
 
-    const debugInfo = {
-        // 브라우저 창 내부 높이 (스크롤바 제외)
-        'w.innerHeight': `${window.innerHeight}px`,
 
-        // 브라우저 창 전체 높이 (툴바 포함)
-        'w.outerHeight': `${window.outerHeight}px`,
 
-        // 뷰포트 단위 계산용 변수
-        '--vh (1% of viewport height)': `${window.innerHeight * 0.01}px`,
+    const getDebugInfo = () => {
+        const debugInfo = {
+            // 브라우저 창 내부 높이 (스크롤바 제외)
+            'w.innerHeight': `${window.innerHeight}px`,
 
-        // 화면 전체 높이 (모바일/데스크탑)
-        's.height': `${window.screen.height}px`,
-        's.availHeight': `${window.screen.availHeight}px`, // OS UI 제외
+            // 브라우저 창 전체 높이 (툴바 포함)
+            'w.outerHeight': `${window.outerHeight}px`,
 
-        // 문서의 실제 높이
-        'clientHeight': `${document.documentElement.clientHeight}px`,
+            // 뷰포트 단위 계산용 변수
+            '--vh (1% of viewport height)': `${window.innerHeight * 0.01}px`,
 
-        //100vh
-        //100svh
-        //100lvh의 높이
-        '100vh': `${getVhToPx('100vh')}`,
-        '100lvh': `${getVhToPx('100lvh')}`,
-        '100svh': `${getVhToPx('100svh')}`
+            // 화면 전체 높이 (모바일/데스크탑)
+            's.height': `${window.screen.height}px`,
+            's.availHeight': `${window.screen.availHeight}px`, // OS UI 제외
+
+            // 문서의 실제 높이
+            'clientHeight': `${document.documentElement.clientHeight}px`,
+
+            //100vh
+            //100svh
+            //100lvh의 높이
+            '100vh': `${getVhToPx('100vh')}`,
+            '100lvh': `${getVhToPx('100lvh')}`,
+            '100svh': `${getVhToPx('100svh')}`
+        };
+        return debugInfo;
     };
 
-
-    createDebugInfo(debugInfo);
+    createDebugInfo(getDebugInfo());
 
     window.addEventListener('resize', () => {
-        createDebugInfo(debugInfo);
+        createDebugInfo(getDebugInfo());
     });
+
 });
