@@ -90,7 +90,7 @@ const aboutJuScroll = {
 			gsap.set(trigger, { 
 				"--hero-scroll-inverted-progress": 1,
                 "--hero-scroll-progress": 0,
-				height: "clamp(3000px, calc(var(--lvh) * 200), 5000px)",
+				height: "calc(var(--lvh) * 200)",
 			});
 
 			gsap.set(container, { 
