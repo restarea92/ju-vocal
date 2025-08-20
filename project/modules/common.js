@@ -1,3 +1,5 @@
+const documentRootElement = document.documentElement;
+
 const getStringValueToPx = (value) => {
     if (!document.body) return '0px'; // fallback
     const tempElement = document.createElement('div');
@@ -31,9 +33,9 @@ const headerSize = {
 
     updateState() {
         const headerHeight = this.element ? this.element.getBoundingClientRect().height : 0;
-        const headerHeightProperty = document.documentElement.style.getPropertyValue('--header-height');
+        const headerHeightProperty = documentRootElement.style.getPropertyValue('--header-height');
         if (headerHeightProperty !== `${headerHeight}px`) {
-            document.documentElement.style.setProperty('--header-height', `${headerHeight}px`);
+            documentRootElement.style.setProperty('--header-height', `${headerHeight}px`);
         }
     }
 };
@@ -42,13 +44,16 @@ const commonState = {
     lvh: `${getStringValueToNum('1lvh')}`,
 
     init() {
+        documentRootElement.style.setProperty('--lvh', `${this.lvh}px`);
         this.updateState();
     },
 
     updateState() {
         const originLvh = this.lvh;
         const newLvh =  getStringValueToNum('1lvh');
+
         if (originLvh < newLvh) {
+            documentRootElement.style.setProperty('--lvh', `${newLvh}px`);
             this.lvh = newLvh;
         }
     }
