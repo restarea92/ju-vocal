@@ -39,11 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create Debug display viewport size
     const debugContainer = document.createElement('div');
     debugContainer.style.position = 'fixed';
-    debugContainer.style.top = '0';
-    debugContainer.style.left = '0';
-    debugContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-    debugContainer.style.color = '#fff';
-    debugContainer.style.padding = '5px';
+    debugContainer.style.top = '10%';
+    debugContainer.style.left = '10%';
+    debugContainer.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+    debugContainer.style.backdropFilter = 'blur(16px)';
+    debugContainer.style.border = '1px solid #000';
+    debugContainer.style.borderRadius = '1rem';
+    debugContainer.style.color = '#000';
+    debugContainer.style.padding = '05rem';
     debugContainer.style.zIndex = '9999';
     document.body.appendChild(debugContainer);
 });
