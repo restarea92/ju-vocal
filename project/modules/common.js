@@ -19,3 +19,7 @@ const headerSize = {
 };
 
 export default { headerSize };
+
+document.addEventListener('DOMContentLoaded', () => {
+    headerSize.init();
+});
