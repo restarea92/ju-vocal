@@ -36,20 +36,19 @@ const commonState = {
     },
 
     updateState() {
-        const lvhValue = document.documentElement.style.getPropertyValue('--lvh');
-        if (lvhValue !== this.lvh) {
-            document.documentElement.style.setProperty('--lvh', this.lvh);
-        }
+        const lvh = getStringValueToPx('1lvh');
+        this.lvh = lvh;
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     headerSize.init();
-
+    commonState.init();
 });
 
 document.addEventListener('resize', () => {
     headerSize.updateState();
+    commonState.updateState();
 });
 
 
@@ -109,31 +108,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getDebugInfo = () => {
         const debugInfo = {
-            // 브라우저 창 내부 높이 (스크롤바 제외)
-            'w.innerHeight': `${window.innerHeight}px`,
-
-            // 브라우저 창 전체 높이 (툴바 포함)
-            'w.outerHeight': `${window.outerHeight}px`,
-
-            // 화면 전체 높이 (모바일/데스크탑)
-            's.height': `${window.screen.height}px`,
-            's.availHeight': `${window.screen.availHeight}px`, // OS UI 제외
-
-            // 문서의 실제 높이
-            'clientHeight': `${document.documentElement.clientHeight}px`,
-
-            //100vh
-            //100svh
-            //100lvh의 높이
-            '100vh': `${getStringValueToPx('100vh')}`,
-            '100dvh': `${getStringValueToPx('100dvh')}`,
-            '100lvh': `${getStringValueToPx('100lvh')}`,
-            '100svh': `${getStringValueToPx('100svh')}`,
-            '': '',
-            '1vh': `${getStringValueToPx('1vh')}`,
-            '1dvh': `${getStringValueToPx('1dvh')}`,
-            '1lvh': `${getStringValueToPx('1lvh')}`,
-            '1svh': `${getStringValueToPx('1svh')}`,
+            'css 100lvh': `${getStringValueToPx('100lvh')}`,
+            'current 100lvh': `${commonState.lvh}`,
+            'css 1lvh': `${getStringValueToPx('1lvh')}`,
+            'current 1lvh': `${commonState.lvh}`,
         };
         return debugInfo;
     };
