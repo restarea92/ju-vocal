@@ -1,3 +1,13 @@
+const getStringValueToPx = (value) => {
+    const tempElement = document.createElement('div');
+    tempElement.style.height = value;
+    document.body.appendChild(tempElement);
+    const vhValue = getComputedStyle(tempElement).height;
+    document.body.removeChild(tempElement);
+    return vhValue;
+};
+
+
 const headerSize = {
     element: document.querySelector('#doz_header_wrap'),
     state: {
@@ -94,16 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
             debugContents.appendChild(createValueSpan);
         });
     };
-
-    const getStringValueToPx = (value) => {
-        const tempElement = document.createElement('div');
-        tempElement.style.height = value;
-        document.body.appendChild(tempElement);
-        const vhValue = getComputedStyle(tempElement).height;
-        document.body.removeChild(tempElement);
-        return vhValue;
-    };
-
 
 
     const getDebugInfo = () => {
