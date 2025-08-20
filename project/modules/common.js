@@ -27,3 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('resize', () => {
     headerSize.updateState();
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    /**
+     * Set the --lvh variable
+     */
+
+
+    // Create Debug display viewport size
+    const debugContainer = document.createElement('div');
+    debugContainer.style.position = 'fixed';
+    debugContainer.style.top = '0';
+    debugContainer.style.left = '0';
+    debugContainer.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    debugContainer.style.color = '#fff';
+    debugContainer.style.padding = '5px';
+    debugContainer.style.zIndex = '9999';
+    document.body.appendChild(debugContainer);
+});
