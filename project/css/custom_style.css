@@ -12,45 +12,10 @@ div.inside:has(.hidden-comment) {
 /* ----------------------------------------------
  * common header default style
  * header id         - #doz_header_wrap
- * header wrapper id - #s20250721b75480cc5aa0f
- * header inner id   - #s20250721b75480cc5aa0f
- *
- * menu widget id    - #w2025072190d07aa84cf05
- * login widget id   - #w20250721c82ad2c991d45
- *
  * ---------------------------------------------- */
-#s20250721b75480cc5aa0f .inline-inside {
-    max-width: var(--default-content-width);
-}
+#doz_header_wrap {
 
-#w20250721c225b846009a0 {
-    margin-right: var(--default-logo-margin);
-    padding:.5rem 0;
 }
-
-#w2025072190d07aa84cf05 {
-    font-weight:400;
-}
-#w2025072190d07aa84cf05 li.dropdown > ul.dropdown-menu {
-  ul, li, a {
-      --webkit-transition:.1s;
-      transition:.1s;
-  }
-}
-#w2025072190d07aa84cf05 .viewport-nav > li.dropdown > .notranslate a.active, 
-#w2025072190d07aa84cf05 .viewport-nav > li.dropdown > a.active {
-  font-weight:750;
-}
-#w2025072190d07aa84cf05 .viewport-nav > li.dropdown > .notranslate a:hover, 
-#w2025072190d07aa84cf05 .viewport-nav > li.dropdown > a:hover {
-    opacity: 0.5;
-}
-#w2025072190d07aa84cf05 .viewport-nav > li.dropdown > .notranslate a, #w2025072190d07aa84cf05 .viewport-nav > li.dropdown > a {
-  transition:unset;
-  padding: 0 var(--default-navbar-padding);
-}
-
-
 
 /* ----------------------------------------------
  * common Footer default style
