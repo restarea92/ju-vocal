@@ -40,7 +40,7 @@
 /* for iOS Firefox and old browsers */
 @supports (-webkit-touch-callout: none) {
     :root {
-        --lvh: 1lvh;
+        --lvh: calc(var(--lvh) * 1);
     }
 }
 

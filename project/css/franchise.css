@@ -126,7 +126,7 @@
 	--common-text-color: white;
 	--content-title-padding-top: 0;
 	--fixed-wrapper-top: 0;
-	min-height: 100lvh;
+	min-height: calc(var(--lvh) * 100);
 	background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
 	position: relative;
 	padding:0;
@@ -157,7 +157,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		min-height: 100lvh;
+		min-height: calc(var(--lvh) * 100);
 	}
 	
 	h2.content-title {
@@ -191,7 +191,7 @@
             display: flex;
             padding: 2rem;
             height: fit-content;
-            max-height: 100lvh;
+            max-height: calc(var(--lvh) * 100);
             align-items: flex-end;
             .hero-intro-copy-inner {
                 width: 100%;

@@ -89,7 +89,7 @@ const franchiseApp = {
 			gsap.set(trigger, { 
 				"--hero-scroll-inverted-progress": 1,
                 "--hero-scroll-progress": 0,
-				height: "clamp(2000px, 200svh, 3000px)",
+				height: "clamp(2000px, 200lvh, 3000px)",
 			});
 
 			gsap.set(container, { 

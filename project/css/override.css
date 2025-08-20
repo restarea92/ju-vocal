@@ -15,15 +15,15 @@ body {
 }
 body.doz_sys.modal-open {
   overflow-y:clip;
-  max-height: 100lvh;
-  min-height: 100lvh;
+  max-height: calc(var(--lvh) * 100);
+  min-height: calc(var(--lvh) * 100);
 }
 
 
 html.clip {
   overflow-y:clip;
-  max-height: 100lvh;
-  min-height: 100lvh;
+  max-height: calc(var(--lvh) * 100);
+  min-height: calc(var(--lvh) * 100);
 }
 body.clip {
   overflow-y:clip;
@@ -32,8 +32,8 @@ body.clip {
 
 body.doz_sys.modal-open {
   overflow-y:clip;
-  max-height: 100lvh;
-  min-height: 100lvh;
+  max-height: calc(var(--lvh) * 100);
+  min-height: calc(var(--lvh) * 100);
 }
 
 #doz_footer_wrap {

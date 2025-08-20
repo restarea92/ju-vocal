@@ -142,7 +142,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-auto-rows: 1fr;
-        height: 60lvh;
+        height: calc(var(--lvh) * 60);
     }
 
     .course-card {

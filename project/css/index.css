@@ -83,7 +83,7 @@
     .content {
         border-radius: 1rem;
         background: #f5f5f7;
-        min-height: 50lvh;
+        min-height: calc(var(--lvh) * 50);
         margin-top: 2rem;
         display: flex;
         justify-content: center;
