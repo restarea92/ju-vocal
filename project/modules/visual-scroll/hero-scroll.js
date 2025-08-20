@@ -139,7 +139,6 @@ const heroScroll = {
                 )`,
             });
 
-            // resize X
             window.addEventListener('resize', () => { 
                 const endSize = this.getInitialSize();
                 console.log(endSize);
