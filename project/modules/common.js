@@ -34,7 +34,8 @@ const common = {
                 this.state.lvh = newLvh;
             }
         } else {
-
+            this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
+            this.state.lvh = newLvh;
         }
         
 
