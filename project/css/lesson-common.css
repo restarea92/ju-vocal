@@ -370,9 +370,12 @@
         }
         &.scroll-to-down::after {
             opacity: 1;
+            transition: opacity 0.3s ease-in-out 0s;
+
         }
         &.scroll-to-up::before {
             opacity: 1;
+            transition: opacity 0.3s ease-in-out 0s;
         }
         &.visible .course-content  {
             .course-features {
