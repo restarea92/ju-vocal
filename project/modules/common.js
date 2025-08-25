@@ -108,7 +108,7 @@ const common = {
             }, 200);
         });
 
-        window.addEventListener('scrollEnd', () => {
+        window.addEventListener('scrollend', () => {
             this.state.events.onScroll = false;
         });
 
