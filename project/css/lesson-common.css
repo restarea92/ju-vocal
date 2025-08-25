@@ -262,6 +262,7 @@
         height: fit-content;
     }
     .course-card {
+        --fs-card-subtitle: calc(var(--fs-subtitle) * 0.75);
         transform: translateZ(0) scale(1.1);
         opacity: 0;
         will-change: transform, opacity;
