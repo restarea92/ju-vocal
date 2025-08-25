@@ -201,7 +201,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.target.classList.remove('visible');
             }
             if (entry.intersectionRatio >= 0.1) {
-                entry.target.classList.add('partial-visible');
+                // currentId
+                const currentId = entry.target.dataset.id;
+                if (currentId > 1) // id - 1에 partial-visible 클래스 추가
+                    entry.target.classList.add('partial-visible');
+
             } else {
                 entry.target.classList.remove('partial-visible');
             }
