@@ -47,14 +47,22 @@ const common = {
         });
 
         window.addEventListener('resize', (event) => {
-            this.updateResizeScrollState(true);
             this.refreshDimensions();            
         });
 
-        //리사이즈 종료 되면 false로
-        window.addEventListener('resizeend', (event) => {
-            this.updateResizeScrollState(false);
+        //리사이즈 종료 이벤트
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                common.state.events.onResize = false;
+                common.state.events.needResize = true;
+                setTimeout(() => {
+                    common.state.events.needResize = false;
+                }, 500);
+            }, 300);
         });
+        
     },
     
     refreshDimensions() {
