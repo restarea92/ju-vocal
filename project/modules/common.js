@@ -49,6 +49,10 @@ const common = {
                 this.updateScrollingState(false);
             }, 100);
         });
+        window.addEventListener('resize', (event) => {
+            clearTimeout(resizeTimeout);
+            this.updateResizeState(true);
+            resizeTimeout = setTimeout(() => {  
                 this.updateResizeState(false);
             }, 100);
             
