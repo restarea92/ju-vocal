@@ -2,7 +2,7 @@ const common = {
     elements: {
         root: document.documentElement,
         get header() {
-            return document.querySelector('header#doz_header_wrap');
+            return this.root.querySelector('header#doz_header_wrap');
         },
     },
     
