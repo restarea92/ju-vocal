@@ -200,7 +200,6 @@ const callback = (entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             console.log(`Card ${entry.target.dataset.id} is fully in viewport`);
-            observer.unobserve(entry.target);
         }
     });
 };
