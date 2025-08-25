@@ -205,23 +205,24 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const observer = new IntersectionObserver(callback, options);
-
     cards.forEach((card, i) => {
         card.dataset.id = i + 1;
         observer.observe(card);
         const cardFeature = card.querySelector('.course-feature');
-        cardFeature.addEventListener('scroll', () => {
-            if (cardFeature.scrollTop > 0) {
-                card.classList.add('scroll-to-up');
-            } else {
-                card.classList.remove('scroll-to-up');
-            }
+        if (cardFeature) {
+            cardFeature.addEventListener('scroll', () => {
+                if (cardFeature.scrollTop > 0) {
+                    card.classList.add('scroll-to-up');
+                } else {
+                    card.classList.remove('scroll-to-up');
+                }
 
-            if (cardFeature.scrollTop + cardFeature.clientHeight < cardFeature.scrollHeight) {
-                card.classList.add('scroll-to-down');
-            } else {
-                card.classList.remove('scroll-to-down');
-            }
-        });
+                if (cardFeature.scrollTop + cardFeature.clientHeight < cardFeature.scrollHeight) {
+                    card.classList.add('scroll-to-down');
+                } else {
+                    card.classList.remove('scroll-to-down');
+                }
+            });
+        }
     });
 });
