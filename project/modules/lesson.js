@@ -76,7 +76,18 @@ const lessonApp = {
         gsap.set(spacer, {
             height: `calc(var(--lvh) * 200)`,
         });
+        ScrollTrigger.create({
+            trigger: card,
+            start: `top+=${i * gridCardRatio}% top`,
+            onEnter: () => {
+                gsap.set(card, {
+                    border: "8px solid red",
+                });
+            },
+            onLeaveBack: () => {
 
+            }
+        });
         gridCards.forEach((card, i) => {
             const timelineReady = this.createTimeline({
                 scrub: true,
@@ -110,19 +121,6 @@ const lessonApp = {
                     scale: 1,
                     filter: "brightness(1)",
                     overflowY: "hidden"
-                });
-
-                ScrollTrigger.create({
-                    trigger: card,
-                    start: `top+=${i * gridCardRatio}% top`,
-                    onEnter: () => {
-                        gsap.set(card, {
-                            border: "8px solid red",
-                        });
-                    },
-                    onLeaveBack: () => {
-
-                    }
                 });
             }
 
