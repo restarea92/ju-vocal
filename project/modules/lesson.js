@@ -110,7 +110,6 @@ const lessonApp = {
                 });
                 timeline1.to(card, {
                     ease: "power1.inOut",
-                    display: "none",
                     yPercent: 0,
                     scale: 1,
                     filter: "brightness(1)",
