@@ -114,10 +114,6 @@ const common = {
             }, 100);
         });
         
-        window.addEventListener('scrollend', (event) => {
-            this.updateScrollingState(false);
-        });
-
         window.addEventListener('resize', () => {
             if (this.state.events.onScroll) {
                 this.updateResizeState(true);
