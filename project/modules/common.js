@@ -25,6 +25,7 @@ const common = {
         clearTimeout(this.state.events.resizeTimeout);
         this.state.events.resizeTimeout = setTimeout(() => {
             this.updateViewportHeight();
+            this.state.events.onResize = false;
         }, 100);
         this.updateHeaderHeight();
     },
