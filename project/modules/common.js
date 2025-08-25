@@ -115,7 +115,6 @@ const common = {
 
         window.addEventListener('touchstart', () => {
             this.state.events.onTouch = true;
-            
         });
 
         window.addEventListener('touchend', () => {
