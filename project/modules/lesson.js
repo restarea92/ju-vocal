@@ -1,5 +1,3 @@
-
-
 import { initGSAP } from './gsapUtils.js';
 const lessonApp = {
 
@@ -188,9 +186,9 @@ const lessonApp = {
 export default lessonApp;
 
 document.addEventListener('DOMContentLoaded', () => {
-    
     const cards = document.querySelectorAll(".course-card");
 
+    // IntersectionObserver: 카드가 화면에 보일 때 visible 클래스
     const options = {
         root: null,
         rootMargin: '0px',
@@ -209,10 +207,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const observer = new IntersectionObserver(callback, options);
 
-
     cards.forEach((card, i) => {
         card.dataset.id = i + 1;
         observer.observe(card);
-    });
 
+        // 내부 스크롤 감지: 맨 위면 class1, 맨 아래면 class2
+        card.addEventListener('scroll', () => {
+            if (card.scrollTop === 0) {
+                card.classList.add('class1');
+                card.classList.remove('class2');
+            } else if (card.scrollTop + card.clientHeight >= card.scrollHeight) {
+                card.classList.add('class2');
+                card.classList.remove('class1');
+            } else {
+                card.classList.remove('class1');
+                card.classList.remove('class2');
+            }
+        });
+    });
 });
