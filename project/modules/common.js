@@ -10,6 +10,7 @@ const common = {
     },
     
     init() {
+        console.log('Initializing common module');
         this.refreshDimensions();
 
         window.addEventListener('resize', () => this.refreshDimensions());
