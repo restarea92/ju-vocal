@@ -106,7 +106,7 @@ const common = {
             </div>
 
             <style>
-                #debugElement span.false {
+                #debugElement span {
                     color: orange;
                 }
                 #debugElement span.true {
