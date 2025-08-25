@@ -98,7 +98,15 @@ const lessonApp = {
                     start:  `top+=${(i - 1) * gridCardRatio}% top+=40%`,
                     end: `top+=${(i -1) * gridCardRatio }% 10%`,
                 });
+                
                 timelineReady.to(card, {
+                    ease: "power1.inOut",
+                    yPercent: 120,
+                    scale: 1.1,
+                    filter: "brightness(1)",
+                }, 0);
+
+                timelineReady.to(gridCards[0], {
                     ease: "power1.inOut",
                     yPercent: 120,
                     scale: 1.1,
