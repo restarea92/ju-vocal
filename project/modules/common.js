@@ -65,6 +65,7 @@ const common = {
                 <p>Resizing: ${this.state.onResize}</p>
             </div>
         `
+        document.body.insertAdjacentHTML('beforeend', elementHtml);
     }
 };
 
