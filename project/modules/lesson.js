@@ -64,6 +64,7 @@ const lessonApp = {
         });
         
         gsap.set(contentWrapper, {
+            paddingTop: "4rem",
         });
 
         gsap.set(stickyElement, {
