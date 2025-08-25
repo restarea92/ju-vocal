@@ -55,11 +55,7 @@ const common = {
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(() => {
-                common.state.events.onResize = false;
-                common.state.events.needResize = true;
-                setTimeout(() => {
-                    common.state.events.needResize = false;
-                }, 500);
+                this.updateResizeScrollState(false);
             }, 300);
         });
         
