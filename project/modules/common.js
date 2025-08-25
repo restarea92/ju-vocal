@@ -48,7 +48,7 @@ const common = {
     updateResizeState(isResizing = true) {
         this.state.events.onResize = isResizing;
         if (this.state.events.onScroll) {
-            this.state.events.needResize = true;
+            this.state.events.needResize = isResizing;
         }
     },
     
