@@ -47,6 +47,7 @@ const common = {
         });
 
         window.addEventListener('resize', (event) => {
+            this.updateResizeScrollState(true);
             this.refreshDimensions();
         });
         window.addEventListener('resizeend', (event) => {
