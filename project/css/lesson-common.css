@@ -572,7 +572,7 @@
                     grid-row: 1 / 2;
                     z-index: 1;
                     p {
-                        color: var(--text-dark);
+                        color: white;
                     }
                 }
             }
