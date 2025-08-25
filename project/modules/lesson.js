@@ -193,9 +193,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     courseContent.forEach(content => {
         const features = content.querySelector('.course-features');
-
         const contentHeight = content.offsetHeight;
-        const contentPadding = parseInt(window.getComputedStyle(content).paddingTop, 10) + parseInt(window.getComputedStyle(content).paddingBottom, 10);
-        console.log({ contentHeight, contentPadding });
+        const featuresHeight = features.offsetHeight;
+        const featuresVerticalPadding = parseInt(window.getComputedStyle(features).paddingTop, 10) + parseInt(window.getComputedStyle(features).paddingBottom, 10);
+        console.log({ contentHeight, featuresHeight, featuresVerticalPadding });
     });
 });
