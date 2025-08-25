@@ -31,7 +31,7 @@ const common = {
     
     updateHeaderHeight() {
         const newHeight = this.elements.header?.getBoundingClientRect().height || 0;
-        console.log(newHeight, this.state.headerHeight);
+        console.log("?");
         if (this.state.headerHeight !== newHeight) {
             this.elements.root.style.setProperty('--header-height', `${newHeight}px`);
             this.state.headerHeight = newHeight;
