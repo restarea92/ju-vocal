@@ -18,7 +18,7 @@ const common = {
         this.state = new Proxy(this.state, {
             set: (target, prop, value) => {
                 target[prop] = value;
-                console.log(`state.${prop} changed to`, value); // 값 변경시 콘솔 출력
+                console.log(`state.${prop}, value); // 값 변경시 콘솔 출력
                 return true;
             }
         });
