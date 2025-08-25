@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // IntersectionObserver: 카드가 화면에 보일 때 visible 클래스, 약간 보일 때 partial-visible 클래스
     const options = {
         rootMargin: '0px',
-        threshold: [0.01, 0.99] // 1% 이상 보이면 partial, 99% 이상 보이면 visible
+        threshold: [0.1, 0.99] // 10% 이상 보이면 partial, 99% 이상 보이면 visible
     };
 
     const callback = (entries) => {
