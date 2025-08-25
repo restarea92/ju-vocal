@@ -61,7 +61,7 @@ const common = {
 
     debugScrolling() {
         const elementHtml = `
-            <div style="z-index:99999; position: fixed; top:1rem; left:1rem; background: blue; color:white; padding: 0.5rem; border: 4px solid red;">
+            <div style="z-index:99999; position: fixed; bottom:1rem; left:1rem; background: blue; color:white; padding: 0.5rem; border: 4px solid red;">
                 <p class="debugScroll">Is Scrolling: ${this.state.onScroll}</p>
                 <p class="debugResize">Resizing: ${this.state.onResize}</p>
             </div>
