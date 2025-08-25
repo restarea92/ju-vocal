@@ -129,7 +129,7 @@ const lessonApp = {
                     filter: "brightness(1)",
                     onStart: () => {
                         gsap.set(gridCards[i - 1], {
-                            border: "2px solid red",
+                            overflowY: "auto",
                         });
                     }
                 }, 0);
