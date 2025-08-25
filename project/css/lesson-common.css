@@ -272,11 +272,11 @@
         h3 {
             font-size: var(--fs-subtitle);
             font-weight: 700;
-            margin-bottom: 1rem;
             text-align: left;
         }
         h4 {
             font-size: var(--fs-copyright);
+            margin-bottom: calc(var(--fs-subtitle) / 2);
             font-weight: 700;
         }
     }
