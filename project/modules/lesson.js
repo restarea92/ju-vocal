@@ -76,32 +76,33 @@ const lessonApp = {
         gsap.set(spacer, {
             height: `calc(var(--lvh) * 200)`,
         });
+        const timelineReady = this.createTimeline({
+            scrub: true,
+            ease: "none",
+            start:  `top+=${(i - 1) * gridCardRatio}% top+=40%`,
+            end: `top+=${(i -1) * gridCardRatio }% 10%`,
+        });
 
+        const timeline1 = this.createTimeline({
+            start:  `top+=${i * gridCardRatio}% top+=40%`,
+            end: `top+=${(i) * gridCardRatio }% 10%`,
+        });
+        const timeline2 = this.createTimeline({
+            start:  `top+=${(i + 1) * gridCardRatio}% top+=25%`,
+            end: `top+=${(i + 1) * gridCardRatio }% 10%`,
+        });
+        const timeline3 = this.createTimeline({
+            start:  `top+=${(i + 2) * gridCardRatio}% top+=30%`,
+            end: `top+=${(i + 2) * gridCardRatio }% 10%`,
+        });
+        const timeline4 = this.createTimeline({
+            start:  `top+=${(i + 3) * gridCardRatio}% top+=35%`,
+            end: `top+=${(i + 3) * gridCardRatio }% 10%`,
+        });
+        
         gridCards.forEach((card, i) => {
-            const timelineReady = this.createTimeline({
-                scrub: true,
-                ease: "none",
-                start:  `top+=${(i - 1) * gridCardRatio}% top+=40%`,
-                end: `top+=${(i -1) * gridCardRatio }% 10%`,
-            });
 
-            const timeline1 = this.createTimeline({
-                start:  `top+=${i * gridCardRatio}% top+=40%`,
-                end: `top+=${(i) * gridCardRatio }% 10%`,
-            });
-            const timeline2 = this.createTimeline({
-                start:  `top+=${(i + 1) * gridCardRatio}% top+=25%`,
-                end: `top+=${(i + 1) * gridCardRatio }% 10%`,
-            });
-            const timeline3 = this.createTimeline({
-                start:  `top+=${(i + 2) * gridCardRatio}% top+=30%`,
-                end: `top+=${(i + 2) * gridCardRatio }% 10%`,
-            });
-            const timeline4 = this.createTimeline({
-                start:  `top+=${(i + 3) * gridCardRatio}% top+=35%`,
-                end: `top+=${(i + 3) * gridCardRatio }% 10%`,
-            });
-            
+
             if (i === 0) {
                 gsap.set(card, {
                     force3D: true,
