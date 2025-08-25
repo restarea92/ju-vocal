@@ -278,7 +278,8 @@
         min-width: 0;
         width: 100%;
         flex-direction: column; 
-        max-height: 
+        max-height:
+        overflow-y: auto;
         calc(
             (var(--lvh) * 100)
             - (var(--fs-title) * 2) 
