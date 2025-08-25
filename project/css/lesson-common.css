@@ -289,7 +289,7 @@
         }
         .course-content {
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
+            grid-template-columns: repeat(12, minmax(max-content,1fr);
             gap:2rem;
             height: 100%;
             .course-features {
