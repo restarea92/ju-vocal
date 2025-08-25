@@ -189,10 +189,11 @@ export default lessonApp;
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const courseContent = document.querySelector('.course-content');
+    const courseContent = document.querySelectorAll('.course-content');
     const courseFeatures = document.querySelector('.course-features');
 
     const courseContentHeight = courseContent.offsetHeight;
     const courseContentPadding = parseInt(window.getComputedStyle(courseContent).paddingTop, 10) + parseInt(window.getComputedStyle(courseContent).paddingBottom, 10);
+    console.log
     
 });
