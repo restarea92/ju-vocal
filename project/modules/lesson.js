@@ -113,7 +113,7 @@ const lessonApp = {
                 });
 
                 ScrollTrigger.create({
-                    trigger: card,
+                    trigger: this.elements.trigger,
                     start: `top+=${i * gridCardRatio}% top`,
                     onEnter: () => {
                         gsap.set(card, {
