@@ -186,3 +186,28 @@ const lessonApp = {
 };
 
 export default lessonApp;
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll(".course-card");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && entry.intersectionRatio === 1) {
+      console.log(`${entry.target.dataset.id} 완전히 보임!`);
+      // 원하는 동작 실행
+      entry.target.classList.add("in-view");
+    } else {
+      entry.target.classList.remove("in-view");
+    }
+  });
+}, {
+  threshold: 1.0, // 100% 들어왔을 때만
+});
+
+cards.forEach((card, i) => {
+  // 카드별 식별자 달아주면 로그 구분하기 쉬움
+  card.dataset.id = i + 1;
+  observer.observe(card);
+});
+});
