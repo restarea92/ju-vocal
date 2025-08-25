@@ -131,6 +131,11 @@ const lessonApp = {
                         gsap.set(gridCards[i - 1], {
                             overflowY: "auto",
                         });
+                    },
+                    onComplete: () => {
+                        gsap.set(gridCards[i - 1], {
+                            overflowY: "hidden",
+                        });
                     }
                 }, 0);
 
