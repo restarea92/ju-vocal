@@ -20,21 +20,7 @@ const common = {
     },
     
     init() {
-        this.state.events = new Proxy(this.state.events, {
-            set: (target, prop, value) => {
-                target[prop] = value;
-                const debugElement = this.elements.debugElement;
-                if (debugElement) {
-                    // Use data attributes for mapping
-                    const span = debugElement.querySelector(`[data-debug="${prop}"]`);
-                    if (span) {
-                        span.textContent = `${prop}: ${value}`;
-                        span.className = `${value}`;
-                    }
-                }
-                return true;
-            }
-        });
+
         
         this.refreshDimensions();
         this.debugScrolling();
@@ -65,8 +51,25 @@ const common = {
                 this.updateResizeState(false);
             }, 100);
         });
-        
     },
+
+    initProxy() {
+        this.state.events = new Proxy(this.state.events, {
+            set: (target, prop, value) => {
+                target[prop] = value;
+                const debugElement = this.elements.debugElement;
+                if (debugElement) {
+                    // Use data attributes for mapping
+                    const span = debugElement.querySelector(`[data-debug="${prop}"]`);
+                    if (span) {
+                        span.textContent = `${prop}: ${value}`;
+                        span.className = `${value}`;
+                    }
+                }
+                return true;
+            }
+        });
+    }
     
     refreshDimensions() {
         this.updateViewportHeight();
