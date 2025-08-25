@@ -127,18 +127,6 @@ const lessonApp = {
                     yPercent: 0,
                     scale: 1,
                     filter: "brightness(1)",
-                    onStart: () => {
-                        gsap.set(gridCards[i], {
-                            overflowY: "hidden",
-                            border: "4px solid red"
-                        });
-                    },
-                    onComplete: () => {
-                        gsap.set(gridCards[i], {
-                            overflowY: "auto",
-                            border: "4px solid blue"
-                        });
-                    }
                 }, 0);
 
                 timeline1.to(card, {
