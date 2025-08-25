@@ -113,7 +113,7 @@ const lessonApp = {
                     scrub: false,
                 });
 
-                timeline1NoScrub.to(card[i], {
+                timeline1NoScrub.to(card[2], {
                     border: "4px solid red",
                 });
                 
