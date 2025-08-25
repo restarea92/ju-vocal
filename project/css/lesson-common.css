@@ -552,7 +552,7 @@
                 }
 
                 .course-features {
-                    padding: 1rem;
+                    padding: calc(var(--default-container-padding) * 2);
                     grid-column: 1 / 13;
                     grid-row: 1 / 2;
                     z-index: 1;
