@@ -204,5 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const compareHeight = contentHeight - featuresHeight - featuresVerticalPadding;
         const compareWidth = contentWidth - featuresWidth - featuresHorizontalPadding;
 
+        console.log({ featuresHeight, featuresWidth, contentHeight, contentWidth, compareHeight, compareWidth });
+
     });
 });
