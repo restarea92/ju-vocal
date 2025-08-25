@@ -4,6 +4,9 @@ const common = {
         get header() {
             return this.root.querySelector('header#doz_header_wrap');
         },
+        get debugElement() {
+            return this.root.querySelector('.debug');
+        }
     },
     
     state: {
@@ -20,7 +23,8 @@ const common = {
         this.state.events = new Proxy(this.state.events, {
             set: (target, prop, value) => {
                 target[prop] = value;
-                console.log(`${prop}`, value); // 값 변경시 콘솔 출력
+                const debugElement = document.querySelector(`.debug${prop.charAt(0).toUpperCase() + prop.slice(1)}`);
+                
                 return true;
             }
         });
