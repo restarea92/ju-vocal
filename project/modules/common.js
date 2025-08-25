@@ -34,11 +34,11 @@ const common = {
         const lvhel = debugElement.querySelector('#lvh span');
 
         if (this.state.events.onScroll || this.state.events.onTouchScroll) {
+            lvhel.textContent = `onscroll상태에서 state.lvh: ${this.state.lvh} / newLvh: ${newLvh}`;
             if (this.state.lvh < newLvh) {
                 this.state.events.onResize = true;
                 this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
                 this.state.lvh = newLvh;
-                lvhel.textContent = `onscroll상태에서 state.lvh: ${this.state.lvh} / newLvh: ${newLvh}`;
             }
         } else {
             this.state.events.onResize = true;
