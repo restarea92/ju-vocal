@@ -101,7 +101,7 @@ const common = {
     initEventListener() {
         let resizeTimeout,
             scrollTimeout,
-            touchScrollTimeout,
+            touchScrollTimeout;
 
         window.addEventListener('scroll', (event) => {
             clearTimeout(resizeTimeout);
