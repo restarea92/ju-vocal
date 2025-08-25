@@ -188,7 +188,6 @@ const lessonApp = {
 export default lessonApp;
 
 
-const cards = document.querySelectorAll(".course-card");
 
 const cards = document.querySelectorAll(".course-card");
 
