@@ -22,6 +22,7 @@ const common = {
     },
 
     refreshDimensions() {
+        clearTimeout(this.state.events.resizeTimeout);
         this.updateViewportHeight();
         this.updateHeaderHeight();
     },
