@@ -184,22 +184,26 @@ const lessonApp = {
 };
 
 export default lessonApp;
-
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll(".course-card");
 
-    // IntersectionObserver: 카드가 화면에 보일 때 visible 클래스
+    // IntersectionObserver: 카드가 화면에 보일 때 visible 클래스, 약간 보일 때 partial-visible 클래스
     const options = {
         rootMargin: '0px',
-        threshold: 0.99
+        threshold: [0.01, 0.99] // 1% 이상 보이면 partial, 99% 이상 보이면 visible
     };
 
     const callback = (entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting == true) {
+            if (entry.intersectionRatio >= 0.99) {
                 entry.target.classList.add('visible');
             } else {
                 entry.target.classList.remove('visible');
+            }
+            if (entry.intersectionRatio >= 0.01) {
+                entry.target.classList.add('partial-visible');
+            } else {
+                entry.target.classList.remove('partial-visible');
             }
         });
     };
