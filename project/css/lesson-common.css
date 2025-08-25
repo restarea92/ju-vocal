@@ -304,7 +304,6 @@
          */
         &.visible {
             overflow-y: auto;
-            filter: brightness(1.2);
         }
         h3 {
             font-size: var(--fs-card-subtitle);
