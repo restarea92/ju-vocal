@@ -129,7 +129,7 @@ const lessonApp = {
                 });
                 timeline2.to(card, {
                 ease: "expo.inOut",
-                    yPercent: -3,
+                    yPercent: -2,
                     opacity: 1,
                     scale: 0.95,
                     filter: "brightness(0.95)",
@@ -145,7 +145,7 @@ const lessonApp = {
                 ease: "expo.inOut",
                     opacity: 0.5,
                     scale: 0.9,
-                    yPercent: -4,
+                    yPercent: -3,
                     filter: "brightness(0.6)",
                 }, 0);
             }
