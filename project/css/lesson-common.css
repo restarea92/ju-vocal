@@ -552,7 +552,7 @@
     }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 768px) {
     .courses.common-container {
         h2.content-title {
         }
