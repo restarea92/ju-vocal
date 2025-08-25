@@ -38,6 +38,10 @@ const common = {
             this.state.headerHeight = newHeight;
         }
     },
+
+    updateScrollingState() {
+        
+    },
     
     toPx(cssValue) {
         if (!document.body) return 0;
