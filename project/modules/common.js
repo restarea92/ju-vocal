@@ -18,15 +18,6 @@ const common = {
             needResize: false,
         }
     },
-    
-    init() {
-        this.initProxy();
-        
-        this.refreshDimensions();
-        this.debugScrolling();
-
-        this.initEventListener();
-    },
 
     initProxy() {
         this.state.events = new Proxy(this.state.events, {
@@ -135,7 +126,17 @@ const common = {
             </style>
         `;
         document.body.insertAdjacentHTML('beforeend', elementHtml);
-    }
+    },
+
+        
+    init() {
+        this.initProxy();
+        
+        this.refreshDimensions();
+        this.debugScrolling();
+
+        this.initEventListener();
+    },
 };
 
 document.addEventListener('DOMContentLoaded', () => common.init());
