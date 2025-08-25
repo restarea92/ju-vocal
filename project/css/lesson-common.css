@@ -303,7 +303,7 @@
          */
 
         h3 {
-            font-size: var(--fs-title);
+            font-size: var(--fs-subtitle);
             font-weight: 700;
             text-align: left;
         }
