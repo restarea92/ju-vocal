@@ -122,6 +122,7 @@ const common = {
             } else {
                 touchScrollTimeout = setTimeout(() => {
                     this.state.events.onTouchScroll = false;
+                    console.log("해제");
                 }, 200);
             }
    
