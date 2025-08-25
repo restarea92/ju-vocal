@@ -214,16 +214,16 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('scroll', () => {
             // 맨 위에서 떨어져 있으면 class1
             if (card.scrollTop > 0) {
-                card.classList.add('down-scrolling');
+                card.classList.add('scroll-down');
             } else {
-                card.classList.remove('down-scrolling');
+                card.classList.remove('scroll-down');
             }
 
             // 맨 아래에서 떨어져 있으면 class2
             if (card.scrollTop + card.clientHeight < card.scrollHeight) {
-                card.classList.add('up-scrolling');
+                card.classList.add('scroll-up');
             } else {
-                card.classList.remove('up-scrolling');
+                card.classList.remove('scroll-up');
             }
         });
     });
