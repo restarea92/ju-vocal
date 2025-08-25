@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const contentWidth = content.offsetWidth;
 
         const compareHeight = contentHeight - featuresHeight - featuresVerticalPadding;
-        const compareWidth = contentWidth - featuresWidth - featuresVerticalPadding;
+        const compareWidth = contentWidth - featuresWidth - featuresHorizontalPadding;
 
         const featuresHeight = features.offsetHeight;
         const featuresWidth = features.offsetWidth;
