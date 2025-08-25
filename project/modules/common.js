@@ -39,8 +39,16 @@ const common = {
         this.refreshDimensions();
         this.debugScrolling();
 
+        let resizeTimeout,
+            scrollTimeout;
+
         window.addEventListener('scroll', (event) => {
-            this.updateScrollingState(true);
+                        clearTimeout(resizeTimeout);
+            this.updateResizeState(true);
+            resizeTimeout = setTimeout(() => {
+                this.updateResizeState(false);
+            }, 100);
+            
         });
         window.addEventListener('scrollend', (event) => {
             this.updateScrollingState(false);
@@ -50,8 +58,6 @@ const common = {
             this.refreshDimensions();            
         });
 
-        //리사이즈 종료 이벤트
-        let resizeTimeout;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
             this.updateResizeState(true);
