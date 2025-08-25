@@ -101,7 +101,7 @@ const lessonApp = {
                 start:  `top+=${(i + 3) * gridCardRatio}% top+=35%`,
                 end: `top+=${(i + 3) * gridCardRatio }% 10%`,
             });
-            
+
             if (i === 0) {
                 gsap.set(card, {
                     force3D: true,
