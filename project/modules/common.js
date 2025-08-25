@@ -109,10 +109,6 @@ const common = {
             }, 200);
         });
 
-        window.addEventListener('scrollend', () => {
-            this.state.events.onScroll = false;
-        });
-
         window.addEventListener('touchstart', () => {
             this.state.events.onTouch = true;
         });
