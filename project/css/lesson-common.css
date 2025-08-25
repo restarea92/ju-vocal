@@ -281,44 +281,41 @@
             margin-bottom: calc(var(--fs-subtitle) / 2);
             font-weight: 700;
         }
+        p {
+            color: var(--text-light);
+            font-size: var(--fs-subtitle);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        .course-features {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            list-style: none;
+            padding: 0;
+            p {
+                font-size: var(--fs-body);
+            }
+        }
+        .course-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap:2rem;
+            height: 100%;
+        }
+        .course-image {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1rem;
+            }
+        }
         :nth-of-type(even) {
 
         }
     }
-    
-    .course-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap:2rem;
-        height: 100%;
-    }
-    .course-image {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 1rem;
-        }
-    }
-
-    .course-card > p {
-        color: var(--text-light);
-        font-size: var(--fs-subtitle);
-        line-height: 1.5;
-        margin-bottom: 1rem;
-    }
-    .course-features {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-        list-style: none;
-        padding: 0;
-        p {
-            font-size: var(--fs-body);
-        }
-    }
-
 }
 
 /* Process Section */
