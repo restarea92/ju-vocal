@@ -555,6 +555,26 @@
         .courses-grid {
             .course-card, .courses-card:nth-last-of-type(even) {
                 padding: 0;
+                &.scroll-up::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(255, 255, 255, 0.5);
+                    pointer-events: none;
+                }
+                &.scroll-down::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(255, 255, 255, 0.5);
+                    pointer-events: none;
+                }
                 h3 {
                     color:white;
                 }
