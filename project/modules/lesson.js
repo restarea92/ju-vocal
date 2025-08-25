@@ -81,12 +81,12 @@ const lessonApp = {
             const timelineReady = this.createTimeline({
                 scrub: true,
                 ease: "none",
-                start:  `top+=${(i - 1) * gridCardRatio}% top+=40%`,
+                start:  `top+=${(i - 1) * gridCardRatio}% top+=20%`,
                 end: `top+=${(i -1) * gridCardRatio }% 10%`,
             });
 
             const timeline1 = this.createTimeline({
-                start:  `top+=${i * gridCardRatio}% top+=40%`,
+                start:  `top+=${i * gridCardRatio}% top+=20%`,
                 end: `top+=${(i) * gridCardRatio }% 10%`,
             });
             const timeline2 = this.createTimeline({
