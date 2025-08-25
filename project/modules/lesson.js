@@ -186,3 +186,12 @@ const lessonApp = {
 };
 
 export default lessonApp;
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const courseContent = document.querySelector('.course-content');
+    const courseFeatures = document.querySelector('.course-features');
+
+    const courseContentHeight = courseContent.offsetHeight;
+    const courseContentPadding = parseInt(window.getComputedStyle(courseContent).paddingTop, 10) + parseInt(window.getComputedStyle(courseContent).paddingBottom, 10);
+});
