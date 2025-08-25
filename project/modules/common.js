@@ -128,7 +128,7 @@ const common = {
                 this.refreshDimensions();
                 resizeTimeout = setTimeout(() => {
                     this.state.events.onResize = false;
-                }, 100);
+                }, 200);
             }
         });
     },
