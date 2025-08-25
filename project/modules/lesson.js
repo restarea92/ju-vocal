@@ -202,6 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const featuresHeight = features.offsetHeight;
         const featuresWidth = features.offsetWidth;
         const featuresVerticalPadding = parseInt(window.getComputedStyle(features).paddingTop, 10) + parseInt(window.getComputedStyle(features).paddingBottom, 10);
-        
+        const featuresHorizontalPadding = parseInt(window.getComputedStyle(features).paddingLeft, 10) + parseInt(window.getComputedStyle(features).paddingRight, 10);
     });
 });
