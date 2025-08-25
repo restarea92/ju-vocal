@@ -186,3 +186,28 @@ const lessonApp = {
 };
 
 export default lessonApp;
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    function fitTextToBox(selector) {
+  const el = document.querySelector(selector);
+  if (!el) return;
+
+  // 원래 폰트 크기 기억
+  const style = window.getComputedStyle(el);
+  const baseFontSize = parseInt(style.fontSize, 10);
+
+  let fontSize = baseFontSize;
+
+  // 글씨가 넘치면 줄여줌
+  while (el.scrollHeight > el.clientHeight || el.scrollWidth > el.clientWidth) {
+    fontSize--;
+    el.style.fontSize = fontSize + "px";
+    if (fontSize <= 10) break; // 최소 폰트 크기 제한
+  }
+}
+
+// 최초 실행
+fitTextToBox('.course-features');
+
+});
