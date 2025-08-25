@@ -136,6 +136,7 @@ const lessonApp = {
                     onComplete: () => {
                         gsap.set(gridCards[i - 1], {
                             overflowY: "hidden",
+                            border: "4px solid blue"
                         });
                     }
                 }, 0);
