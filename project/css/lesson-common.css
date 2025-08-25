@@ -327,7 +327,6 @@
             gap: min(4%, 2rem);
             height: 100%;
             .course-features {
-                overflow-y: auto;
                 grid-column: 1 / 6;
                 grid-row: 1 / 2;
                 list-style: none;
