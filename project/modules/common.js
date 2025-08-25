@@ -10,7 +10,7 @@ const common = {
         headerHeight: 0,
         lvh: 0,
         events: {
-            onScroll: false,
+            onScroll: window.onScroll,
             onResize: false,
             needResize: false,
         }
@@ -55,7 +55,6 @@ const common = {
 
     updateScrollingState(isScrolling = true) {
         this.state.events.onScroll = isScrolling;
-        console.log(window);
     },
 
     updateResizeScrollState(isResizing = true) {
