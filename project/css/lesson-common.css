@@ -232,7 +232,7 @@
 
     .content-wrapper {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         max-width: var(--max-container-width-small);
     }
 
