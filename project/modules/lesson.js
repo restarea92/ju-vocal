@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const callback = (entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting == true) {
+            if (entry.intersectionRatio >= 0.1) {
                 entry.target.classList.add('visible');
             } else {
                 entry.target.classList.remove('visible');
