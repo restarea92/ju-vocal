@@ -211,17 +211,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardFeature = card.querySelector('.course-features');
         if (cardFeature) {
             cardFeature.addEventListener('scroll', () => {
-                if (cardFeature.scrollTop > 0) {
-                    card.classList.add('scroll-to-up');
-                } else {
-                    card.classList.remove('scroll-to-up');
+                function updateScrollClasses(card, cardFeature) {
+                    if (cardFeature.scrollTop > 0) {
+                        card.classList.add('scroll-to-up');
+                    } else {
+                        card.classList.remove('scroll-to-up');
+                    }
+
+                    if (cardFeature.scrollTop + cardFeature.clientHeight < cardFeature.scrollHeight) {
+                        card.classList.add('scroll-to-down');
+                    } else {
+                        card.classList.remove('scroll-to-down');
+                    }
                 }
 
-                if (cardFeature.scrollTop + cardFeature.clientHeight < cardFeature.scrollHeight) {
-                    card.classList.add('scroll-to-down');
-                } else {
-                    card.classList.remove('scroll-to-down');
-                }
+                // 최초 1회 실행
+                updateScrollClasses(card, cardFeature);
+
+                cardFeature.addEventListener('scroll', () => {
+                    updateScrollClasses(card, cardFeature);
+                });
             });
         }
     });
