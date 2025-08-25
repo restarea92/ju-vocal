@@ -110,10 +110,8 @@ const common = {
         
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
-            if (this.state.events.onScroll) {
-                this.state.events.onResize = false;
-            } else {
-                this.state.events.onResize = true;
+            this.state.events.onResize = true;
+            if (!this.state.events.onScroll) {
                 this.refreshDimensions();
                 resizeTimeout = setTimeout(() => {
                     this.state.events.onResize = false;
