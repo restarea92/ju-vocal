@@ -31,8 +31,7 @@ const common = {
         clearTimeout(this.state.events.resizeTimeout);
         const newLvh = this.toPx('1lvh');
         const lvhel = document.querySelector('#lvh span');
-        lvhel.innerHTML = `lvh: ${newLvh} / state.lvh: ${this.state.lvh}`;
-
+        
         if (this.state.events.onScroll || this.state.events.onTouchScroll) {
             if (this.state.lvh < newLvh) {
                 this.state.events.onResize = true;
