@@ -23,8 +23,10 @@ const common = {
         this.state.events = new Proxy(this.state.events, {
             set: (target, prop, value) => {
                 target[prop] = value;
-                const debugElement = document.querySelector(`.debug${prop.charAt(0).toUpperCase() + prop.slice(1)}`);
-                
+                const debugElement = this.elements.debugElement;
+                if (debugElement) {
+                    debugElement.textContent = `${prop}: ${value}`;
+                }
                 return true;
             }
         });
