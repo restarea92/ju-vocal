@@ -130,6 +130,7 @@ const lessonApp = {
                     onStart: () => {
                         gsap.set(gridCards[i - 1], {
                             overflowY: "auto",
+                            border: "4px solid red"
                         });
                     },
                     onComplete: () => {
