@@ -48,9 +48,11 @@ const common = {
 
         window.addEventListener('resize', (event) => {
             this.updateResizeScrollState(true);
-            this.refreshDimensions();
+            this.refreshDimensions();            
+        });
 
-            //리사이즈 종료 되면 false
+        //리사이즈 종료 되면 false로
+        window.addEventListener('resizeend', (event) => {
             this.updateResizeScrollState(false);
         });
     },
