@@ -131,8 +131,8 @@ const lessonApp = {
                     },
                     onLeave: () => {
                         gsap.set(card, {
-                            border: "8px solid yellow",
-                            overflowY: "scroll"
+                            border: "8px solid blue",
+                            overflowY: "hidden"
                         });
                     },
                     onLeaveBack: () => {
