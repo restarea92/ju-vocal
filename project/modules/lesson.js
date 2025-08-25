@@ -222,12 +222,12 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(card);
         const cardFeature = card.querySelector('.course-features');
         if (cardFeature) {
-                // 최초 1회 실행
-                updateScrollClasses(card, cardFeature);
+            // 최초 1회 실행
+            updateScrollClasses(card, cardFeature);
 
-                cardFeature.addEventListener('scroll', () => {
-                    updateScrollClasses(card, cardFeature);
-                });
+            cardFeature.addEventListener('scroll', () => {
+                updateScrollClasses(card, cardFeature);
+            });
         }
     });
 });
