@@ -124,6 +124,7 @@ const common = {
         window.addEventListener('touchstart', () => {
             clearInterval(touchCheckInterval);
             touchCheckInterval = setInterval(() => {
+                console.log("인터벌중")
                 clearTimeout(scrollTimeout);
                 clearTimeout(resizeTimeout);
             }, 50);
