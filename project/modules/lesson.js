@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     function updateScrollClasses(card, cardFeature) {
-        if (cardFeature.scrollTop > 10) {
+        if (cardFeature.scrollTop > 25) {
             card.classList.add('scroll-to-up');
         } else {
             card.classList.remove('scroll-to-up');
