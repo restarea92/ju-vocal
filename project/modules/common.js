@@ -158,7 +158,7 @@ const common = {
     
     init() {
         this.initProxy();
-        this.debugScrolling();
+        // this.debugScrolling();
 
         this.refreshDimensions();
 
