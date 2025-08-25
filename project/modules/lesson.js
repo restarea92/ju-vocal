@@ -187,29 +187,32 @@ const lessonApp = {
 
 export default lessonApp;
 
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const cards = document.querySelectorAll(".course-card");
 
-const cards = document.querySelectorAll(".course-card");
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1.0
+    };
 
-const options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1.0
-};
+    const callback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    };
 
-const callback = (entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        } else {
-            entry.target.classList.remove('visible');
-        }
+    const observer = new IntersectionObserver(callback, options);
+
+
+    cards.forEach((card, i) => {
+        card.dataset.id = i + 1;
+        observer.observe(card);
     });
-};
 
-const observer = new IntersectionObserver(callback, options);
-
-
-cards.forEach((card, i) => {
-    card.dataset.id = i + 1;
-    observer.observe(card);
 });
