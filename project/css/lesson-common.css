@@ -276,6 +276,7 @@
         }
         h4 {
             font-size: var(--fs-copyright);
+            margin-top: calc(var(--fs-subtitle) / 2);
             margin-bottom: calc(var(--fs-subtitle) / 2);
             font-weight: 700;
         }
