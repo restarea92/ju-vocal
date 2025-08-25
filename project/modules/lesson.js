@@ -123,7 +123,7 @@ const lessonApp = {
                     },
                     onUpdate: () => {
                         gsap.set(card, {
-                            border: "8px solid red",
+                            border: "8px solid Yellow",
                         });
                     },
                     onLeave: () => {
