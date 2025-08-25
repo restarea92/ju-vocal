@@ -55,7 +55,7 @@ const common = {
 
     updateScrollingState(isScrolling = true) {
         this.state.events.onScroll = isScrolling;
-        console.log(window.onScroll)
+        console.log(window.onScroll);
     },
 
     updateResizeScrollState(isResizing = true) {
