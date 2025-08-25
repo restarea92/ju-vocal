@@ -132,6 +132,7 @@ const common = {
         });
 
         window.addEventListener('touchstart', () => {
+            clearTimeout(touchScrollTimeout);
             this.state.events.onTouch = true;
         });
 
