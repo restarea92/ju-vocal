@@ -194,12 +194,12 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 1.0
     };
 
-    const callback = (entries, observer) => {
+    const callback = (entries) => {
         entries.forEach(entry => {
-            if (entry.intersectionRatio === 1) {
-                // 완전히 보이게 되는 그 순간만
+            if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // 한 번만 옵저버
+            } else {
+                entry.target.classList.remove('visible');
             }
         });
     };
