@@ -47,7 +47,9 @@ const common = {
 
     updateResizeState(isResizing = true) {
         this.state.events.onResize = isResizing;
-        this.state.events.needResize = isResizing;
+        if(common.state.events.onScroll) {
+            console.log('Scrolling while resizing');
+        }
     },
     
     // utility
