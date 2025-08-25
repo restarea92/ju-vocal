@@ -197,13 +197,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const callback = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.intersectionRatio === 1) {
-                // 완전히 보일 때
+                // 완전히 보이게 되는 그 순간만
                 entry.target.classList.add('visible');
-            } else if (entry.intersectionRatio === 0) {
-                
-            } else {
-                // 일부만 보일 때
-                entry.target.classList.remove('visible');
+                observer.unobserve(entry.target); // 한 번만 옵저버
             }
         });
     };
