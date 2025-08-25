@@ -190,11 +190,22 @@ export default lessonApp;
 
 const cards = document.querySelectorAll(".course-card");
 
-const observer = new IntersectionObserver(callback, options);
 const options = {
-  rootMargin: '0px',
-  threshold: 1.0
+    root: null,
+    rootMargin: '0px',
+    threshold: 1.0
 };
+
+const callback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            console.log(`Card ${entry.target.dataset.id} is fully in viewport`);
+            observer.unobserve(entry.target);
+        }
+    });
+};
+
+const observer = new IntersectionObserver(callback, options);
 
 
 cards.forEach((card, i) => {
