@@ -558,7 +558,7 @@
                 &::before, &::after {
                     z-index: 2;
                     content: ' ';
-                    position: absolute;
+                    position: sticky;
                     left: 0;
                     border: 2px solid red;
                     width: 100%;
