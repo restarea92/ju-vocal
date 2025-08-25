@@ -102,7 +102,6 @@ const common = {
             touchCheckInterval;
 
         window.addEventListener('scroll', (event) => {
-            clearTimeout(scrollTimeout);
             clearTimeout(resizeTimeout);
             this.state.events.onScroll = true;
             scrollTimeout = setTimeout(() => {
@@ -115,6 +114,7 @@ const common = {
             clearInterval(touchCheckInterval);
             touchCheckInterval = setInterval(() => {
                 if (this.state.events.onScroll) {
+                    clearTimeout(scrollTimeout);
                     clearTimeout(resizeTimeout);
                 }
             }, 50);
