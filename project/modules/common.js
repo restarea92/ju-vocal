@@ -43,12 +43,10 @@ const common = {
     },
 
     updateScrollingState(isScrolling = true) {
-        console.log('scrolling...');
         this.state.onScroll = isScrolling;
     },
 
     updateResizeScrollState(isResizing = true) {
-        console.log('resizing...');
         this.state.onResize = isResizing;
     },
     
