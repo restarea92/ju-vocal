@@ -190,7 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // IntersectionObserver: 카드가 화면에 보일 때 visible 클래스
     const options = {
-        root: null,
         rootMargin: '0px',
         threshold: 1.0
     };
