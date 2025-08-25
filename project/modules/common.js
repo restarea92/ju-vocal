@@ -15,14 +15,10 @@ const common = {
     },
     
     init() {
-        // Proxy로 state 전체 옵저브
         this.state = new Proxy(this.state, {
             set: (target, prop, value) => {
                 target[prop] = value;
-                // UI 실시간 반영
-                document.querySelector('.debugScroll').textContent = `Is Scrolling: ${target.onScroll}`;
-                document.querySelectorAll('.debugResize')[0].textContent = `Resizing: ${target.onResize}`;
-                document.querySelectorAll('.debugResize')[1].textContent = `Need Resize: ${target.needResize}`;
+                console.log(`state.${prop} changed to`, value); // 값 변경시 콘솔 출력
                 return true;
             }
         });
