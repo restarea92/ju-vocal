@@ -11,6 +11,7 @@ const common = {
         lvh: 0,
         onScroll: false,
         onResize: false,
+        needResize: false,
     },
     
     init() {
