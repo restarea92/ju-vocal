@@ -110,7 +110,7 @@ const lessonApp = {
                     scrub: false,
                     ease: "none",
                     start:  `top+=${(i - 1) * gridCardRatio}% top+=40%`,
-                }).to(gridCards[i - 1], {
+                }).to(gridCards[i], {
                     border: "4px solid red"
                 }, 0);
 
