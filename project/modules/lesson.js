@@ -64,7 +64,7 @@ const lessonApp = {
         });
         
         gsap.set(contentWrapper, {
-            paddingTop: "var(--header-height0",
+            paddingTop: "var(--header-height)",
         });
 
         gsap.set(stickyElement, {
