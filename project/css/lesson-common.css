@@ -557,7 +557,7 @@
                 padding: 0;
                 &::before, &::after {
                     height: 20px;
-                    content: '';
+                    content: ' ';
                     position: absolute;
                     left: 0;
                     border: 2px solid red;
@@ -569,6 +569,10 @@
                 }
                 &::after {
                     bottom: 0;
+                }
+
+                &.scroll-to-down::after {
+                    
                 }
 
                 h3 {
