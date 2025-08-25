@@ -29,7 +29,7 @@ const common = {
                     const span = debugElement.querySelector(`[data-debug="${prop}"]`);
                     if (span) {
                         span.textContent = `${prop}: ${value}`;
-                        span.className = `${value}`
+                        span.className = `${value}`;
                     }
                 }
                 return true;
