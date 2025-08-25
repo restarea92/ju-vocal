@@ -282,8 +282,7 @@
             font-weight: 700;
         }
         :nth-of-type(even) {
-            align-items: flex-end;
-            text-align: right;
+
         }
     }
     
