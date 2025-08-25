@@ -127,7 +127,7 @@ const lessonApp = {
                     yPercent: 0,
                     scale: 1,
                     filter: "brightness(1)",
-                    onStart: () => {
+                    onUpdate: () => {
                         gsap.set(gridCards[i - 1], {
                             overflowY: "auto",
                         });
