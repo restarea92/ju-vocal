@@ -349,6 +349,23 @@
                 }
             }
         }
+        &::before, &::after {
+            z-index: 2;
+            content: ' ';
+            position: absolute;
+            left: 0;
+            border: 2px solid red;
+            width: 100%;
+            height: 10%;
+            background: rgba(255, 255, 255, 0.5);
+            pointer-events: none;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
         &.visible .course-content  {
             .course-features {
                 pointer-events: auto;
