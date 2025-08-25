@@ -138,12 +138,9 @@ const common = {
         window.addEventListener('touchend', () => {
             clearTimeout(touchScrollTimeout);
             this.state.events.onTouch = false;
-            if (!this.state.events.onScroll) {
-                "해제시도"
-                touchScrollTimeout = setTimeout(() => {
-                    this.state.events.onTouchScroll = false;
-                }, 200);
-            }
+            touchScrollTimeout = setTimeout(() => {
+                this.state.events.onTouchScroll = false;
+            }, 200);
         });
 
         window.addEventListener('resize', () => {
