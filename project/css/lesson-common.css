@@ -146,11 +146,16 @@
     }
 
     .content-text h1 {
-        margin-bottom: 24px;
+        margin:0;
+        margin-bottom: var(--fs-subtitle);
         background: var(--gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+    }
+    .content-text h3 {
+        margin-bottom: var(--fs-subtitle);
+        text-align: left;
     }
 
     .content-text p {
