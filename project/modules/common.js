@@ -118,7 +118,6 @@ const common = {
    
             scrollTimeout = setTimeout(() => {
                 this.state.events.onScroll = false;
-                this.state.events.onResize = false;
             }, 200);
         });
 
@@ -135,7 +134,6 @@ const common = {
 
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
-            this.state.events.onResize = true;
             this.refreshDimensions();
         });
     },
