@@ -103,6 +103,7 @@ const lessonApp = {
                     yPercent: 120,
                     scale: 1.1,
                     filter: "brightness(1)",
+                    border: "4px solid red", // 활성화 시점에 border 추가
                 }, 0);
 
                 const timeline1 = this.createTimeline({
