@@ -106,6 +106,7 @@ const common = {
 
         window.addEventListener('scroll', (event) => {
             clearTimeout(resizeTimeout);
+            clearTimeout(touchScrollTimeout);
             this.state.events.onScroll = true;
             if (this.state.events.onTouch) {
                 this.state.events.onTouchScroll = true;
