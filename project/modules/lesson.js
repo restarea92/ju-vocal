@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } 
         });
         }, {
-        threshold: 1.0, // 100% 들어왔을 때만
+            threshold: 1.0, // 100% 들어왔을 때만
         });
 
         cards.forEach((card, i) => {
