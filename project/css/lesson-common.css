@@ -280,10 +280,9 @@
         calc(
             (var(--lvh) * 100)
             - (var(--fs-title) * 2) 
-            - (var(--header-height)
-            - 1rem
+            - var(--header-height)
+            - 2rem
         ); 
-        
         /** 
          * max-height 계산
          * 100lvh로부터
