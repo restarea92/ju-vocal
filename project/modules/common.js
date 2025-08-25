@@ -44,10 +44,12 @@ const common = {
 
     updateScrollingState() {
         console.log('scrolling...');
+        this.state.onScroll = true;
     },
 
     updateResizeScrollState() {
         console.log('resizing...');
+        this.state.onResize = true;
     },
     
     toPx(cssValue) {
