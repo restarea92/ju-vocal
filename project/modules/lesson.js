@@ -112,6 +112,10 @@ const lessonApp = {
                     end: `top+=${(i) * gridCardRatio }% 10%`,
                     scrub: false,
                 });
+
+                timeline1NoScrub.to(card, {
+
+                });
                 
                 timeline1.to(card, {
                     ease: "power1.inOut",
