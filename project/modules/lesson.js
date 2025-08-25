@@ -196,6 +196,7 @@ const options = {
   threshold: 1.0
 };
 
+
 cards.forEach((card, i) => {
   card.dataset.id = i + 1;
   observer.observe(card);
