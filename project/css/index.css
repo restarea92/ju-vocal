@@ -135,7 +135,13 @@
             
             color: #06c;
             &:hover {
-                text-decoration: underline;
+                text-decoration: none;
+                span {
+                    text-decoration: underline;
+                }
+                span.material-symbols-outlined {
+                    text-decoration: underline;
+                }
             }
         }
     }
