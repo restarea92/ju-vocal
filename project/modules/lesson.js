@@ -142,7 +142,6 @@ const lessonApp = {
                     opacity: 1,
                     scale: 0.95,
                     filter: "brightness(0.95)",
-                    overflowY: "hidden"
                 }, 0);
             }
 
