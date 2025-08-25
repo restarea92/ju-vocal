@@ -312,9 +312,14 @@
                 }
             }
         }
-
-
-        :nth-of-type(even)
+        &:nth-of-type(even) .course-content {
+            .course-features {
+                grid-column: 2 / 3;
+            }
+            .course-image {
+                grid-column: 1 / 2;
+            }
+        }
     }
 }
 
