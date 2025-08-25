@@ -33,20 +33,18 @@ const common = {
 
         if (this.state.events.onScroll || this.state.events.onTouchScroll) {
             if (this.state.lvh < newLvh) {
+                this.state.events.onResize = true;
                 this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
                 this.state.lvh = newLvh;
-                this.state.events.resizeTimeout = setTimeout(() => {
-                    this.state.events.onResize = false;
-                }, 200);
             }
         } else {
+            this.state.events.onResize = true;
             this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
             this.state.lvh = newLvh;
-            this.state.events.resizeTimeout = setTimeout(() => {
-                this.state.events.onResize = false;
-            }, 200);
         }
-
+        this.state.events.resizeTimeout = setTimeout(() => {
+            this.state.events.onResize = false;
+        }, 200);
         console.log(this.state.events);
     },
     
