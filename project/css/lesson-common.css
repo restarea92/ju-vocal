@@ -564,6 +564,12 @@
                     background: rgba(255, 255, 255, 0.5);
                     pointer-events: none;
                 }
+                &::before {
+                    top: 0;
+                }
+                &::after {
+                    bottom: 0;
+                }
 
                 h3 {
                     color:white;
