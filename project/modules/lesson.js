@@ -201,8 +201,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const featuresVerticalPadding = parseInt(window.getComputedStyle(features).paddingTop, 10) + parseInt(window.getComputedStyle(features).paddingBottom, 10);
         const featuresHorizontalPadding = parseInt(window.getComputedStyle(features).paddingLeft, 10) + parseInt(window.getComputedStyle(features).paddingRight, 10);
 
-        const compareHeight = contentHeight - featuresHeight - featuresVerticalPadding;
-        const compareWidth = contentWidth - featuresWidth - featuresHorizontalPadding;
+        const compareHeight = contentHeight - featuresVerticalPadding;
+        const compareWidth = contentWidth - featuresHorizontalPadding;
 
         console.log({ featuresHeight, featuresWidth, contentHeight, contentWidth, compareHeight, compareWidth });
 
