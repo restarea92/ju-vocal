@@ -40,7 +40,7 @@ const common = {
     },
 
     updateScrollingState() {
-        
+        console.log('scrolling...');
     },
     
     toPx(cssValue) {
