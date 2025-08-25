@@ -303,7 +303,9 @@
          * - var(--card-padding-vertical)     => bottom padding을 위해 --card-padding-vertical만큼 계산
          */
         &.visible {
-            overflow-y: auto;
+            .grid-feature {
+                overflow-y: auto;
+            }
         }
         h3 {
             font-size: var(--fs-card-subtitle);
