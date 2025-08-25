@@ -40,8 +40,8 @@ const common = {
             this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
             this.state.lvh = newLvh;
         }
-        console.log(this.state.events);
 
+        console.log(this.state.events);
     },
     
     updateHeaderHeight() {
@@ -108,12 +108,10 @@ const common = {
     },
 
     initEventListener() {
-        let resizeTimeout,
-            scrollTimeout,
+        let scrollTimeout,
             touchScrollTimeout;
 
         window.addEventListener('scroll', (event) => {
-            clearTimeout(resizeTimeout);
             clearTimeout(scrollTimeout);
             clearTimeout(touchScrollTimeout);
             this.state.events.onScroll = true;
@@ -144,7 +142,6 @@ const common = {
         });
 
         window.addEventListener('resize', () => {
-            clearTimeout(resizeTimeout);
             this.refreshDimensions();
         });
     },
