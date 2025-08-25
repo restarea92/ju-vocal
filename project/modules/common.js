@@ -58,7 +58,7 @@ const common = {
             resizeTimeout = setTimeout(() => {
                 console.log('Resize event ended');
                 this.updateResizeState(false);
-            }, 300);
+            }, 100);
         });
         
     },
