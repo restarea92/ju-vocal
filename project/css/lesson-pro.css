@@ -96,6 +96,9 @@
 
     .content-text p {
         color: var(--text-light);
+        strong {
+            color:white;
+        }
     }
 
     .cta-button:hover {
