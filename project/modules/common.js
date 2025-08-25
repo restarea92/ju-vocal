@@ -102,7 +102,6 @@ const common = {
         let resizeTimeout,
             scrollTimeout,
             touchScrollTimeout,
-            touchCheckInterval;
 
         window.addEventListener('scroll', (event) => {
             clearTimeout(resizeTimeout);
@@ -122,18 +121,11 @@ const common = {
         });
 
         window.addEventListener('touchstart', () => {
-            clearInterval(touchCheckInterval);
-            touchCheckInterval = setInterval(() => {
-                console.log("인터벌중")
-                clearTimeout(scrollTimeout);
-                clearTimeout(resizeTimeout);
-            }, 50);
             this.state.events.onTouch = true;
         });
 
         window.addEventListener('touchend', () => {
             this.state.events.onTouch = false;
-            clearInterval(touchCheckInterval);
         });
 
         window.addEventListener('resize', () => {
