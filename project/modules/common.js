@@ -116,6 +116,7 @@ const common = {
             clearInterval(touchCheckInterval);
             touchCheckInterval = setInterval(() => {
                 if (this.state.events.onScroll) {
+                    this.state.events.onTouchScroll = true;
                     clearTimeout(scrollTimeout);
                     clearTimeout(resizeTimeout);
                 }
