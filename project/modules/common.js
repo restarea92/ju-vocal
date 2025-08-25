@@ -54,11 +54,11 @@ const common = {
     },
 
     updateScrollingState(isScrolling = true) {
-        this.state.events.onScroll = isScrolling;
+        this.state.onScroll = isScrolling;
     },
 
     updateResizeScrollState(isResizing = true) {
-        this.state.events.onResize = isResizing;
+        this.state.onResize = isResizing;
     },
     
     toPx(cssValue) {
