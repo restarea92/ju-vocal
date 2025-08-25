@@ -69,7 +69,7 @@ const lessonApp = {
 
         gsap.set(stickyElement, {
             position: "sticky",
-            top: "1rem",
+            top: "0",
             zIndex: 1,
         });
 
