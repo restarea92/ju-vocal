@@ -17,7 +17,6 @@ const common = {
             onResize: false,
             onTouch: false,
             onTouchScroll: false,
-            needResize: false,
         }
     },
 
@@ -27,7 +26,7 @@ const common = {
     },
 
     // state
-    updateViewportHeight(needResize) {
+    updateViewportHeight(onScrollResize) {
         const newLvh = this.toPx('1lvh');
         
         if (this.state.lvh < newLvh) {
