@@ -1,7 +1,9 @@
 const common = {
     elements: {
-        header: document.querySelector('header#doz_header_wrap'),
-        root: document.documentElement
+        root: document.documentElement,
+        get header() {
+            return document.querySelector('header#doz_header_wrap');
+        },
     },
     
     state: {
@@ -31,7 +33,7 @@ const common = {
     
     updateHeaderHeight() {
         const newHeight = this.elements.header?.getBoundingClientRect().height || 0;
-        console.log(this.elements.header);
+        
         if (this.state.headerHeight !== newHeight) {
             this.elements.root.style.setProperty('--header-height', `${newHeight}px`);
             this.state.headerHeight = newHeight;
@@ -52,6 +54,4 @@ const common = {
     }
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-    common.init()
-});
+document.addEventListener('DOMContentLoaded', () => common.init());
