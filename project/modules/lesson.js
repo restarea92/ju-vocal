@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (entry.intersectionRatio === 0) {
                 // 완전히 안 보일 때
                 entry.target.classList.remove('visible');
-                entry.target.classList.add('not-visible');
+                entry.target.classList.add('hidden');
             } else {
                 // 일부만 보일 때
                 entry.target.classList.remove('visible');
