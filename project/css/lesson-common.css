@@ -375,7 +375,6 @@
             opacity: 1;
         }
         &.visible .course-content  {
-            border:2px solid red;
             .course-features {
                 pointer-events: auto;
             }
