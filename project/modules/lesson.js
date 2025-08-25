@@ -191,7 +191,11 @@ export default lessonApp;
 const cards = document.querySelectorAll(".course-card");
 
 const observer = new IntersectionObserver(callback, options);
-
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 1.0
+};
 
 cards.forEach((card, i) => {
   card.dataset.id = i + 1;
