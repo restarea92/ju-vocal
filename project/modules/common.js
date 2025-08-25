@@ -29,9 +29,12 @@ const common = {
         this.debugScrolling();
 
         window.addEventListener('scroll', (event) => {
-            this.updateScrollingState();
+            this.updateScrollingState(true);
         });
-        
+        window.addEventListener('scrollEnd', (event) => {
+            this.updateScrollingState(false);
+        });
+
         window.addEventListener('resize', (event) => {
             this.refreshDimensions();
         });
