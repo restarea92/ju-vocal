@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.remove('scroll-to-up');
         }
 
-        if (cardFeature.scrollTop + cardFeature.clientHeight < cardFeature.scrollHeight - 10) {
+        if (cardFeature.scrollTop + cardFeature.clientHeight < cardFeature.scrollHeight - 25) {
             card.classList.add('scroll-to-down');
         } else {
             card.classList.remove('scroll-to-down');
