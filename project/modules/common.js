@@ -54,6 +54,7 @@ const common = {
         let resizeTimeout;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
+            this.updateResizeState(true);
             resizeTimeout = setTimeout(() => {
                 this.updateResizeState(false);
             }, 300);
