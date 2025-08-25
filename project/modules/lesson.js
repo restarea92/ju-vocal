@@ -208,16 +208,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cards.forEach((card, i) => {
         card.dataset.id = i + 1;
-        const cardFeature = card.querySelector('.course-card-feature');
         observer.observe(card);
-        card.addEventListener('scroll', () => {
-            if (card.scrollTop > 0) {
+        const cardFeature = card.querySelector('.course-card-feature');
+        cardFeature.addEventListener('scroll', () => {
+            if (cardFeature.scrollTop > 0) {
                 card.classList.add('scroll-to-up');
             } else {
                 card.classList.remove('scroll-to-up');
             }
 
-            if (card.scrollTop + card.clientHeight < card.scrollHeight) {
+            if (cardFeature.scrollTop + cardFeature.clientHeight < cardFeature.scrollHeight) {
                 card.classList.add('scroll-to-down');
             } else {
                 card.classList.remove('scroll-to-down');
