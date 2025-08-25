@@ -4,9 +4,7 @@ const common = {
         get header() {
             return this.root.querySelector('header#doz_header_wrap');
         },
-        get debugElement() {
-            return this.root.querySelector('#debugElement');
-        }
+
     },
     
     state: {
@@ -33,8 +31,6 @@ const common = {
     // state
     updateViewportHeight() {
         const newLvh = this.toPx('1lvh');
-        const debugElement = this.elements.debugElement;
-        const lvhel = debugElement.querySelector('#lvh span');
 
         if (this.state.events.onScroll || this.state.events.onTouchScroll) {
             lvhel.textContent = `onscroll상태에서 state.lvh: ${this.state.lvh} / newLvh: ${newLvh}`;
@@ -74,48 +70,6 @@ const common = {
         return pixels;
     },
 
-    // debug
-    debugScrolling() {
-        const elementHtml = `
-            <div id="debugElement" style="display:flex; flex-direction:column; gap:0.5rem; z-index:99999; position: fixed; bottom:1rem; font-size:0.75rem; font-weight:900; left:1rem; background: blue; color:white; padding: 0.5rem; border: 4px solid red;">
-                <span data-debug="onScroll">onScroll: false</span>
-                <span data-debug="onTouch">onTouch: false</span>
-                <span data-debug="onTouchScroll">onTouchScroll: false</span>
-                <span data-debug="onResize">onResize: false</span>
-                <div id="lvh">
-                    <span>lvh: 0</span>
-                </div>
-            </div>
-
-            <style>
-                #debugElement span {
-                    color: orange;
-                }
-                #debugElement span.true {
-                    color: lime;
-                }
-            </style>
-        `;
-        document.body.insertAdjacentHTML('beforeend', elementHtml);
-    },
-
-    initProxy() {
-        this.state.events = new Proxy(this.state.events, {
-            set: (target, prop, value) => {
-                target[prop] = value;
-                const debugElement = this.elements.debugElement;
-                if (debugElement) {
-                    // Use data attributes for mapping
-                    const span = debugElement.querySelector(`[data-debug="${prop}"]`);
-                    if (span) {
-                        span.textContent = `${prop}: ${value}`;
-                        span.className = `${value}`;
-                    }
-                }
-                return true;
-            }
-        });
-    },
 
     initEventListener() {
         let scrollTimeout,
@@ -158,7 +112,6 @@ const common = {
     
     init() {
         this.initProxy();
-        // this.debugScrolling();
 
         this.refreshDimensions();
 
