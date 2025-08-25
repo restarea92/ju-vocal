@@ -192,7 +192,6 @@ const cards = document.querySelectorAll(".course-card");
 
 const observer = new IntersectionObserver(callback, options);
 const options = {
-  root: null,
   rootMargin: '0px',
   threshold: 1.0
 };
