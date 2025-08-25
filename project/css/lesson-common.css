@@ -302,11 +302,7 @@
          * - (var(--header-height) - 1rem)    => Top:0 기준으로 부모의 padding-top값(Header의 Height과 --card-padding-vertical만큼 계산)
          * - var(--card-padding-vertical)     => bottom padding을 위해 --card-padding-vertical만큼 계산
          */
-        &.visible {
-            .courses-content .courses-features {
-                overflow-y: auto;
-            }
-        }
+
         h3 {
             font-size: var(--fs-card-subtitle);
             font-weight: 700;
@@ -349,6 +345,11 @@
                     object-fit: cover;
                     border-radius: 1rem;
                 }
+            }
+        }
+        &.visible .courses-content  {
+            .courses-features {
+                overflow-y: auto;
             }
         }
         &:nth-of-type(even) .course-content {
