@@ -27,11 +27,17 @@ const common = {
     // state
     updateViewportHeight() {
         const newLvh = this.toPx('1lvh');
-        
-        if (this.state.lvh < newLvh) {
-            this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
-            this.state.lvh = newLvh;
+
+        if (this.state.events.onScroll || this.state.events.onTouchScroll) {
+            if (this.state.lvh < newLvh) {
+                this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
+                this.state.lvh = newLvh;
+            }
+        } else {
+
         }
+        
+
     },
     
     updateHeaderHeight() {
