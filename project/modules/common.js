@@ -29,7 +29,7 @@ const common = {
         this.debugScrolling();
 
         window.addEventListener('scroll', (event) => {
-            console.log(event.onScroll)
+            console.log(window.onScroll)
             this.updateScrollingState();
         });
         
