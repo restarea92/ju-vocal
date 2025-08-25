@@ -196,10 +196,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const callback = (entries, observer) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (entry.intersectionRatio === 1) {
+                // 완전히 보일 때
                 entry.target.classList.add('visible');
-            } else {
+                entry.target.classList.remove('not-visible');
+            } else if (entry.intersectionRatio === 0) {
+                // 완전히 안 보일 때
                 entry.target.classList.remove('visible');
+                entry.target.classList.add('not-visible');
+            } else {
+                // 일부만 보일 때
+                entry.target.classList.remove('visible');
+                entry.target.classList.remove('not-visible');
             }
         });
     };
