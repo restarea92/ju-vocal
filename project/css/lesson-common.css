@@ -362,11 +362,11 @@
             transition: opacity 0.3s ease;
         }
         &::before {
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0));
             top: 0;
         }
         &::after {
-            background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+            background-image: linear-gradient(to top, rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, 0));
             bottom: 0;
         }
         &.scroll-to-down::after {
