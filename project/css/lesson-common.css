@@ -254,6 +254,7 @@
         grid-auto-rows: 1fr;
         min-height: calc(var(--lvh) * 60);
         height: fit-content;
+        max-height: calc(var(--lvh) * 80);
     }
     .course-card {
         transform: translateZ(0) scale(1.1);
