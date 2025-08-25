@@ -111,6 +111,20 @@ const lessonApp = {
                     filter: "brightness(1)",
                     overflowY: "hidden"
                 });
+
+                ScrollTrigger.create({
+                    trigger: card,
+                    start: "top+=0% top+=40%",
+                    end: "top+=0% 10%",
+                    onEnter: () => {
+                        gsap.set(card, {
+                            border: "8px solid red",
+                        });
+                    },
+                    onLeaveBack: () => {
+
+                    }
+                });
             }
 
             if (i > 0) {
