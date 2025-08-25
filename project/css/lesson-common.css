@@ -561,11 +561,13 @@
                 }
 
                 .course-features {
-                    color:white;
                     padding: calc(var(--default-container-padding));
                     grid-column: 1 / 13;
                     grid-row: 1 / 2;
                     z-index: 1;
+                    p {
+                        color:white;
+                    }
                 }
             }
         }
