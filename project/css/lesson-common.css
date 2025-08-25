@@ -556,6 +556,7 @@
             .course-card, .courses-card:nth-last-of-type(even) {
                 padding: 0;
                 &.scroll-to-up::after {
+                    height: 20px;
                     content: '';
                     position: absolute;
                     left: 0;
@@ -564,6 +565,7 @@
                     pointer-events: none;
                 }
                 &.scroll-to-down::after {
+                    height: 20px;
                     content: '';
                     position: absolute;
                     right: 0;
