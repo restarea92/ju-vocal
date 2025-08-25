@@ -102,9 +102,8 @@ const common = {
             </div>
 
             <style>
-                #debugElement span {
-                    display: inline-block;
-                    min-width: 150px;
+                #debugElement span.true {
+                    color: green;
                 }
             </style>
         `;
