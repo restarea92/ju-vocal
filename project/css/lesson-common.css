@@ -336,6 +336,7 @@
                 }
             }
             .course-image {
+                overflow: hidden;
                 grid-column: 5 / 13;
                 grid-row: 1 / 2;
                 img {
