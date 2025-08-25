@@ -72,7 +72,7 @@ const common = {
                 <span data-debug="onScroll">onScroll: false</span>
                 <span data-debug="onTouch">onTouch: false</span>
                 <span data-debug="onTouchScroll">onTouchScroll: false</span>
-                <span data-debug="needResize">needResize: false</span>
+                <span data-debug="onResize">onResize: false</span>
             </div>
 
             <style>
