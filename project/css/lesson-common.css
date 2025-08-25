@@ -328,6 +328,7 @@
             height: 100%;
             .course-features {
                 overflow-y: auto;
+                pointer-events: none;
                 grid-column: 1 / 6;
                 grid-row: 1 / 2;
                 list-style: none;
@@ -350,7 +351,7 @@
         }
         &.visible .course-content  {
             .course-features {
-                overflow-y: auto;
+                pointer-events: auto;
             }
         }
         &:nth-of-type(even) .course-content {
