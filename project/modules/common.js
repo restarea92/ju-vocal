@@ -119,9 +119,7 @@ const common = {
                 clearTimeout(resizeTimeout);
                 if (this.state.events.onScroll) {
                     this.state.events.onTouchScroll = true;
-                } else {
-                    this.state.events.onTouchScroll = false;
-                }
+                } 
             }, 50);
             this.state.events.onTouch = true;
         });
