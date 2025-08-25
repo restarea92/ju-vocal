@@ -286,7 +286,7 @@
             font-weight: 700;
         }
         p {
-            color: var(--text-dark);
+            color: black;
             font-size: var(--fs-subtitle);
             line-height: 1.5;
             margin-bottom: 1rem;
