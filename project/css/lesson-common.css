@@ -294,7 +294,6 @@
             - (var(--header-height) + var(--card-padding-vertical))
             - var(--card-padding-vertical)
         );
-        overflow-y: hidden;
         /** 
          * max-height 계산
          * 100lvh로부터
