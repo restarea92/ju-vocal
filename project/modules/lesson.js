@@ -122,7 +122,9 @@ const lessonApp = {
                         });
                     },
                     onLeaveBack: () => {
-
+                        gsap.set(card, {
+                            border: "8px solid blue",
+                        });
                     }
                 });
             }
