@@ -111,7 +111,6 @@ const lessonApp = {
                     filter: "brightness(1)",
                     overflowY: "hidden"
                 });
-                
             }
 
             if (i > 0) {
