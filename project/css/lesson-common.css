@@ -519,14 +519,12 @@
 @media (max-width: 1280px) and (min-width: 1025px) {
     .courses.common-container {
         h2.content-title {
-            margin-bottom:3rem;
         }
     }
 }
 @media (max-width: 1024px) and (min-width: 769px) {
     .courses.common-container {
         h2.content-title {
-            margin-bottom:2.5rem;
         }
     }
 }
@@ -535,7 +533,6 @@
     .courses.common-container {
         padding-top: 4rem;
         h2.content-title {
-            margin-bottom:2rem;
         }
 
     
