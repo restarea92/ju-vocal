@@ -126,9 +126,6 @@ const common = {
 
         window.addEventListener('touchend', () => {
             this.state.events.onTouch = false;
-            if (!this.state.events.onScroll) {
-                this.state.events.onTouchScroll = false;
-            }
             clearInterval(touchCheckInterval);
         });
 
