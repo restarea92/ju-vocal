@@ -204,13 +204,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     function updateScrollClasses(card, cardFeature) {
-        if (cardFeature.scrollTop > 25) {
+        if (cardFeature.scrollTop > 34) {
             card.classList.add('scroll-to-up');
         } else {
             card.classList.remove('scroll-to-up');
         }
 
-        if (cardFeature.scrollTop + cardFeature.clientHeight < cardFeature.scrollHeight - 25) {
+        if (cardFeature.scrollTop + cardFeature.clientHeight < cardFeature.scrollHeight - 34) {
             card.classList.add('scroll-to-down');
         } else {
             card.classList.remove('scroll-to-down');
