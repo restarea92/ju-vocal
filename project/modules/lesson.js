@@ -195,11 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting && entry.intersectionRatio === 1) {
             console.log(`${entry.target.dataset.id} 완전히 보임!`);
-            // 원하는 동작 실행
-            entry.target.classList.add("in-view");
-            } else {
-            entry.target.classList.remove("in-view");
-            }
+            } 
         });
         }, {
         threshold: 1.0, // 100% 들어왔을 때만
