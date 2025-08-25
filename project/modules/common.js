@@ -28,8 +28,8 @@ const common = {
         this.refreshDimensions();
         this.debugScrolling();
 
-        window.addEventListener('scroll', () => this.updateScrollingState());
-        window.addEventListener('resize', () => this.refreshDimensions());
+        window.addEventListener('scroll', (event) => this.updateScrollingState());
+        window.addEventListener('resize', (event) => this.refreshDimensions());ㅇ
     },
     
     refreshDimensions() {
