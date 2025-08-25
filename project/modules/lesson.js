@@ -199,15 +199,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.intersectionRatio === 1) {
                 // 완전히 보일 때
                 entry.target.classList.add('visible');
-                entry.target.classList.remove('hidden');
             } else if (entry.intersectionRatio === 0) {
-                // 완전히 안 보일 때
-                entry.target.classList.remove('visible');
-                entry.target.classList.add('hidden');
+                
             } else {
                 // 일부만 보일 때
                 entry.target.classList.remove('visible');
-                entry.target.classList.remove('hidden');
             }
         });
     };
