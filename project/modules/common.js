@@ -1,6 +1,6 @@
 const common = {
     elements: {
-        header: document.querySelector('#doz_header_wrap'),
+        header: document.querySelector('header#doz_header_wrap'),
         root: document.documentElement
     },
     
