@@ -302,7 +302,10 @@
          * - (var(--header-height) - 1rem)    => Top:0 기준으로 부모의 padding-top값(Header의 Height과 --card-padding-vertical만큼 계산)
          * - var(--card-padding-vertical)     => bottom padding을 위해 --card-padding-vertical만큼 계산
          */
-
+        &.visible {
+            overflow-y: auto;
+            border:4px solid red;
+        }
         h3 {
             font-size: var(--fs-card-subtitle);
             font-weight: 700;
