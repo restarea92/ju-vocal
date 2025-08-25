@@ -197,7 +197,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const callback = (entries) => {
         entries.forEach(entry => {
             if (entry.intersectionRatio >= 0.1) {
-                entry.target.classList.add('visible');
+                // Remove 'visible' from cards with lower data-id
+                const currentId = Number(entry.target.dataset.id);
+                cards.forEach(card => {
+                    if (Number(card.dataset.id) < currentId) {
+                        card.classList.remove('visible');
+                    }
+                });
             }
             if (entry.isIntersecting == true) {
                 entry.target.classList.add('visible');
