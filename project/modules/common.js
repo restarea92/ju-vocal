@@ -103,10 +103,10 @@ const common = {
 
             <style>
                 #debugElement span.false {
-                    color: pink;
+                    color: orange;
                 }
                 #debugElement span.true {
-                    color: lightgreen;
+                    color: lime;
                 }
             </style>
         `;
