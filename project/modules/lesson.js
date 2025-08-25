@@ -106,13 +106,7 @@ const lessonApp = {
                     filter: "brightness(1)",
                 }, 0);
 
-                this.createTimeline({
-                    scrub: 0,
-                    ease: "none",
-                    start:  `top+=${(i -1) * gridCardRatio }% 10%`,
-                }).to(gridCards[i - 1], {
-                    border: "4px solid red"
-                }, 0);
+                
 
                 const timeline1 = this.createTimeline({
                     start:  `top+=${i * gridCardRatio}% top+=40%`,
