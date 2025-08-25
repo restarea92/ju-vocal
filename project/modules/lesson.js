@@ -192,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const courseContent = document.querySelectorAll('.course-content');
 
     courseContent.forEach(content => {
+        const courseFeatures = content.querySelectorAll('.course-features');
         const contentHeight = content.offsetHeight;
         const contentPadding = parseInt(window.getComputedStyle(content).paddingTop, 10) + parseInt(window.getComputedStyle(content).paddingBottom, 10);
         console.log({ contentHeight, contentPadding });
