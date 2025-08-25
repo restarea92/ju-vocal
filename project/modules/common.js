@@ -16,6 +16,7 @@ const common = {
             onScroll: false,
             onResize: false,
             onTouch: false,
+            onTouchScroll: false,
             needResize: false,
         }
     },
@@ -111,8 +112,12 @@ const common = {
         });
 
         window.addEventListener('touchstart', () => {
+            clearInterval(touchCheckInterval);
+            touchCheckInterval = setInterval(() => {
+                if (this.state.events.onTouch) {
+                }
+            }, 50);
             this.state.events.onTouch = true;
-
         });
 
         window.addEventListener('touchend', () => {
