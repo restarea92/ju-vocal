@@ -10,7 +10,7 @@ const common = {
         headerHeight: 0,
         lvh: 0,
         events: {
-            onScroll: window.onScroll,
+            onScroll: false,
             onResize: false,
             needResize: false,
         }
@@ -28,8 +28,8 @@ const common = {
         this.refreshDimensions();
         this.debugScrolling();
 
-        // window.addEventListener('scroll', (event) => this.updateScrollingState());
-        // window.addEventListener('resize', (event) => this.refreshDimensions());
+        window.addEventListener('scroll', (event) => this.updateScrollingState());
+        window.addEventListener('resize', (event) => this.refreshDimensions());
     },
     
     refreshDimensions() {
