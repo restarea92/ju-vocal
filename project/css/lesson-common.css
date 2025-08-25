@@ -542,7 +542,7 @@
 @media (max-width: 768px) {
     .courses.common-container {
         .courses-grid {
-            .course-card {
+            .course-card, .courses-card:nth-last-of-type(even) {
                 .course-image {
                     grid-column: 1 / 13;
                     grid-row: 1 / 2;
