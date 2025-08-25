@@ -9,6 +9,7 @@ const common = {
     state: {
         headerHeight: 0,
         lvh: 0
+        isScrolling: false,
     },
     
     init() {
@@ -53,3 +54,5 @@ const common = {
 };
 
 document.addEventListener('DOMContentLoaded', () => common.init());
+
+
