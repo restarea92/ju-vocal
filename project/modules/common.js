@@ -113,7 +113,7 @@ const common = {
             scrollTimeout = setTimeout(() => {
                 this.updateScrollingState(false);
                 this.updateResizeState(false);
-            }, 100);
+            }, 200);
         });
         
         window.addEventListener('resize', () => {
