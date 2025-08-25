@@ -665,7 +665,7 @@
             border-radius: 0;
             background: black;
             img {
-                filter: brightness(0.5) blur(4px);
+                filter: brightness(0.75) blur(2px);
             }
         }
     }
