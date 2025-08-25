@@ -283,7 +283,7 @@
         calc(
             (var(--lvh) * 100)
             - (var(--fs-title) * 2) 
-            - (var(--header-height) - var(--card-padding-vertical))
+            - (var(--header-height) + var(--card-padding-vertical))
             - var(--card-padding-vertical)
         );
         overflow-y: auto;
