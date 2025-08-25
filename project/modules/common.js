@@ -103,7 +103,7 @@ const common = {
             clearTimeout(resizeTimeout);
             this.state.events.onScroll = true;
             scrollTimeout = setTimeout(() => {
-                this.state.events.onScroll = true;
+                this.state.events.onScroll = false;
                 this.state.events.onResize = false;
             }, 200);
         });
