@@ -138,6 +138,7 @@ const common = {
             if (this.state.events.onScroll) {
                 this.state.events.needResize = false;
             } else {
+                this.state.events.needResize = true;
                 this.refreshDimensions();
                 resizeTimeout = setTimeout(() => {
                     this.state.events.onResize = false;
