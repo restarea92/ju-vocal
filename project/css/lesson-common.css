@@ -276,7 +276,8 @@
         min-width: 0;
         width: 100%;
         flex-direction: column;
-        max-height: calc(
+        max-height: 
+        calc(
             (var(--lvh) * 100)
             - (var(--fs-title) * 2) 
             - (var(--header-height) 
