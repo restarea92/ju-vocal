@@ -42,10 +42,6 @@ const common = {
             this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
             this.state.lvh = newLvh;
         }
-        this.state.events.resizeTimeout = setTimeout(() => {
-            this.state.events.onResize = false;
-        }, 200);
-        console.log(this.state.events);
     },
     
     updateHeaderHeight() {
