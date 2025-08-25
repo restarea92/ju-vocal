@@ -113,6 +113,14 @@ const common = {
             this.state.events.onScroll = false;
         });
 
+        window.addEventListener('touchstart', () => {
+            this.state.events.onTouch = true;
+        });
+
+        window.addEventListener('touchend', () => {
+            this.state.events.onTouch = false;
+        });
+
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
             this.state.events.onResize = true;
