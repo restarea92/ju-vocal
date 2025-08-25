@@ -304,7 +304,7 @@
          */
 
         h3 {
-            font-size: var(--fs-subtitle);
+            font-size: var(--fs-card-subtitle);
             font-weight: 700;
             text-align: left;
         }
