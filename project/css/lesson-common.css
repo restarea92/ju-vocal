@@ -314,10 +314,10 @@
         }
         &:nth-of-type(even) .course-content {
             .course-features {
-                grid-column: 2 / 3;
+                grid-column: 4 / 13;
             }
             .course-image {
-                grid-column: 1 / 2;
+                grid-column: 1 / 4;
             }
         }
     }
