@@ -114,7 +114,7 @@ const lessonApp = {
                 });
 
                 timeline1NoScrub.to(card, {
-
+                    border: "4px solid red",
                 });
                 
                 timeline1.to(card, {
