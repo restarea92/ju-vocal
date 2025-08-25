@@ -204,5 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const contentHeightForComparison = contentHeight  - featuresVerticalPadding;
         const contentWidthForComparison = contentWidth  - featuresHorizontalPadding;
 
+        const featuresHeightForComparison = featuresHeight - featuresVerticalPadding;
+        const featuresWidthForComparison = featuresWidth - featuresHorizontalPadding;
+
+        console.log({ featuresHeight, featuresWidth, contentHeight, contentWidth, contentHeightForComparison, contentWidthForComparison, featuresHeightForComparison, featuresWidthForComparison });
+
     });
 });
