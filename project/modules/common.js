@@ -47,9 +47,10 @@ const common = {
             this.updateScrollingState(true);
             scrollTimeout = setTimeout(() => {
                 this.updateScrollingState(false);
-            }, 100);
+            }, 0);
             
         });
+        
         window.addEventListener('scrollend', (event) => {
             this.updateScrollingState(false);
         });
