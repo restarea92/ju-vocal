@@ -232,6 +232,7 @@
     .content-wrapper {
         display: grid;
         grid-template-columns: 1fr;
+        max-width: var(--max-container-width);
     }
 
     h2.content-title {
