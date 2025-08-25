@@ -107,7 +107,11 @@ const common = {
                 this.state.events.onResize = false;
             }, 200);
         });
-        
+
+        window.addEventListener('scrollEnd', () => {
+            this.state.events.onScroll = false;
+        });
+
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
             this.state.events.onResize = true;
