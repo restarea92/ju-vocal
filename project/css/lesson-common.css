@@ -228,11 +228,12 @@
         rgba(99, 102, 241, 0.1) 0%, 
         rgba(236, 72, 153, 0.1) 50%, 
         rgba(245, 158, 11, 0.1) 100%);
-    max-width: var(--max-container-width-small);
 
     .content-wrapper {
         display: grid;
         grid-template-columns: 1fr;
+            max-width: var(--max-container-width-small);
+
     }
 
     h2.content-title {
