@@ -94,7 +94,7 @@ const lessonApp = {
                 gsap.scrollTrigger.create({
                     trigger: gridCards[1],
                     start: "top top",
-                    end: "bottom bottom",
+                    end: `top+=${(i - 1) * gridCardRatio}% top+=40%`,
                     scrub: true,
                 });
                 const timelineReady = this.createTimeline({
