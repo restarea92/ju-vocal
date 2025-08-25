@@ -143,6 +143,7 @@
         grid-template-columns: 7fr 5fr;
         gap: 4rem;
         align-items: center;
+        min-height: 0;
     }
 
     .content-text h1 {
