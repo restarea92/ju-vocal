@@ -276,6 +276,7 @@
         min-width: 0;
         width: 100%;
         flex-direction: column; 
+        --card-padding-vertical: 2rem;
         max-height: 
         calc(
             (var(--lvh) * 100)
@@ -287,7 +288,7 @@
          * max-height 계산
          * 100lvh로부터
          * - (var(--fs-title) * 2)            => Title의 Height과 Margin
-         * - (var(--header-height) - 1rem)    => Top:0 기준으로 부모의 padding-top값(Header의 Height과 1rem)
+         * - (var(--header-height) - 1rem)    => Top:0 기준으로 부모의 padding-top값(Header의 Height과 )
          */
 
         h3 {
