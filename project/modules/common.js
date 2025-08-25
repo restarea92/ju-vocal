@@ -118,7 +118,7 @@ const common = {
             scrollTimeout = setTimeout(() => {
                 this.state.events.onScroll = false;
                 this.state.events.onResize = false;
-            }, 1200);
+            }, 200);
         });
 
         window.addEventListener('touchstart', () => {
