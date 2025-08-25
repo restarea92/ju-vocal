@@ -142,6 +142,7 @@ const lessonApp = {
                     opacity: 1,
                     scale: 0.95,
                     filter: "brightness(0.95)",
+                    overflowY: "hidden"
                 }, 0);
             }
 
@@ -152,6 +153,7 @@ const lessonApp = {
                     scale: 0.9,
                     yPercent: -3,
                     filter: "brightness(0.6)",
+                    overflowY: "hidden"
                 }, 0);
             }
             if (i < gridCardCount - 3) {
@@ -161,6 +163,7 @@ const lessonApp = {
                     scale: 0.8,
                     yPercent: -5,
                     filter: "brightness(0.9)",
+                    overflowY: "hidden"
                 }, 0);
             } 
 
