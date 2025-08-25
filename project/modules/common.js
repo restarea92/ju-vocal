@@ -38,6 +38,7 @@ const common = {
                 this.state.events.onResize = true;
                 this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
                 this.state.lvh = newLvh;
+                lvhel.textContent = `state.lvh: ${this.state.lvh} / newLvh: ${newLvh}`;
             }
         } else {
             this.state.events.onResize = true;
