@@ -1,0 +1,10 @@
+{
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": ".*",
+                "cmd": "git -c user.name=\"Your Name\" -c user.email=\"you@example.com\" add . && git -c user.name=\"Your Name\" -c user.email=\"you@example.com\" commit --allow-empty -m \"refresh cache\" && export GIT_SSH_COMMAND='ssh -i ~/.ssh/ju' && git push github master && git push origin master"
+            }
+        ]
+    }
+}
