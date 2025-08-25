@@ -334,6 +334,7 @@
                 padding: 0;
                 p {
                     font-size: var(--fs-body);
+                    font-size: 5cqw;
                 }
             }
             .course-image {
