@@ -276,7 +276,7 @@
         min-width: 0;
         width: 100%;
         flex-direction: column; 
-        --card-padding-vertical: 2rem;
+        --card-padding-vertical: 1rem;
         max-height: 
         calc(
             (var(--lvh) * 100)
