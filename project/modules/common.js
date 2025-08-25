@@ -25,32 +25,7 @@ const common = {
         this.refreshDimensions();
         this.debugScrolling();
 
-        let resizeTimeout,
-            scrollTimeout;
-
-        window.addEventListener('scroll', (event) => {
-            clearTimeout(scrollTimeout);
-            this.updateScrollingState(true);
-            scrollTimeout = setTimeout(() => {
-                this.updateScrollingState(false);
-            }, 100);
-        });
-        
-        window.addEventListener('scrollend', (event) => {
-            this.updateScrollingState(false);
-        });
-
-        window.addEventListener('resize', (event) => {
-            this.refreshDimensions();            
-        });
-
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimeout);
-            this.updateResizeState(true);
-            resizeTimeout = setTimeout(() => {
-                this.updateResizeState(false);
-            }, 100);
-        });
+        this.initEventListener();
     },
 
     initProxy() {
