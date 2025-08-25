@@ -119,6 +119,8 @@ const common = {
                     this.state.events.onTouchScroll = true;
                     clearTimeout(scrollTimeout);
                     clearTimeout(resizeTimeout);
+                } else {
+                    this.state.events.onTouchScroll = false;
                 }
             }, 50);
             this.state.events.onTouch = true;
