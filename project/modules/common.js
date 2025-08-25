@@ -71,6 +71,8 @@ const common = {
         this.updateHeaderHeight();
     },
     
+
+    // state
     updateViewportHeight() {
         const newLvh = this.toPx('1lvh');
         
