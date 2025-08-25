@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 // 일부만 보일 때
                 entry.target.classList.remove('visible');
-                entry.target.classList.remove('not-visible');
+                entry.target.classList.remove('hidden');
             }
         });
     };
