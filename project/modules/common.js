@@ -30,7 +30,6 @@ const common = {
     updateViewportHeight() {
         clearTimeout(this.state.events.resizeTimeout);
         const newLvh = this.toPx('1lvh');
-        document.querySelector('#lvh span').textContent = `lvh: ${newLvh}`;
 
         if (this.state.events.onScroll || this.state.events.onTouchScroll) {
             if (this.state.lvh < newLvh) {
