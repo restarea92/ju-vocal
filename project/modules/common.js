@@ -42,14 +42,14 @@ const common = {
         }
     },
 
-    updateScrollingState() {
+    updateScrollingState(isScrolling = true) {
         console.log('scrolling...');
-        this.state.onScroll = true;
+        this.state.onScroll = isScrolling;
     },
 
-    updateResizeScrollState() {
+    updateResizeScrollState(isResizing = true) {
         console.log('resizing...');
-        this.state.onResize = true;
+        this.state.onResize = isResizing;
     },
     
     toPx(cssValue) {
