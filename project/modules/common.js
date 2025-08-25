@@ -62,8 +62,8 @@ const common = {
     debugScrolling() {
         const elementHtml = `
             <div style="position: fixed; top:1rem; left:1rem; background: blue; color:white; padding: 0.5rem; border: 4px solid red;">
-                <p>Is Scrolling: ${this.state.onScroll}</p>
-                <p>Resizing: ${this.state.onResize}</p>
+                <p class="debugScroll">Is Scrolling: ${this.state.onScroll}</p>
+                <p class="debugScroll">Resizing: ${this.state.onResize}</p>
             </div>
         `
         document.body.insertAdjacentHTML('beforeend', elementHtml);
