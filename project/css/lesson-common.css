@@ -140,7 +140,7 @@
     .content {
         background: unset;
         display: grid;
-        grid-template-columns: 6f0r fr;
+        grid-template-columns: 6fr 6fr;
         grid-auto-rows: 1fr;
         gap: 4rem;
         min-height: 0;
