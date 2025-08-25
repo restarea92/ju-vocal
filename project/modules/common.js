@@ -43,7 +43,8 @@ const common = {
     },
 
     updateScrollingState() {
-        console.log('scrolling...');
+        this.state.onScroll = true;
+        this.debugScrolling();
     },
     
     toPx(cssValue) {
