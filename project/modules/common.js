@@ -27,7 +27,10 @@ const common = {
                 if (debugElement) {
                     // Use data attributes for mapping
                     const span = debugElement.querySelector(`[data-debug="${prop}"]`);
-                    if (span) span.textContent = `${prop}: ${value}`;
+                    if (span) {
+                        span.textContent = `${prop}: ${value}`;
+                        span.className = `${value}`
+                    }
                 }
                 return true;
             }
