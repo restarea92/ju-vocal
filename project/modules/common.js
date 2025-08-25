@@ -16,6 +16,7 @@ const common = {
             onScroll: false,
             onTouch: false,
             onTouchScroll: false,
+            onResize: false,
         }
     },
 
@@ -36,6 +37,7 @@ const common = {
         } else {
             this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
             this.state.lvh = newLvh;
+
         }
         
 
