@@ -55,7 +55,7 @@ const common = {
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(() => {
-                this.updateResizeScrollState(false);
+                this.updateResizeState(false);
             }, 300);
         });
         
@@ -86,7 +86,7 @@ const common = {
         this.state.events.onScroll = isScrolling;
     },
 
-    updateResizeScrollState(isResizing = true) {
+    updateResizeState(isResizing = true) {
         this.state.events.onResize = isResizing;
     },
     
