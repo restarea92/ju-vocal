@@ -567,7 +567,7 @@
                     content: '';
                     position: absolute;
                     right: 0;
-                    bottom: 0;
+                    bottom: top;
                     background: rgba(255, 255, 255, 0.5);
                     pointer-events: none;
                 }
