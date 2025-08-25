@@ -5,7 +5,7 @@ const common = {
             return this.root.querySelector('header#doz_header_wrap');
         },
         get debugElement() {
-            return this.root.querySelector('.debug');
+            return this.root.querySelector('#debugElement');
         }
     },
     
