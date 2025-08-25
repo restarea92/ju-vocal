@@ -31,6 +31,7 @@ const common = {
         clearTimeout(this.state.events.resizeTimeout);
         const newLvh = this.toPx('1lvh');
         const lvhel = document.querySelector('#lvh span');
+        lvhel.textContent = `lvh: ${newLvh} / state.lvh: ${this.state.lvh}`;
 
         if (this.state.events.onScroll || this.state.events.onTouchScroll) {
             if (this.state.lvh < newLvh) {
@@ -76,10 +77,11 @@ const common = {
                 <span data-debug="onTouch">onTouch: false</span>
                 <span data-debug="onTouchScroll">onTouchScroll: false</span>
                 <span data-debug="onResize">onResize: false</span>
-            </div>
-            <div id="lvh">
+                            <div id="lvh">
                 <span>lvh: 0</span>
             </div>
+            </div>
+
             <style>
                 #debugElement span {
                     color: orange;
