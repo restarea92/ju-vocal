@@ -47,7 +47,7 @@ const common = {
 
     updateResizeState(isResizing = true) {
         this.state.events.onResize = isResizing;
-        this.state.events.needResize = ;
+        this.state.events.needResize = isResizing;
     },
     
     // utility
