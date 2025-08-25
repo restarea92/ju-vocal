@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 entry.target.classList.remove('visible');
             }
-            if (entry.intersectionRatio >= 0.01) {
+            if (entry.intersectionRatio >= 0.1) {
                 entry.target.classList.add('partial-visible');
             } else {
                 entry.target.classList.remove('partial-visible');
