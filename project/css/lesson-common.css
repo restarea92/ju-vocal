@@ -276,7 +276,7 @@
         min-width: 0;
         width: 100%;
         flex-direction: column;
-        max-height: calc(var(--lvh) * 100 - var(--header-height) - 2rem - (var(--fs-title) * 2));
+        max-height: calc((var(--lvh) * 100) - var(--header-height) - 2rem - (var(--fs-title) * 2));
         h3 {
             font-size: var(--fs-subtitle);
             font-weight: 700;
