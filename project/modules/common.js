@@ -111,6 +111,7 @@ const common = {
             this.updateScrollingState(true);
             scrollTimeout = setTimeout(() => {
                 this.updateScrollingState(false);
+                this.updateResizeState(false);
             }, 100);
         });
         
