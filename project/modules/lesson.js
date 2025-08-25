@@ -195,6 +195,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const features = content.querySelector('.course-features');
         const contentHeight = content.offsetHeight;
         const contentWidth = content.offsetWidth;
+
+        const compareHeight = contentHeight - featuresHeight - featuresVerticalPadding;
+        const compareWidth = contentWidth - featuresWidth - featuresVerticalPadding;
+
         const featuresHeight = features.offsetHeight;
         const featuresWidth = features.offsetWidth;
         const featuresVerticalPadding = parseInt(window.getComputedStyle(features).paddingTop, 10) + parseInt(window.getComputedStyle(features).paddingBottom, 10);
