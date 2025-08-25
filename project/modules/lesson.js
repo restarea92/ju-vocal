@@ -87,15 +87,16 @@ const lessonApp = {
                     filter: "brightness(1)",
                     overflowY: "hidden"
                 });
+
+            }
+
+            if (i > 0) {
                 gsap.scrollTrigger.create({
-                    trigger: card,
+                    trigger: gridCards[1],
                     start: "top top",
                     end: "bottom bottom",
                     scrub: true,
                 });
-            }
-
-            if (i > 0) {
                 const timelineReady = this.createTimeline({
                     scrub: true,
                     ease: "none",
