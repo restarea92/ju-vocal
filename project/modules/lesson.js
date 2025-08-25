@@ -78,6 +78,30 @@ const lessonApp = {
         });
 
         gridCards.forEach((card, i) => {
+            const timelineReady = this.createTimeline({
+                scrub: true,
+                ease: "none",
+                start:  `top+=${(i - 1) * gridCardRatio}% top+=40%`,
+                end: `top+=${(i -1) * gridCardRatio }% 10%`,
+            });
+
+            const timeline1 = this.createTimeline({
+                start:  `top+=${i * gridCardRatio}% top+=40%`,
+                end: `top+=${(i) * gridCardRatio }% 10%`,
+            });
+            const timeline2 = this.createTimeline({
+                start:  `top+=${(i + 1) * gridCardRatio}% top+=25%`,
+                end: `top+=${(i + 1) * gridCardRatio }% 10%`,
+            });
+            const timeline3 = this.createTimeline({
+                start:  `top+=${(i + 2) * gridCardRatio}% top+=30%`,
+                end: `top+=${(i + 2) * gridCardRatio }% 10%`,
+            });
+            const timeline4 = this.createTimeline({
+                start:  `top+=${(i + 3) * gridCardRatio}% top+=35%`,
+                end: `top+=${(i + 3) * gridCardRatio }% 10%`,
+            });
+            
             if (i === 0) {
                 gsap.set(card, {
                     force3D: true,
@@ -87,18 +111,11 @@ const lessonApp = {
                     filter: "brightness(1)",
                     overflowY: "hidden"
                 });
-
+                
             }
 
             if (i > 0) {
-
-                const timelineReady = this.createTimeline({
-                    scrub: true,
-                    ease: "none",
-                    start:  `top+=${(i - 1) * gridCardRatio}% top+=40%`,
-                    end: `top+=${(i -1) * gridCardRatio }% 10%`,
-                });
-                
+     
                 timelineReady.to(card, {
                     ease: "power1.inOut",
                     yPercent: 120,
@@ -106,10 +123,6 @@ const lessonApp = {
                     filter: "brightness(1)",
                 }, 0);
 
-                const timeline1 = this.createTimeline({
-                    start:  `top+=${i * gridCardRatio}% top+=40%`,
-                    end: `top+=${(i) * gridCardRatio }% 10%`,
-                });
                 
                 timeline1.to(card, {
                     ease: "power1.inOut",
@@ -126,10 +139,6 @@ const lessonApp = {
 
 
             if (i < gridCardCount - 1) {
-                const timeline2 = this.createTimeline({
-                    start:  `top+=${(i + 1) * gridCardRatio}% top+=25%`,
-                    end: `top+=${(i + 1) * gridCardRatio }% 10%`,
-                });
                 timeline2.to(card, {
                 ease: "expo.inOut",
                     yPercent: -2,
@@ -140,10 +149,6 @@ const lessonApp = {
             }
 
             if (i < gridCardCount - 2) {
-                const timeline3 = this.createTimeline({
-                    start:  `top+=${(i + 2) * gridCardRatio}% top+=30%`,
-                    end: `top+=${(i + 2) * gridCardRatio }% 10%`,
-                });
                 timeline3.to(card, {
                 ease: "expo.inOut",
                     opacity: 0.5,
@@ -152,13 +157,7 @@ const lessonApp = {
                     filter: "brightness(0.6)",
                 }, 0);
             }
-
             if (i < gridCardCount - 3) {
-                const timeline4 = this.createTimeline({
-                    start:  `top+=${(i + 3) * gridCardRatio}% top+=35%`,
-                    end: `top+=${(i + 3) * gridCardRatio }% 10%`,
-                });
-                
                 timeline4.to(card, {
                 ease: "expo.inOut",
                     opacity: 0,
