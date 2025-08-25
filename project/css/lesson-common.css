@@ -133,6 +133,11 @@
         font-weight: 600;
     }
 
+    h4 {
+        font-size: var(--fs-copyright);
+        font-weight: 600;
+    }
+
     p {
         font-size: var(--fs-body);
     }
