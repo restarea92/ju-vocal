@@ -354,9 +354,8 @@
             content: ' ';
             position: absolute;
             left: 0;
-            border: 2px solid red;
             width: 100%;
-            height: 10%;
+            height: 12.5%;
             pointer-events: none;
             opacity: 0;
             transition: opacity 0.3s ease;
