@@ -208,8 +208,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cards.forEach((card, i) => {
         card.dataset.id = i + 1;
+        const cardFeature = card.querySelector('.course-card-feature');
         observer.observe(card);
-
         card.addEventListener('scroll', () => {
             if (card.scrollTop > 0) {
                 card.classList.add('scroll-to-up');
