@@ -100,6 +100,13 @@ const common = {
                 <span data-debug="onResize">onResize: false</span>
                 <span data-debug="needResize">needResize: false</span>
             </div>
+
+            <style>
+                #debugElement span {
+                    display: inline-block;
+                    min-width: 150px;
+                }
+            </style>
         `;
         document.body.insertAdjacentHTML('beforeend', elementHtml);
     }
