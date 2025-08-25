@@ -25,10 +25,13 @@ const common = {
                 target[prop] = value;
                 const debugElement = this.elements.debugElement;
                 if (debugElement) {
-                    debugElement.querySelector('.debugScroll')?.textContent = `Is Scrolling: ${target.onScroll}`;
-                    const [resizeSpan, needResizeSpan] = debugElement.querySelectorAll('.debugResize');
-                    resizeSpan?.textContent = `Resizing: ${target.onResize}`;
-                    needResizeSpan?.textContent = `Need Resize: ${target.needResize}`;
+                    const scrollSpan = debugElement.querySelector('.debugScroll');
+                    const resizeSpan = debugElement.querySelector('.debugResize');
+                    const needResizeSpan = debugElement.querySelector('.debugNeedResize');
+                    
+                    if (scrollSpan) scrollSpan.textContent = `Is Scrolling: ${target.onScroll}`;
+                    if (resizeSpan) resizeSpan.textContent = `Resizing: ${target.onResize}`;
+                    if (needResizeSpan) needResizeSpan.textContent = `Need Resize: ${target.needResize}`;
                 }
                 return true;
             }
