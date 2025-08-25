@@ -63,6 +63,9 @@
 /* 공통 컨테이너 스타일 override */
 .common-container {
 	position: relative;
+    * {
+        word-break: keep-all;
+    }
 	h2, h3, h4, h5 {
 		margin: 0;
 	}
