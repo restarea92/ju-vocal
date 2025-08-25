@@ -120,7 +120,7 @@ const common = {
 
         window.addEventListener('resize', () => {
             if (this.state.events.onScroll) {
-                this.state.events.needResize = true;
+                this.updateResizeState(true);
             } else {
             clearTimeout(resizeTimeout);
                 this.updateResizeState(true);
