@@ -117,6 +117,7 @@ const common = {
 
         window.addEventListener('touchend', () => {
             this.state.events.onTouch = false;
+            clearInterval(touchCheckInterval);
         });
 
         window.addEventListener('resize', () => {
