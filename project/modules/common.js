@@ -9,9 +9,6 @@ const common = {
     state: {
         headerHeight: 0,
         lvh: 0,
-        onScroll: false,
-        onResize: false,
-        needResize: false,
     },
     
     init() {
