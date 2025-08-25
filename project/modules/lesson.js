@@ -114,7 +114,6 @@ const lessonApp = {
             }
 
             if (i > 0) {
-     
                 timelineReady.to(card, {
                     ease: "power1.inOut",
                     yPercent: 120,
@@ -128,6 +127,11 @@ const lessonApp = {
                     yPercent: 0,
                     scale: 1,
                     filter: "brightness(1)",
+                    onStart: () => {
+                        gsap.set(gridCards[i - 1], {
+                            border: "2px solid red",
+                        });
+                    }
                 }, 0);
 
                 timeline1.to(card, {
