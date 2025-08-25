@@ -347,8 +347,8 @@
                 }
             }
         }
-        &.visible .courses-content  {
-            .courses-features {
+        &.visible .course-content  {
+            .course-features {
                 overflow-y: auto;
             }
         }
