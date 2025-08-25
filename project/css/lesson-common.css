@@ -241,7 +241,7 @@
         width: 100%;
         font-weight: 800;
         font-size: var(--fs-title);
-        margin-bottom: 4rem;
+        margin-bottom: var(--fs-title);
         color:black;
     }
 
