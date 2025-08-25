@@ -55,6 +55,14 @@ const common = {
         temp.remove();
         
         return pixels;
+    },
+
+    debugScrolling() {
+        const elementHtml = `
+            <div>
+                <p>Is Scrolling: ${this.state.onScroll}</p>
+            </div>
+        `
     }
 };
 
