@@ -85,6 +85,7 @@ const lessonApp = {
                     opacity: 1,
                     scale: 1,
                     filter: "brightness(1)",
+                    overflowY: "hidden"
                 });
             }
 
