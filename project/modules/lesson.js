@@ -195,19 +195,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const callback = (entries) => {
         entries.forEach(entry => {
+            const currentId = Number(entry.target.dataset.id);
             if (entry.intersectionRatio >= 0.99) {
                 entry.target.classList.add('visible');
             } else {
                 entry.target.classList.remove('visible');
             }
             if (entry.intersectionRatio >= 0.1) {
-                // currentId
-                const currentId = entry.target.dataset.id;
-                if (currentId > 1) 
+                if (currentId > 1) {
                     cards[currentId - 2].classList.add('partial-visible');
+                }
             } else {
-                if (currentId > 1)
-                    cards[currentId - 2].classList.remove('partial-visible');            }
+                if (currentId > 1) {
+                    cards[currentId - 2].classList.remove('partial-visible');
+                }
+            }
         });
     };
     function updateScrollClasses(card, cardFeature) {
