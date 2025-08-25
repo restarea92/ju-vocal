@@ -249,10 +249,12 @@
     }
 
     .courses-grid {
-        will-change: transform;
-        transform: translateZ(0);
         --row-span: 3;
         --grid-card-count: 3;
+        --card-padding-vertical: 1rem;
+
+        will-change: transform;
+        transform: translateZ(0);
         display: grid;
         grid-template-columns: 1fr;
         grid-auto-rows: 1fr;
