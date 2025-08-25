@@ -544,14 +544,14 @@
 
     
         .course-image {
-            grid-column: 1 / 3;
-            grid-row: 2 / 3;
+            grid-column: 1 / 13;
+            grid-row: 1 / 2;
             z-index: 0;
             min-height: 0;
         }
 
         .course-features {
-            grid-column: 1 / 3;
+            grid-column: 1 / 13;
             grid-row: 1 / 2;
             z-index: 1;
         }
