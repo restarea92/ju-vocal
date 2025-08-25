@@ -541,22 +541,22 @@
 
 @media (max-width: 768px) {
     .courses.common-container {
+        .courses-grid {
+            .course-card {
+                .course-image {
+                    grid-column: 1 / 13;
+                    grid-row: 1 / 2;
+                    z-index: 0;
+                    min-height: 0;
+                }
 
-        .course-card {
-            .course-image {
-                grid-column: 1 / 13;
-                grid-row: 1 / 2;
-                z-index: 0;
-                min-height: 0;
-            }
-
-            .course-features {
-                grid-column: 1 / 13;
-                grid-row: 1 / 2;
-                z-index: 1;
+                .course-features {
+                    grid-column: 1 / 13;
+                    grid-row: 1 / 2;
+                    z-index: 1;
+                }
             }
         }
-
     }
 }
 
