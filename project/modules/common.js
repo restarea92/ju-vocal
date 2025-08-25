@@ -15,6 +15,7 @@ const common = {
     
     init() {
         this.refreshDimensions();
+        this.debugScrolling();
 
         window.addEventListener('scroll', () => this.updateScrollingState());
         window.addEventListener('resize', () => this.refreshDimensions());
