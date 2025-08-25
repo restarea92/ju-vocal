@@ -81,12 +81,12 @@ const lessonApp = {
             const timelineReady = this.createTimeline({
                 scrub: true,
                 ease: "none",
-                start:  `top+=${(i - 1) * gridCardRatio}% top+=20%`,
+                start:  `top+=${(i - 1) * gridCardRatio}% top+=40%`,
                 end: `top+=${(i -1) * gridCardRatio }% 10%`,
             });
 
             const timeline1 = this.createTimeline({
-                start:  `top+=${i * gridCardRatio}% top+=20%`,
+                start:  `top+=${i * gridCardRatio}% top+=40%`,
                 end: `top+=${(i) * gridCardRatio }% 10%`,
             });
             const timeline2 = this.createTimeline({
@@ -109,38 +109,7 @@ const lessonApp = {
                     opacity: 1,
                     scale: 1,
                     filter: "brightness(1)",
-                    overflowY: "hidden",
-                    border: "8px solid blue",
-                });
-
-                ScrollTrigger.create({
-                    trigger: this.elements.trigger,
-                    start: `top+=${i * gridCardRatio}% top`,
-                    end: `top+=${(i + 1) * gridCardRatio}% top+=40%`,
-                    onEnter: () => {
-                        gsap.set(card, {
-                            border: "8px solid red",
-                            overflowY: "scroll"
-                        });
-                    },
-                    onUpdate: () => {
-                        gsap.set(card, {
-                            border: "8px solid yellow",
-                            overflowY: "scroll"
-                        });
-                    },
-                    onLeave: () => {
-                        gsap.set(card, {
-                            border: "8px solid blue",
-                            overflowY: "hidden"
-                        });
-                    },
-                    onLeaveBack: () => {
-                        gsap.set(card, {
-                            border: "8px solid blue",
-                            overflowY: "hidden"
-                        });
-                    }
+                    overflowY: "hidden"
                 });
             }
 
