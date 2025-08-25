@@ -14,7 +14,6 @@ const common = {
         lvh: 0,
         events: {
             onScroll: false,
-            onResize: false,
             onTouch: false,
             onTouchScroll: false,
         }
