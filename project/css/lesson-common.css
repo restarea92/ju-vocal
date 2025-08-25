@@ -570,7 +570,6 @@
                 }
 
                 .course-features {
-                    overflow: auto;
                     padding: calc(var(--default-container-padding));
                     grid-column: 1 / 13;
                     grid-row: 1 / 2;
