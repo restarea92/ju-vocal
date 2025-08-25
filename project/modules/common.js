@@ -38,9 +38,10 @@ const common = {
                 this.state.events.onResize = true;
                 this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
                 this.state.lvh = newLvh;
-                lvhel.textContent = `state.lvh: ${this.state.lvh} / newLvh: ${newLvh}`;
+                lvhel.textContent = `onscroll상태에서 state.lvh: ${this.state.lvh} / newLvh: ${newLvh}`;
             }
         } else {
+            lvhel.textContent = `onscroll아닌상태 state.lvh: ${this.state.lvh} / newLvh: ${newLvh}`;
             this.state.events.onResize = true;
             this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
             this.state.lvh = newLvh;
