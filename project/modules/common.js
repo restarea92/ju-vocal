@@ -108,13 +108,13 @@ const common = {
             clearTimeout(resizeTimeout);
             clearTimeout(touchScrollTimeout);
             this.state.events.onScroll = true;
-            if (this.state.events.onTouch) {
-                this.state.events.onTouchScroll = true;
-            } else {
-                touchScrollTimeout = setTimeout(() => {
+            touchScrollTimeout = setTimeout(() => {
+                if (this.state.events.onTouch) {
+                    this.state.events.onTouchScroll = true;
+                } else {
                     this.state.events.onTouchScroll = false;
-                }, 200);
-            }
+                }
+            }, 200);
             scrollTimeout = setTimeout(() => {
                 this.state.events.onScroll = false;
                 this.state.events.onResize = false;
