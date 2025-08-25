@@ -207,7 +207,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const featuresHeightForComparison = featuresHeight - featuresVerticalPadding;
         const featuresWidthForComparison = featuresWidth - featuresHorizontalPadding;
 
-        console.log({contentHeightForComparison, contentWidthForComparison, featuresHeightForComparison, featuresWidthForComparison});
+        const contentAreaForComparison = contentHeightForComparison * contentWidthForComparison;
+        const featuresAreaForComparison = featuresHeightForComparison * featuresWidthForComparison;
+
+        const areaRatio = featuresAreaForComparison / contentAreaForComparison;
 
     });
 });
