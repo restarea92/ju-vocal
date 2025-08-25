@@ -121,7 +121,7 @@ const common = {
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
             this.updateResizeState(true);
-            this.refreshDimensions();            
+            this.refreshDimensions();
             resizeTimeout = setTimeout(() => {
                 this.updateResizeState(false);
             }, 100);
