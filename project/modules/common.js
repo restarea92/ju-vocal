@@ -95,6 +95,7 @@ const common = {
         this.state.events.onResize = isResizing;
     },
     
+    // utility
     toPx(cssValue) {
         if (!document.body) return 0;
         
