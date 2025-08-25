@@ -197,9 +197,9 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log(`${entry.target.dataset.id} 완전히 보임!`);
             } 
         });
-        }, {
-            threshold: 1.0, // 100% 들어왔을 때만
-        });
+    }, {
+    threshold: 1.0, // 100% 들어왔을 때만
+    });
 
         cards.forEach((card, i) => {
         // 카드별 식별자 달아주면 로그 구분하기 쉬움
