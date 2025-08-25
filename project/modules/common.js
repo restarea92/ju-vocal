@@ -108,6 +108,7 @@ const common = {
 
         window.addEventListener('scroll', (event) => {
             clearTimeout(scrollTimeout);
+            clearTimeout(resizeTimeout);
             this.updateScrollingState(true);
             scrollTimeout = setTimeout(() => {
                 this.updateScrollingState(false);
