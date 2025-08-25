@@ -17,7 +17,6 @@ const common = {
             onTouch: false,
             onTouchScroll: false,
             onResize: false,
-            resizeTimeout: null,
         }
     },
 
@@ -28,7 +27,6 @@ const common = {
 
     // state
     updateViewportHeight() {
-        clearTimeout(this.state.events.resizeTimeout);
         const newLvh = this.toPx('1lvh');
         const debugElement = this.elements.debugElement;
         const lvhel = debugElement.querySelector('#lvh span');
