@@ -76,6 +76,23 @@ const common = {
     }
 };
 
+// Proxy로 state 변경 감지 및 UI 갱신
+common.state = new Proxy(common.state, {
+    set(target, prop, value) {
+        target[prop] = value;
+        if (prop === 'onScroll') {
+            document.querySelector('.debugScroll').textContent = `Is Scrolling: ${value}`;
+        }
+        if (prop === 'onResize') {
+            document.querySelectorAll('.debugResize')[0].textContent = `Resizing: ${value}`;
+        }
+        if (prop === 'needResize') {
+            document.querySelectorAll('.debugResize')[1].textContent = `Need Resize: ${value}`;
+        }
+        return true;
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => common.init());
 
 
