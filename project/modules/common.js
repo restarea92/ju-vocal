@@ -10,6 +10,7 @@ const common = {
         headerHeight: 0,
         lvh: 0,
         onScroll: false,
+        onResize: false,
     },
     
     init() {
@@ -61,6 +62,7 @@ const common = {
         const elementHtml = `
             <div>
                 <p>Is Scrolling: ${this.state.onScroll}</p>
+                <p>Resizing: ${this.state.onResize}</p>
             </div>
         `
     }
