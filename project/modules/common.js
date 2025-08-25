@@ -90,7 +90,7 @@ const common = {
 
     debugScrolling() {
         const elementHtml = `
-            <div style="display:flex; flex-direction:column; gap:0.5rem; z-index:99999; position: fixed; bottom:1rem; font-size:0.75rem; font-weight:900; left:1rem; background: blue; color:white; padding: 0.5rem; border: 4px solid red;">
+            <div id="debugElement" style="display:flex; flex-direction:column; gap:0.5rem; z-index:99999; position: fixed; bottom:1rem; font-size:0.75rem; font-weight:900; left:1rem; background: blue; color:white; padding: 0.5rem; border: 4px solid red;">
                 <span class="debugScroll">Is Scrolling: false</span>
                 <span class="debugResize">Resizing: false</span>
                 <span class="debugResize">Need Resize: false</span>
