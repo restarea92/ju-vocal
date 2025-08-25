@@ -186,29 +186,3 @@ const lessonApp = {
 };
 
 export default lessonApp;
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const courseContent = document.querySelectorAll('.course-content');
-
-    courseContent.forEach(content => {
-        const features = content.querySelector('.course-features');
-        const contentHeight = content.offsetHeight;
-        const contentWidth = content.offsetWidth;
-
-        const featuresHeight = features.offsetHeight;
-        const featuresWidth = features.offsetWidth;
-        const featuresVerticalPadding = parseInt(window.getComputedStyle(features).paddingTop, 10) + parseInt(window.getComputedStyle(features).paddingBottom, 10);
-        const featuresHorizontalPadding = parseInt(window.getComputedStyle(features).paddingLeft, 10) + parseInt(window.getComputedStyle(features).paddingRight, 10);
-
-        const contentHeightForComparison = contentHeight  - featuresVerticalPadding;
-        const contentWidthForComparison = contentWidth  - featuresHorizontalPadding;
-
-        const featuresHeightForComparison = featuresHeight - featuresVerticalPadding;
-        const featuresWidthForComparison = featuresWidth - featuresHorizontalPadding
-
-        const differenceRatio = contentHeightForComparison / featuresHeightForComparison;
-        console.log({ differenceRatio });
-
-    });
-});
