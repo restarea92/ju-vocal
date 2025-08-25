@@ -20,7 +20,7 @@ const common = {
     },
     
     init() {
-
+        this.initProxy();
         
         this.refreshDimensions();
         this.debugScrolling();
