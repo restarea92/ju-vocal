@@ -111,12 +111,12 @@ const common = {
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
             if (this.state.events.onScroll) {
-                this.updateResizeState(true);
+                this.state.events.onResize = false;
             } else {
-                this.updateResizeState(true);
+                this.state.events.onResize = true;
                 this.refreshDimensions();
                 resizeTimeout = setTimeout(() => {
-                    this.updateResizeState(false);
+                    this.state.events.onResize = false;
                 }, 100);
             }
         });
