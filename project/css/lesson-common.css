@@ -358,7 +358,7 @@
             height: 25%;
             pointer-events: none;
             opacity: 0;
-            transition: opacity 0.3s ease 0.2s;
+            transition: opacity 0.3s ease-in-out 0.2s;
         }
         &::before {
             background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 20%, rgba(255, 255, 255, 0));
