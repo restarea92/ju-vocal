@@ -121,7 +121,7 @@ const lessonApp = {
                             border: "8px solid red",
                         });
                     },
-                    onEnterBack: () => {
+                    onLeave: () => {
                         gsap.set(card, {
                             border: "8px solid blue",
                         });
