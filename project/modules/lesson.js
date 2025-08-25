@@ -127,6 +127,7 @@ const lessonApp = {
                     yPercent: 0,
                     scale: 1,
                     filter: "brightness(1)",
+
                 }, 0);
 
                 timeline1.to(card, {
