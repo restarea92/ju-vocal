@@ -84,7 +84,53 @@ const common = {
         document.body.insertAdjacentHTML('beforeend', elementHtml);
     },
 
+    initProxy() {
+        this.state.events = new Proxy(this.state.events, {
+            set: (target, prop, value) => {
+                target[prop] = value;
+                const debugElement = this.elements.debugElement;
+                if (debugElement) {
+                    // Use data attributes for mapping
+                    const span = debugElement.querySelector(`[data-debug="${prop}"]`);
+                    if (span) {
+                        span.textContent = `${prop}: ${value}`;
+                        span.className = `${value}`;
+                    }
+                }
+                return true;
+            }
+        });
+    },
+
+    initEventListener() {
+        let resizeTimeout,
+            scrollTimeout;
+
+        window.addEventListener('scroll', (event) => {
+            clearTimeout(scrollTimeout);
+            this.updateScrollingState(true);
+            scrollTimeout = setTimeout(() => {
+                this.updateScrollingState(false);
+            }, 100);
+        });
         
+        window.addEventListener('scrollend', (event) => {
+            this.updateScrollingState(false);
+        });
+
+        window.addEventListener('resize', (event) => {
+            this.refreshDimensions();            
+        });
+
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            this.updateResizeState(true);
+            resizeTimeout = setTimeout(() => {
+                this.updateResizeState(false);
+            }, 100);
+        });
+    },
+    
     init() {
         this.initProxy();
         
