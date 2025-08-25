@@ -194,4 +194,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const courseContentHeight = courseContent.offsetHeight;
     const courseContentPadding = parseInt(window.getComputedStyle(courseContent).paddingTop, 10) + parseInt(window.getComputedStyle(courseContent).paddingBottom, 10);
+    
 });
