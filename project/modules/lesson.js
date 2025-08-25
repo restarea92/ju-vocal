@@ -87,6 +87,12 @@ const lessonApp = {
                     filter: "brightness(1)",
                     overflowY: "hidden"
                 });
+                gsap.scrollTrigger.create({
+                    trigger: card,
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1,
+                });
             }
 
             if (i > 0) {
