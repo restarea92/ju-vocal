@@ -294,7 +294,7 @@
         .course-content {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            gap: 2rem;
+            gap: 5%;
             height: 100%;
             .course-features {
                 grid-column: 1 / 5;
