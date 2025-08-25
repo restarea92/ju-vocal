@@ -33,7 +33,6 @@ const common = {
             if (this.state.lvh < newLvh) {
                 this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
                 this.state.lvh = newLvh;
-                console.log(this.state.events);
             }
         } else {
             this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
