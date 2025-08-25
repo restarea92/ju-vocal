@@ -106,11 +106,8 @@ const lessonApp = {
                     filter: "brightness(1)",
                 }, 0);
 
-                timelineReady.to(gridCards[0], {
-                    ease: "power1.inOut",
-                    yPercent: 120,
-                    scale: 1.1,
-                    filter: "brightness(1)",
+                timelineReady.to(gridCards[i - 1], {
+                    border: "4px solid red"
                 }, 0);
 
                 const timeline1 = this.createTimeline({
