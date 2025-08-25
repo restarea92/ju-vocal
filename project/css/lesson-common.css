@@ -556,6 +556,7 @@
             .course-card, .courses-card:nth-last-of-type(even) {
                 padding: 0;
                 &::before, &::after {
+                    z-index: 2;
                     content: ' ';
                     position: absolute;
                     left: 0;
