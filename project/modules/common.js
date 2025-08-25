@@ -29,8 +29,7 @@ const common = {
         this.debugScrolling();
 
         window.addEventListener('scroll', (event) => this.updateScrollingState());
-        window.addEventListener('resize', (event) => this.refreshDimensions());ㅇ
-    },
+        window.addEventListener('resize', (event) => this.refreshDimensions());
     
     refreshDimensions() {
         this.updateViewportHeight();
