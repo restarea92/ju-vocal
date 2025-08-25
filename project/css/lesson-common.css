@@ -275,14 +275,19 @@
         display: flex;
         min-width: 0;
         width: 100%;
-        flex-direction: column;
+        flex-direction: column; 
         max-height: 
         calc(
             (var(--lvh) * 100)
             - (var(--fs-title) * 2) 
             - (var(--header-height) 
             - 1rem)
-        );
+        ); 
+        /** 
+         *
+         * 100lvh - Title and Margin of title, - Top padding from JS Module 
+         */
+
         h3 {
             font-size: var(--fs-subtitle);
             font-weight: 700;
