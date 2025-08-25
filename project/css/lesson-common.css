@@ -77,8 +77,9 @@
     h2.content-title {
         text-align: center;
         font-weight: 800;
-        margin-bottom: 4rem;
+        margin-bottom: var(--fs-title);
         font-size: var(--fs-title);
+        line-height: 1;
     }
     .content {
         border-radius: 1rem;
