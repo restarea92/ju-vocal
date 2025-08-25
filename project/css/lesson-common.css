@@ -286,6 +286,13 @@
             - (var(--header-height) + var(--card-padding-vertical))
             - var(--card-padding-vertical)
         );
+        height: 
+        calc(
+            (var(--lvh) * 100)
+            - (var(--fs-title) * 2) 
+            - (var(--header-height) + var(--card-padding-vertical))
+            - var(--card-padding-vertical)
+        );
         overflow-y: auto;
         /** 
          * max-height 계산
