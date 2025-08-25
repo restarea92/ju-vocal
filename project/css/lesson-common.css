@@ -367,15 +367,11 @@
         &::after {
             bottom: 0;
         }
-        &.scroll-to-down {
-            &::after {
-                opacity: 1;
-            }
+        &.scroll-to-down::after {
+            opacity: 1;
         }
-        &.scroll-to-up {
-            &::before {
-                opacity: 1;
-            }
+        &.scroll-to-up::before {
+            opacity: 1;
         }
         &.visible .course-content  {
             .course-features {
