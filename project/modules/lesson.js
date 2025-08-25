@@ -194,8 +194,10 @@ document.addEventListener('DOMContentLoaded', () => {
     courseContent.forEach(content => {
         const features = content.querySelector('.course-features');
         const contentHeight = content.offsetHeight;
+        const contentWidth = content.offsetWidth;
         const featuresHeight = features.offsetHeight;
+        const featuresWidth = features.offsetWidth;
         const featuresVerticalPadding = parseInt(window.getComputedStyle(features).paddingTop, 10) + parseInt(window.getComputedStyle(features).paddingBottom, 10);
-        console.log({ contentHeight, featuresHeight, featuresVerticalPadding });
+        
     });
 });
