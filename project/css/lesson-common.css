@@ -297,7 +297,7 @@
             gap: 5%;
             height: 100%;
             .course-features {
-                grid-column: 1 / 5;
+                grid-column: 1 / 6;
                 grid-row: 1 / 2;
                 list-style: none;
                 padding: 0;
@@ -306,7 +306,7 @@
                 }
             }
             .course-image {
-                grid-column: 5 / 13;
+                grid-column: 6 / 13;
                 grid-row: 1 / 2;
                 img {
                     width: 100%;
