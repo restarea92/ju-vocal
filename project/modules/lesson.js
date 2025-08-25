@@ -191,12 +191,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // IntersectionObserver: 카드가 화면에 보일 때 visible 클래스
     const options = {
         rootMargin: '0px',
-        threshold: 0.99
+        threshold: 0
     };
 
     const callback = (entries) => {
         entries.forEach(entry => {
-
             if (entry.isIntersecting == true) {
                 entry.target.classList.add('visible');
             } else if (entry.intersectionRatio >= 0.1) {
