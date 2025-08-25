@@ -31,7 +31,7 @@ const common = {
         window.addEventListener('scroll', (event) => {
             this.updateScrollingState(true);
         });
-        window.addEventListener('scrollEnd', (event) => {
+        window.addEventListener('scrollend', (event) => {
             this.updateScrollingState(false);
         });
 
