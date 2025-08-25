@@ -112,7 +112,7 @@ const common = {
             } else {
                 touchScrollTimeout = setTimeout(() => {
                     this.state.events.onTouchScroll = false;
-                }, 200);
+                }, 1200);
             }
    
             scrollTimeout = setTimeout(() => {
