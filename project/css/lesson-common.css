@@ -558,7 +558,9 @@
                     grid-row: 1 / 2;
                     z-index: 0;
                     min-height: 0;
-                    filter: brightness(0.7) blur(4px);
+                    img {
+                        filter: brightness(0.7) blur(2px);
+                    }
                 }
 
                 .course-features {
