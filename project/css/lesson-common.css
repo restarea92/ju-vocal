@@ -281,8 +281,15 @@
             (var(--lvh) * 100)
             - (var(--fs-title) * 2) 
             - (var(--header-height)
-            - 1%
+            - 1rem
         ); 
+        
+        /** 
+         * max-height 계산
+         * 100lvh로부터
+         * - (var(--fs-title) * 2)            => Title의 Height과 Margin
+         * - (var(--header-height) - 1rem)    => Top:0 기준으로 부모의 padding-top값(Header의 Height과 1rem)
+         */
 
         h3 {
             font-size: var(--fs-subtitle);
