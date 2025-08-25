@@ -140,7 +140,7 @@
                     text-decoration: underline;
                 }
                 span.material-symbols-outlined {
-                    text-decoration: underline;
+                    text-decoration: none;
                 }
             }
         }
