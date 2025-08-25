@@ -40,14 +40,6 @@ const common = {
             this.state.headerHeight = newHeight;
         }
     },
-
-    updateScrollingState(isScrolling = true) {
-        this.state.events.onScroll = isScrolling;
-    },
-
-    updateResizeState(isResizing = true) {
-        this.state.events.onResize = isResizing;
-    },
     
     // utility
     toPx(cssValue) {
@@ -109,10 +101,10 @@ const common = {
         window.addEventListener('scroll', (event) => {
             clearTimeout(scrollTimeout);
             clearTimeout(resizeTimeout);
-            this.updateScrollingState(true);
+            this.state.events.onScroll = true;
             scrollTimeout = setTimeout(() => {
-                this.updateScrollingState(false);
-                this.updateResizeState(false);
+                this.state.events.onScroll = true;
+                this.state.events.onResize = false;
             }, 200);
         });
         
