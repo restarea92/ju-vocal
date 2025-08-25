@@ -17,6 +17,7 @@ const common = {
             onTouch: false,
             onTouchScroll: false,
             onResize: false,
+            resizeTimeout: null,
         }
     },
 
@@ -27,6 +28,7 @@ const common = {
 
     // state
     updateViewportHeight() {
+        
         const newLvh = this.toPx('1lvh');
 
         if (this.state.events.onScroll || this.state.events.onTouchScroll) {
