@@ -555,7 +555,7 @@
         .courses-grid {
             .course-card, .courses-card:nth-last-of-type(even) {
                 padding: 0;
-                &.scroll-to-up::after {
+                &::before, &::after {
                     height: 20px;
                     content: '';
                     position: absolute;
@@ -565,15 +565,7 @@
                     background: rgba(255, 255, 255, 0.5);
                     pointer-events: none;
                 }
-                &.scroll-to-down::after {
-                    height: 20px;
-                    content: '';
-                    position: absolute;
-                    right: 0;
-                    top:0;
-                    background: rgba(255, 255, 255, 0.5);
-                    pointer-events: none;
-                }
+
                 h3 {
                     color:white;
                 }
