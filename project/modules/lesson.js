@@ -120,21 +120,25 @@ const lessonApp = {
                     onEnter: () => {
                         gsap.set(card, {
                             border: "8px solid red",
+                            overflowY: "scroll"
                         });
                     },
                     onUpdate: () => {
                         gsap.set(card, {
                             border: "8px solid yellow",
+                            overflowY: "scroll"
                         });
                     },
                     onLeave: () => {
                         gsap.set(card, {
                             border: "8px solid blue",
+                            overflowY: "hidden"
                         });
                     },
                     onLeaveBack: () => {
                         gsap.set(card, {
                             border: "8px solid blue",
+                            overflowY: "hidden"
                         });
                     }
                 });
