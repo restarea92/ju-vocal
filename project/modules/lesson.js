@@ -109,7 +109,7 @@ const lessonApp = {
                 this.createTimeline({
                     scrub: false,
                     ease: "none",
-                    start:  `top+=${(i - 1) * gridCardRatio}% top+=40%`,
+                    start:  `top+=${(i -1) * gridCardRatio }% 10%`,
                 }).to(gridCards[i - 1], {
                     border: "4px solid red"
                 }, 0);
