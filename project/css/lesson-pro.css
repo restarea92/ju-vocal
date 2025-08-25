@@ -184,6 +184,7 @@
                         width: 100%;
                         height: 75%;
                         filter: brightness(0.7) blur(1px);
+                        border-radius: 0;
                     }
                 }
 
