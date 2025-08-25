@@ -57,13 +57,13 @@ const common = {
                 this.updateScrollingState(false);
             }, 100);
         });
-
+        
         window.addEventListener('scrollend', (event) => {
             this.updateScrollingState(false);
         });
 
         window.addEventListener('resize', (event) => {
-            this.refreshDimensions();
+            this.refreshDimensions();            
         });
 
         window.addEventListener('resize', () => {
