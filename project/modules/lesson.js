@@ -205,12 +205,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const contentWidthForComparison = contentWidth  - featuresHorizontalPadding;
 
         const featuresHeightForComparison = featuresHeight - featuresVerticalPadding;
-        const featuresWidthForComparison = featuresWidth - featuresHorizontalPadding;
+        const featuresWidthForComparison = featuresWidth - featuresHorizontalPadding
 
-        const contentAreaForComparison = contentHeightForComparison * contentWidthForComparison;
-        const featuresAreaForComparison = featuresHeightForComparison * featuresWidthForComparison;
-
-        const differenceRatio = contentAreaForComparison / featuresAreaForComparison;
+        const differenceRatio = contentHeightForComparison / featuresHeightForComparison;
         console.log({ differenceRatio });
 
     });
