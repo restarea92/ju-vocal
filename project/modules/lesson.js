@@ -200,8 +200,7 @@ const callback = (entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-        }
-        else {
+        } else {
             entry.target.classList.remove('visible');
         }
     });
