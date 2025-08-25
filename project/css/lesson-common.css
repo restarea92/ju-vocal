@@ -291,7 +291,7 @@
             line-height: 1.5;
             margin-bottom: 1rem;
         }
-        /* .course-content {
+        .course-content {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             gap:2rem;
@@ -315,15 +315,15 @@
                     border-radius: 1rem;
                 }
             }
-        } */
-        &:nth-of-type(even) .course-content {
+        }
+        /* &:nth-of-type(even) .course-content {
             .course-features {
                 grid-column: 9 / 13;
             }
             .course-image {
                 grid-column: 1 / 9;
             }
-        }
+        } */
     }
 }
 
