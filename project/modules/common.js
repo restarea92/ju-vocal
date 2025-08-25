@@ -9,10 +9,15 @@ const common = {
     state: {
         headerHeight: 0,
         lvh: 0,
+        events: {
+            onScroll: false,
+            onResize: false,
+            needResize: false,
+        }
     },
     
     init() {
-        this.state = new Proxy(this.state, {
+        this.state = new Proxy(this.state.events, {
             set: (target, prop, value) => {
                 target[prop] = value;
                 console.log(`${prop}`, value); // 값 변경시 콘솔 출력
