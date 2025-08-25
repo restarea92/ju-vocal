@@ -188,21 +188,23 @@ const lessonApp = {
 export default lessonApp;
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll(".course-card");
+const cards = document.querySelectorAll(".course-card");
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && entry.intersectionRatio === 1) {
-                console.log(`${entry.target.dataset.id} 완전히 보임!`);
-            } 
-        });
-    }, {
-        threshold: 1.0, // 100% 들어왔을 때만
-    });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    // 자기 자신만, 그리고 완전히 보일 때만
+    if (entry.isIntersecting && entry.intersectionRatio === 1) {
+      console.log(`${entry.target.dataset.id} 완전히 보임!`);
+      entry.target.classList.add("in-view");
+    } else {
+      entry.target.classList.remove("in-view");
+    }
+  });
+}, {
+  threshold: 1.0
+});
 
-    cards.forEach((card, i) => {
-        card.dataset.id = i + 1;
-        observer.observe(card);
-    });
+cards.forEach((card, i) => {
+  card.dataset.id = i + 1;
+  observer.observe(card);
 });
