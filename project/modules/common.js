@@ -119,7 +119,7 @@ const common = {
             if (this.state.events.onScroll) {
                 this.updateResizeState(true);
             } else {
-            clearTimeout(resizeTimeout);
+                clearTimeout(resizeTimeout);
                 this.updateResizeState(true);
                 this.refreshDimensions();
                 resizeTimeout = setTimeout(() => {
