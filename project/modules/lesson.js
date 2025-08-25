@@ -91,7 +91,7 @@ const lessonApp = {
                     trigger: card,
                     start: "top top",
                     end: "bottom bottom",
-                    scrub: 0,
+                    scrub: 1,
                 });
             }
 
