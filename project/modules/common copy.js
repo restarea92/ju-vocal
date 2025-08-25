@@ -27,13 +27,11 @@ const common = {
     },
 
     // state
-    updateViewportHeight(needResize) {
+    updateViewportHeight() {
         const newLvh = this.toPx('1lvh');
         
-        if (this.state.lvh < newLvh) {
-            this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
-            this.state.lvh = newLvh;
-        }
+        this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
+        this.state.lvh = newLvh;
     },
     
     updateHeaderHeight() {
@@ -137,7 +135,9 @@ const common = {
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimeout);
             this.state.events.onResize = true;
-                
+            if (this.state.events.onScroll || this.state.events.onTouchScroll) {
+                this.state.events.needResize = false;
+            }
             if (!this.state.events.onScroll) {
                 this.refreshDimensions();
                 resizeTimeout = setTimeout(() => {
