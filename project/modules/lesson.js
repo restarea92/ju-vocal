@@ -208,6 +208,6 @@ const observer = new IntersectionObserver(callback, options);
 
 
 cards.forEach((card, i) => {
-  card.dataset.id = i + 1;
-  observer.observe(card);
+    card.dataset.id = i + 1;
+    observer.observe(card);
 });
