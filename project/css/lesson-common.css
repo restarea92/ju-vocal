@@ -237,7 +237,7 @@
         --card-padding-vertical: 1rem;
         display: grid;
         grid-template-columns: minmax(0, 1fr);
-        max-width: var(--max-container-width-small);
+        max-width: var(--max-container-width);
     }
 
     h2.content-title {
