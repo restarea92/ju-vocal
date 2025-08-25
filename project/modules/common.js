@@ -25,10 +25,8 @@ const common = {
     updateViewportHeight() {
         const newLvh = this.toPx('1lvh');
         
-        if (this.state.lvh < newLvh) {
-            this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
-            this.state.lvh = newLvh;
-        }
+        this.elements.root.style.setProperty('--lvh', `${newLvh}px`);
+        this.state.lvh = newLvh;
     },
     
     updateHeaderHeight() {
