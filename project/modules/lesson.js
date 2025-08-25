@@ -98,7 +98,7 @@ const lessonApp = {
                 });
                 timelineReady.to(card, {
                     ease: "power1.inOut",
-                    yPercent: 95,
+                    yPercent: 120,
                     scale: 1.1,
                     filter: "brightness(1)",
                 }, 0);
