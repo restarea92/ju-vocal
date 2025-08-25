@@ -109,7 +109,8 @@ const lessonApp = {
                     opacity: 1,
                     scale: 1,
                     filter: "brightness(1)",
-                    overflowY: "hidden"
+                    overflowY: "hidden",
+                    border: "8px solid blue",
                 });
 
                 ScrollTrigger.create({
