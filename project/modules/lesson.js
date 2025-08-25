@@ -201,6 +201,9 @@ const callback = (entries, observer) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
         }
+        else {
+            entry.target.classList.remove('visible');
+        }
     });
 };
 
