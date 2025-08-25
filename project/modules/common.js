@@ -136,7 +136,6 @@ const common = {
         });
 
         window.addEventListener('touchend', () => {
-            clearTimeout(touchScrollTimeout);
             this.state.events.onTouch = false;
             if (!this.state.events.onScroll) {
                 this.state.events.onTouchScroll = false;
