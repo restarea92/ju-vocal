@@ -107,7 +107,7 @@ const lessonApp = {
                 }, 0);
 
                 this.createTimeline({
-                    scrub: fa0lse,
+                    scrub: 0,
                     ease: "none",
                     start:  `top+=${(i -1) * gridCardRatio }% 10%`,
                 }).to(gridCards[i - 1], {
