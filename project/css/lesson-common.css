@@ -558,9 +558,7 @@
         .courses-grid {
             .course-card, .courses-card:nth-last-of-type(even) {
                 padding: 0;
-                &.scroll-to-down::after {
 
-                }
 
                 h3 {
                     color:white;
