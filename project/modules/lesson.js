@@ -203,11 +203,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.intersectionRatio >= 0.1) {
                 // currentId
                 const currentId = entry.target.dataset.id;
-                if (currentId > 1) // id - 1에 partial-visible 클래스 추가
+                if (currentId > 1) 
                     cards[currentId - 2].classList.add('partial-visible');
             } else {
-                if (currentId > 1) // id - 1에 partial-visible 클래스 추가
-                    cards[currentId - 2].classList.add('partial-visible');            }
+                if (currentId > 1)
+                    cards[currentId - 2].classList.remove('partial-visible');            }
         });
     };
     function updateScrollClasses(card, cardFeature) {
