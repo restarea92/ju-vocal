@@ -9,7 +9,7 @@ const common = {
     state: {
         headerHeight: 0,
         lvh: 0,
-        isScrolling: false,
+        onScroll: false,
     },
     
     init() {
