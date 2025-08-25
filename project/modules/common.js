@@ -52,4 +52,7 @@ const common = {
     }
 };
 
-document.addEventListener('DOMContentLoaded', () => common.init());
+document.addEventListener('DOMContentLoaded', () => {
+    console.log(document.querySelector('header#doz_header_wrap'));
+    common.init()
+});
