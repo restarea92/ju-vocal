@@ -114,7 +114,8 @@ const common = {
         window.addEventListener('touchstart', () => {
             clearInterval(touchCheckInterval);
             touchCheckInterval = setInterval(() => {
-                if (this.state.events.onTouch) {
+                if (this.state.events.onScroll) {
+                    clearTimeout(resizeTimeout);
                 }
             }, 50);
             this.state.events.onTouch = true;
