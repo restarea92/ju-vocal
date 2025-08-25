@@ -234,6 +234,7 @@
         rgba(245, 158, 11, 0.1) 100%);
 
     .content-wrapper {
+        --card-padding-vertical: 1rem;
         display: grid;
         grid-template-columns: minmax(0, 1fr);
         max-width: var(--max-container-width-small);
@@ -251,7 +252,6 @@
     .courses-grid {
         --row-span: 3;
         --grid-card-count: 3;
-        --card-padding-vertical: 1rem;
 
         will-change: transform;
         transform: translateZ(0);
