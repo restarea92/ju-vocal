@@ -553,6 +553,9 @@
         .courses-grid {
             .course-card, .courses-card:nth-last-of-type(even) {
                 padding: 0;
+                h3 {
+                    color:white;
+                }
                 .course-image {
                     grid-column: 1 / 13;
                     grid-row: 1 / 2;
