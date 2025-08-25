@@ -128,7 +128,7 @@ const lessonApp = {
                     scale: 1,
                     filter: "brightness(1)",
                     onStart: () => {
-                        gsap.set(gridCards[i - 1], {
+                        gsap.set(gridCards[i], {
                             overflowY: "auto",
                             border: "4px solid red"
                         });
