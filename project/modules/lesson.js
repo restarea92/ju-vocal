@@ -63,6 +63,8 @@ const lessonApp = {
             filter: "brightness(1)",
         });
         
+        gsap.set(contentWrapper, {
+        });
 
         gsap.set(stickyElement, {
             position: "sticky",
