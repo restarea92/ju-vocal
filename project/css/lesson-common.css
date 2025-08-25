@@ -143,7 +143,6 @@
         grid-template-columns: 7fr 5fr;
         grid-auto-rows: 1fr;
         gap: 4rem;
-        align-items: center;
         min-height: 0;
         align-items: flex-start;
     }
