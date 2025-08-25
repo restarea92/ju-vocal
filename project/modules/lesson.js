@@ -107,7 +107,16 @@ const lessonApp = {
                     start:  `top+=${i * gridCardRatio}% top+=40%`,
                     end: `top+=${(i) * gridCardRatio }% 10%`,
                 });
+                const timeline1NoScrub = this.createTimeline({
+                    start:  `top+=${i * gridCardRatio}% top+=40%`,
+                    end: `top+=${(i) * gridCardRatio }% 10%`,
+                    scrub: false,
+                });
 
+                timeline1NoScrub.to(card[i], {
+                    border: "4px solid red",
+                });
+                
                 timeline1.to(card, {
                     ease: "power1.inOut",
                     yPercent: 0,
