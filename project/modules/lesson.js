@@ -106,7 +106,6 @@ const lessonApp = {
                 const timeline1 = this.createTimeline({
                     start:  `top+=${i * gridCardRatio}% top+=40%`,
                     end: `top+=${(i) * gridCardRatio }% 10%`,
-
                 });
                 timeline1.to(card, {
                     ease: "power1.inOut",
