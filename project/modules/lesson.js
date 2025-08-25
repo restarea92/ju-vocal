@@ -205,7 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const currentId = entry.target.dataset.id;
                 if (currentId > 1) // id - 1에 partial-visible 클래스 추가
                     cards[currentId - 2].classList.add('partial-visible');
-
             } else {
                 entry.target.classList.remove('partial-visible');
             }
