@@ -155,7 +155,7 @@
         background-clip: text;
     }
     .content-text h3 {
-        margin-top: calc(var(--fs-subtitle) / 2);
+        margin-top: calc(var(--fs-subtitle));
         margin-bottom: var(--fs-subtitle);
         text-align: left;
     }
