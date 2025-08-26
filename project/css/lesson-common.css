@@ -621,7 +621,7 @@
                     z-index: 0;
                     min-height: 0;
                     img {
-                        filter: brightness(0.7) blur(1px);
+                        filter: brightness(0.5) blur(1px);
                     }
                 }
 
