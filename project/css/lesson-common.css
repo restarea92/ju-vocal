@@ -301,7 +301,7 @@
          * 100lvh로부터
          * - (var(--fs-title) * 2)            => Title의 Height과 Margin
          * - (var(--header-height) - 1rem)    => Top:0 기준으로 부모의 padding-top값(Header의 Height과 --card-padding-vertical만큼 계산)
-         * - var(--card-padding-vertical)     => bottom padding을 위해 --card-padding-vertical만큼 계산
+         * - var(--card-padding-vertical)     => bottom padding을 위해 --card-padding-vertical * 2만큼 계산
          */
 
         h3 {
