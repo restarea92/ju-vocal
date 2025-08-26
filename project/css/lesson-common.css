@@ -266,6 +266,7 @@
         transform: translateZ(0) scale(1.1);
         opacity: 0;
         will-change: transform, opacity;
+        transform: translate3d(0, 0, 0);
         border-radius: 1rem;
         background-color: white;
         grid-column: 1;
@@ -326,11 +327,16 @@
             content-visibility: visible;
             backface-visibility: hidden;
             will-change: transform;
+            transform: translate3d(0, 0, 0);
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             gap: min(4%, 2rem);
             height: 100%;
             .course-features {
+                visibility: visible;
+                content-visibility: visible;
+                backface-visibility: hidden;
+                will-change: transform;
                 overflow-y: auto;
                 pointer-events: none;
                 grid-column: 1 / 6;
@@ -342,10 +348,20 @@
                 }
             }
             .course-image {
+                visibility: visible;
+                content-visibility: visible;
+                backface-visibility: hidden;
+                will-change: transform;
+                transform: translate3d(0, 0, 0);
                 overflow: hidden;
                 grid-column: 6 / 13;
                 grid-row: 1 / 2;
                 img {
+                    visibility: visible;
+                    content-visibility: visible;
+                    backface-visibility: hidden;
+                    will-change: transform;
+                    transform: translate3d(0, 0, 0);
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
