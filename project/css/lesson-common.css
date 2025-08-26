@@ -322,6 +322,10 @@
             margin-bottom: 1rem;
         }
         .course-content {
+            visibility: visible;
+            content-visibility: visible;
+            backface-visibility: hidden;
+            will-change: transform;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             gap: min(4%, 2rem);
